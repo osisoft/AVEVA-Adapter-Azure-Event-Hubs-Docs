@@ -38,6 +38,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html",
+          "hash": "Ewr50Z5aZwmvrYpmiPhnmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.md",
       "output": {
         ".html": {
@@ -58,18 +70,6 @@
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html",
           "hash": "Er6JotX3pwq9QYlrFVBKkQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configuration/pi-adatpter-for-azure-event-hubs-client-settings-configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configuration/pi-adatpter-for-azure-event-hubs-client-settings-configuration.html",
-          "hash": "Dydy5/Eiy5EAjz9nnikmXQ=="
         }
       },
       "is_incremental": false,
@@ -1658,7 +1658,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "u8m7F7cEo6uIsDFfF97DEg=="
+          "hash": "HwVdCc0zliFgXj1yN5caug=="
         }
       },
       "is_incremental": false,
