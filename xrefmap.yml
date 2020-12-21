@@ -40,6 +40,9 @@ references:
 - uid: Administration1-4
   name: Administration
   href: V1/main/V1.4/Administration/administration.html
+- uid: AzureEventHubsConfiguration
+  name: Configuration
+  href: V1/Configuration/configuration.html
 - uid: BufferingConfiguration
   name: Buffering configuration
   href: V1/main/V1/Configuration/buffering-configuration.html
@@ -163,6 +166,9 @@ references:
 - uid: Installation1-4
   name: Installation
   href: V1/main/V1.4/Installation/installation.html
+- uid: InstallPIAdapterForAzureEventHubsUsingDocker
+  name: Install PI Adapter for Azure Event Hubs using Docker
+  href: V1/Installation/install-pi-adapter-for-azure-event-hubs-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/install-the-adapter.html
@@ -211,6 +217,9 @@ references:
 - uid: PIAdapterForAzureEventHubsOverview
   name: PI Adapter for Azure Event Hubs overview
   href: pi-adapter-for-azure-event-hubs-overview.html
+- uid: PIAdapterForAzureEventHubsPrinciplesOfOperation
+  name: PI Adapter for Azure Event Hubs principles of operation
+  href: V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: V1/main/V1/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html
@@ -223,6 +232,9 @@ references:
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
+- uid: ReleaseNotes
+  name: ReleaseNotes
+  href: V1/Release-notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/retrieve-product-version-information.html
@@ -295,6 +307,9 @@ references:
 - uid: SystemComponentsConfiguration1-4
   name: System components configuration
   href: V1/main/V1.4/Configuration/system-components-configuration.html
+- uid: SystemRequirements
+  name: System requirements
+  href: V1/Installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: V1/main/V1/technical-support-and-feedback.html

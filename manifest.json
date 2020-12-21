@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/configuration.html",
-          "hash": "dMNdbMFy68bP1SM+NAYd8A=="
+          "hash": "M/kNuCJoIj65US6+9s7ZgQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/install-pi-adapter-for-azure-event-hubs-using-docker.html",
-          "hash": "W704oX7K7vbhQ5ZOrxxELQ=="
+          "hash": "5KhWhk5DXg501NUtUvAnrg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/system-requirements.html",
-          "hash": "Nk3cFbV581iFz16qSQJ+lg=="
+          "hash": "VdvIYxPK1vMpKu68botEvg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html",
-          "hash": "4jlX92OeqCIs0kp0kfzO8w=="
+          "hash": "cwUUI1pH9I0NFbvCOmagJA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,18 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "LfcuDbb5WjEKoQ3HrCvnOA=="
+          "hash": "MmRLiwjF+GpKiKAS8GJX1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/images/pi-adapter-for-azure-event-hubs-architecture-diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/pi-adapter-for-azure-event-hubs-architecture-diagram.png"
         }
       },
       "is_incremental": false,
@@ -129,7 +140,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "NtWa9EiIsqBkCbsagBU+kw=="
+          "hash": "Ez+tljnm9ZpPbejhH6XyPQ=="
         }
       },
       "is_incremental": false,
@@ -148,15 +159,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/Templates/Markdown Release Notes template-V1.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/Templates/Markdown Release Notes template-V1.html",
-          "hash": "r3f/AOp0Z0e7WLB2z/0BcQ=="
+          "hash": "2HZRj6HoRj88cKES6bumHQ=="
         }
       },
       "is_incremental": false,
@@ -1662,7 +1670,7 @@
       "output": {
         ".html": {
           "relative_path": "pi-adapter-for-azure-event-hubs-overview.html",
-          "hash": "VUtnyFAKbYEykpTEzNnXgA=="
+          "hash": "voRKtmHYJXP7EDJlqvFISg=="
         }
       },
       "is_incremental": false,

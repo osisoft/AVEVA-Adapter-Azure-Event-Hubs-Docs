@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>PI Adapter for Azure Event Hubs principles of operation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="PI Adapter for Azure Event Hubs principles of operation ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -75,8 +75,126 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="PIAdapterForAzureEventHubsPrinciplesOfOperation">
+<h1 id="pi-adapter-for-azure-event-hubs-principles-of-operation">PI Adapter for Azure Event Hubs principles of operation</h1>
 
+<p>This adapter&#39;s operations focus on data collection and stream creation.</p>
+<h2 id="adapter-configuration">Adapter configuration</h2>
+<p>For the Azure Event Hubs adapter to start data collection, configure the following:</p>
+<ul>
+<li>Data source: Provide the data source from which the adapter should collect data.</li>
+<li>Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data.</li>
+<li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
+</ul>
+<p>For more details, see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
+<h2 id="connection">Connection</h2>
+<p>The adapter communicates with the Azure Event Hubs devices through <!--Insert content here--></p>
+<h2 id="data-collection">Data collection</h2>
+<p>The adapter collects data from the <!-- Insert content here --> For more information see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
+<h3 id="data-types">Data types</h3>
+<p>The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.</p>
+<table>
+<thead>
+<tr>
+<th>OPC UA data type</th>
+<th>Stream data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>SByte</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>Int16</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>UInt16</td>
+<td>UInt16</td>
+</tr>
+<tr>
+<td>Int32</td>
+<td>Int32</td>
+</tr>
+<tr>
+<td>UInt32</td>
+<td>UInt32</td>
+</tr>
+<tr>
+<td>Int64</td>
+<td>Int64</td>
+</tr>
+<tr>
+<td>UInt64</td>
+<td>UInt64</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>Double</td>
+<td>Float64</td>
+</tr>
+<tr>
+<td>DateTime</td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>String</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stream-creation">Stream creation</h2>
+<p>The Azure Event Hubs adapter creates a stream with two properties for each selected Azure Event Hubs item. The properties are described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Timestamp</code></td>
+<td>String</td>
+<td>The response time of the stream data from the Azure Event Hubs device</td>
+</tr>
+<tr>
+<td><code>Value</code></td>
+<td>Specified by the data selection</td>
+<td>The value of the stream data from the Azure Event Hubs device</td>
+</tr>
+</tbody>
+</table>
+<p>Certain metadata are sent with each stream created. The following metadata are common for every adapter type:</p>
+<ul>
+<li><strong>ComponentId</strong>: Specifies the data source, for example, <em>EventHubs1</em></li>
+<li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>EventHubs</em></li>
+</ul>
+<p>Metadata specific to the Azure Event Hubs adapter are:</p>
+<ul>
+<li><strong>EventHubName</strong>: Contains the Azure Event Hub name configured in the data selection item.</li>
+<li><strong>DeviceId</strong>: Contains the Device Id configured in the data selection item (IoT Hub integration only).</li>
+</ul>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the Azure Event Hubs adapter, the following metadata is sent for the individual level:</p>
+<p>None: No metadata
+Low: AdapterType (ComponentType) and DataSource (ComponentId)
+Medium: AdapterType (ComponentType), DataSource (ComponentId), EventHubName, and DeviceId</p>
+<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<pre><code class="lang-code">&lt;Id&gt;.&lt;ValueField&gt;
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a>.</p>
 </article>
           </div>
           
