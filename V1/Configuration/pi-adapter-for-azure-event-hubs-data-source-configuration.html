@@ -129,7 +129,7 @@
 <td>Specifies the default stream Id pattern to use. Possible parameters: <code>{Topic}</code>, <code>{ValueField}</code>, <code>{DataType}</code>. <br><br>Allowed value: any string<br>Default value: <code>{Topic}.{ValueField}</code></td>
 </tr>
 <tr>
-<td><strong>EventHubConnectionString</strong></td>
+<td><strong>EventHubNamespaceConnectionString</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
 <td>The connection string for the Event Hub namespace.<br><br>Allowed value:  The primary or secondary connection string as copied from the Azure portal.<br>Default value: <code>null</code></td>
@@ -147,10 +147,16 @@
 <td>The connection string for the Azure Blob Storage account which is used to store event hub checkpoints <br><br>Allowed value: The primary or secondary connection string as copied from the Azure portal.<br>Default value: <code>null</code></td>
 </tr>
 <tr>
-<td><strong>BlobContainerName</strong></td>
+<td><strong>CheckpointBlobContainerName</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
 <td>The name of the container in the Blob Storage account used to store event hub checkpoints. <br><br>Allowed value:  3-63 characters long; contains only letters, numbers, and dash characters per Azure restrictions.</td>
+</tr>
+<tr>
+<td><strong>TimeZone</strong></td>
+<td>Optional</td>
+<td>``</td>
+<td>The time zone associated with the Event Hub namespace.<br><br>Allowed value: IANA format, for example &quot;America/Los_Angeles&quot;. For the complete list, see <a href="https://www.iana.org/time-zones">iana Time Zone Database</a>.</td>
 </tr>
 </tbody>
 </table>

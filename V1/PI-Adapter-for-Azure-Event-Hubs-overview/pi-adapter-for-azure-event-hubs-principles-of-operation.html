@@ -189,9 +189,11 @@
 <li><strong>DeviceId</strong>: Contains the Device Id configured in the data selection item (IoT Hub integration only).</li>
 </ul>
 <p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/V1/Configuration/general-configuration.html">General configuration</a>. For the Azure Event Hubs adapter, the following metadata is sent for the individual level:</p>
-<p>None: No metadata
-Low: AdapterType (ComponentType) and DataSource (ComponentId)
-Medium: AdapterType (ComponentType), DataSource (ComponentId), EventHubName, and DeviceId</p>
+<ul>
+<li><code>None</code>: No metadata</li>
+<li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
+<li><code>Medium</code>: AdapterType (ComponentType), DataSource (ComponentId), EventHubName, and DeviceId</li>
+</ul>
 <p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
 <pre><code class="lang-code">&lt;Id&gt;.&lt;ValueField&gt;
 </code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a>.</p>

@@ -150,10 +150,28 @@
 <td>The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. <strong>PrefetchCount</strong> is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than <code>2</code> times the <strong>CacheEventCount</strong>.</td>
 </tr>
 <tr>
+<td><strong>BatchSizeForCheckpoint</strong></td>
+<td></td>
+<td><code>integer</code></td>
+<td>The number of events processed to trigger a checkpoint operation.<br><br>Default value: <code>50</code></td>
+</tr>
+<tr>
+<td><strong>CheckpointTimeoutSeconds</strong></td>
+<td></td>
+<td><code>integer</code></td>
+<td>The timeout in seconds for the checkpoint operation.<br><br>Default value: <code>60</code></td>
+</tr>
+<tr>
 <td><strong>EventHubTransportType</strong></td>
 <td></td>
 <td><code>enum</code></td>
 <td>Identifies the protocol used internally by the client. Allowed values: <code>AmqpTcp</code> and <code>AmqpWebSockets</code><br>Default value: <code>AmqpTcp</code></td>
+</tr>
+<tr>
+<td><strong>DeviceIdSystemPropertyName</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>The name of the system property for the device id.<br><br>Default value: <code>iothub-connection-device-id</code></td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +183,10 @@
    &quot;TrackLastEnqueuedEventProperties&quot; : false,
    &quot;CacheEventCount&quot; : 100,
    &quot;PrefetchCount&quot; : 300,
-   &quot;EventHubTransportType&quot; : &quot;AmqpTcp&quot;
+   &quot;BatchSizeForCheckpoint&quot; : 50,
+   &quot;CheckpointTimeoutSeconds&quot; : 60,
+   &quot;EventHubTransportType&quot; : &quot;AmqpTcp&quot;,
+   &quot;DeviceIdSystemPropertyName&quot; : &quot;iothub-connection-device-id&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

@@ -140,6 +140,12 @@
 <td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;Id&gt;.&lt;ValueField&gt;</code></td>
 </tr>
 <tr>
+<td><strong>DataFilterId</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>The ID of the data filter. <br><br>Allowed value: any string <br>Default value: <code>null</code></td>
+</tr>
+<tr>
 <td><strong>EventHubName</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
@@ -158,16 +164,16 @@
 <td>The JsonPath expression to take value to use as a timestamp from a property. <br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
+<td><strong>DeviceId</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>The device Id associated with a stream, for example the Azure IoT Hub Device Id.</td>
+</tr>
+<tr>
 <td><strong>DataType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
 <td>The expected data type of the values for the specified field. <br><br>Allowed value: OMF supported data types</td>
-</tr>
-<tr>
-<td><strong>DataFilterId</strong></td>
-<td>Optional</td>
-<td><code>string</code></td>
-<td>The ID of the data filter. <br><br>Allowed value: any string <br>Default value: <code>null</code></td>
 </tr>
 </tbody>
 </table>
@@ -187,11 +193,14 @@
     &quot;Selected&quot; : true,
     &quot;Name&quot; : null,
     &quot;StreamId&quot; : &quot;RandomStreamId&quot;,
+    &quot;DataFilterId&quot; : null,
+    &quot;DataFilterCache&quot;: ,
     &quot;EventHubName&quot; : &quot;RandomEventHubName&quot;,
     &quot;ValueField&quot; : &quot;RandomValueField&quot;,
     &quot;TimeField&quot; : &quot;RandomTimeField&quot;,
-    &quot;DataType&quot; : &quot;uint64&quot;,
-    &quot;DataFilterId&quot; : null,
+    &quot;DeviceId&quot; : 7,
+    &quot;DataType&quot; : &quot;uint64&quot;
+
 
   }
 ]
