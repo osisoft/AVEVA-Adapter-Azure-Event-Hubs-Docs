@@ -65,9 +65,9 @@ Metadata specific to the Azure Event Hubs adapter are:
 
 **Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the Azure Event Hubs adapter, the following metadata is sent for the individual level:
 
-None: No metadata
-Low: AdapterType (ComponentType) and DataSource (ComponentId)
-Medium: AdapterType (ComponentType), DataSource (ComponentId), EventHubName, and DeviceId
+- `None`: No metadata
+- `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
+- `Medium`: AdapterType (ComponentType), DataSource (ComponentId), EventHubName, and DeviceId
 
 Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
