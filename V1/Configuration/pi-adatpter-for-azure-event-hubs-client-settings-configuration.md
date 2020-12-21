@@ -50,7 +50,10 @@ The following parameters are available for configuring Azure Event Hubs client s
 | **TrackLastEnqueuedEventProperties** | | `boolean` | Indicates if the user should request information on the last enqueued event on the partition associated with a given event, and track that  information as events are received. <br><br>Allowed value: `true` or `false` <br>Default value: `false`|
 | **CacheEventCount** | | `integer` | The maximum amount of events read from the Event Hubs service and held in a local memory cache when reading is active and events are emitted to an enumerator for processing.<br><br>Default value: `100` |
 |**PrefetchCount** | | `integer` | The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. **PrefetchCount** is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than `2` times the **CacheEventCount**.|
+| **BatchSizeForCheckpoint** | | `integer`| The number of events processed to trigger a checkpoint operation.<br><br>Default value: `50` |
+| **CheckpointTimeoutSeconds** | | `integer`| The timeout in seconds for the checkpoint operation.<br><br>Default value: `60` |
 | **EventHubTransportType** | | `enum` | Identifies the protocol used internally by the client. Allowed values: `AmqpTcp` and `AmqpWebSockets`<br>Default value: `AmqpTcp`|
+| **DeviceIdSystemPropertyName** | Optional | `string` | The name of the system property for the device id.<br><br>Default value: `iothub-connection-device-id` |
 
 ## Azure Event Hubs client settings example
 
@@ -62,7 +65,10 @@ The following parameters are available for configuring Azure Event Hubs client s
    "TrackLastEnqueuedEventProperties" : false,
    "CacheEventCount" : 100,
    "PrefetchCount" : 300,
-   "EventHubTransportType" : "AmqpTcp"
+   "BatchSizeForCheckpoint" : 50,
+   "CheckpointTimeoutSeconds" : 60,
+   "EventHubTransportType" : "AmqpTcp",
+   "DeviceIdSystemPropertyName" : "iothub-connection-device-id"
 }
 ```
 
