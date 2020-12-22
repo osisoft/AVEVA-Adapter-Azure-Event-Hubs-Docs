@@ -28,7 +28,7 @@ The adapter collects data from the <!-- Insert content here --> For more informa
 
 The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.
 
-| OPC UA data type | Stream data type |
+| Event Hubs data type | Stream data type |
 |------------------|------------------|
 | Boolean          | Boolean          |
 | Byte             | Int16            |
