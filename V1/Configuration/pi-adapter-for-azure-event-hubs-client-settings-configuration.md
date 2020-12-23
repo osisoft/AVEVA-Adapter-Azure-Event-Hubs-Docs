@@ -46,7 +46,6 @@ The following parameters are available for configuring Azure Event Hubs client s
 |--------------------------|----------|------------|-------------|
 | **MaxInternalQueueSize** | Optional | `integer`  |  Specifies maximum number of value updates that can be held by the adapter in memory.<br><br>Allowed value: > `1000`<br>Default value: `500000`           |
 | **InternalQueuePollingIntervalInMs** | Optional | `integer` | Specified interval at which data is removed from internal queue. <br><br>Allowed value: Between `1` and `60000` milliseconds<br>Default value: `100` |
-| **NumOfParallelQueueReaders** | Optional | `integer` | The number of concurrent internal queue readers.<br><br>Allowed value: Between `1` and the number of processors times 2.<br>Default value: `100` |
 | **TrackLastEnqueuedEventProperties** | | `boolean` | Indicates if the user should request information on the last enqueued event on the partition associated with a given event, and track that  information as events are received. <br><br>Allowed value: `true` or `false` <br>Default value: `false`|
 | **CacheEventCount** | | `integer` | The maximum amount of events read from the Event Hubs service and held in a local memory cache when reading is active and events are emitted to an enumerator for processing.<br><br>Default value: `100` |
 |**PrefetchCount** | | `integer` | The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. **PrefetchCount** is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than `2` times the **CacheEventCount**.|
@@ -61,7 +60,6 @@ The following parameters are available for configuring Azure Event Hubs client s
 {
    "MaxInternalQueueSize" : 500000,
    "InternalQueuePollingIntervalInMs" : 100,
-   "NumOfParallelQueueReaders" : 100,
    "TrackLastEnqueuedEventProperties" : false,
    "CacheEventCount" : 100,
    "PrefetchCount" : 300,
