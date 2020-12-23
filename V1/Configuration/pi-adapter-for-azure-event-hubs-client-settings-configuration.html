@@ -8,7 +8,7 @@
     <title>PI Adapter for Azure Event Hubs client settings configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PI Adapter for Azure Event Hubs client settings configuration ">
-    <meta name="generator" content="docfx 2.56.2.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -126,12 +126,6 @@
 <td>Specified interval at which data is removed from internal queue. <br><br>Allowed value: Between <code>1</code> and <code>60000</code> milliseconds<br>Default value: <code>100</code></td>
 </tr>
 <tr>
-<td><strong>NumOfParallelQueueReaders</strong></td>
-<td>Optional</td>
-<td><code>integer</code></td>
-<td>The number of concurrent internal queue readers.<br>Allowed value: Between <code>1</code> and the number of processors times 2.<br>Default value: <code>100</code></td>
-</tr>
-<tr>
 <td><strong>TrackLastEnqueuedEventProperties</strong></td>
 <td></td>
 <td><code>boolean</code></td>
@@ -165,7 +159,7 @@
 <td><strong>EventHubTransportType</strong></td>
 <td></td>
 <td><code>enum</code></td>
-<td>Identifies the protocol used internally by the client. Allowed values: <code>AmqpTcp</code> and <code>AmqpWebSockets</code><br>Default value: <code>AmqpTcp</code></td>
+<td>Identifies the protocol used internally by the client.<br><br>Allowed values: <code>AmqpTcp</code> and <code>AmqpWebSockets</code><br>Default value: <code>AmqpTcp</code></td>
 </tr>
 <tr>
 <td><strong>DeviceIdSystemPropertyName</strong></td>
@@ -179,7 +173,6 @@
 <pre><code class="lang-json">{
    &quot;MaxInternalQueueSize&quot; : 500000,
    &quot;InternalQueuePollingIntervalInMs&quot; : 100,
-   &quot;NumOfParallelQueueReaders&quot; : 100,
    &quot;TrackLastEnqueuedEventProperties&quot; : false,
    &quot;CacheEventCount&quot; : 100,
    &quot;PrefetchCount&quot; : 300,

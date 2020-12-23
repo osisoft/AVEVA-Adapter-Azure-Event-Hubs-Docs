@@ -319,8 +319,8 @@ references:
 - uid: TechnicalSupportAndFeedback1-4
   name: Technical support and feedback
   href: V1/main/V1.4/technical-support-and-feedback.html
-- uid: TroubleshootTheAdapter
-  name: Troubleshoot the adapter
+- uid: Troubleshooting
+  name: Troubleshooting
   href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
 - uid: TroubleshootTheAdapter1-3
   name: Troubleshoot the adapter
