@@ -77,6 +77,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Health-and-diagnostics/Health/next-health-message-expected.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Health-and-diagnostics/Health/next-health-message-expected.html",
+          "hash": "swsUpUKtKNprU5nZV8DQXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/pi-adapter-for-azure-event-hubs-device-status.md",
       "output": {
         ".html": {
@@ -485,7 +497,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/adapter-health.html",
-          "hash": "4kRyS68YMnSZ/Gd+Tt5Q3Q=="
+          "hash": "qrUR90L7CyLeP//J/RCy9g=="
         }
       },
       "is_incremental": false,
@@ -519,6 +531,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/next-health-message-expected.md",
       "output": {
@@ -584,7 +599,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Metadata/adapter-metadata.html",
-          "hash": "ctKuA+1LavmtE9WVRblJmw=="
+          "hash": "f3oOfdwADt92CldL98C/8A=="
         }
       },
       "is_incremental": false,
@@ -1682,7 +1697,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "M0DFttKLSBMO+bpZm0ijBA=="
+          "hash": "GECLURi2qQ0oHL+KLzSbkg=="
         }
       },
       "is_incremental": false,
@@ -1727,7 +1742,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 116,
+          "total_file_count": 117,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
