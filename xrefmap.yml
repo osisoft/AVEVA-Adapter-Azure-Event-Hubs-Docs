@@ -214,6 +214,9 @@ references:
 - uid: PIAdapterForAzureEventHubsDataSourceConfiguration
   name: PI Adapter for Azure Event Hubs data source configuration
   href: V1/Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html
+- uid: PIAdapterForAzureEventHubsDeviceStatus
+  name: PI Adapter for Azure Event Hubs device status
+  href: V1/Health-and-diagnostics/Health/pi-adapter-for-azure-event-hubs-device-status.html
 - uid: PIAdapterForAzureEventHubsOverview
   name: PI Adapter for Azure Event Hubs overview
   href: pi-adapter-for-azure-event-hubs-overview.html
