@@ -1,0 +1,4 @@
+- name: PI Adapter for Azure Event Hubs device status
+  href: pi-adapter-for-azure-event-hubs-device-status.md
+- name: Next health message expected
+  href: ../../main/V1.3/Health/next-health-message-expected.md
