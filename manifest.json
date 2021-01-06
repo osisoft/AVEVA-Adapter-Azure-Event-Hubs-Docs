@@ -77,22 +77,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Health-and-diagnostics/Health/adapter-health.html",
-          "hash": "eMUlyaWrZeGQ63LtehaLWg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
         "DuplicateUids"
       ],
       "type": "Conceptual",
@@ -112,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health-and-diagnostics/Health/pi-adapter-for-azure-event-hubs-device-status.html",
-          "hash": "bnvZqXJ3H+GDcnfiyXZo/g=="
+          "hash": "274X4Xmnbo+WWhN8O7TwZg=="
         }
       },
       "is_incremental": false,
@@ -375,7 +359,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/health-endpoint-configuration.html",
-          "hash": "dQMaMVc4T3hCsoQdNt/WyA=="
+          "hash": "ksPYtgIchLaKZu/Ms2w0SA=="
         }
       },
       "is_incremental": false,
@@ -531,7 +515,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/health-and-diagnostics.html",
-          "hash": "vrMMwxWj2r3jISFLeIdOmg=="
+          "hash": "afhpN+mxA07iY6JDzVjA2w=="
         }
       },
       "is_incremental": false,
@@ -1887,7 +1871,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "YdwLuclJrei3e8YQbnhKSw=="
+          "hash": "GECLURi2qQ0oHL+KLzSbkg=="
         }
       },
       "is_incremental": false,
@@ -1932,7 +1916,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 118,
+          "total_file_count": 117,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
