@@ -76,16 +76,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
       "output": {
         ".html": {
           "relative_path": "V1/Health-and-diagnostics/Health/adapter-health.html",
-          "hash": "eMUlyaWrZeGQ63LtehaLWg=="
+          "hash": "9N/isy0Tk1f0IYbfc7m47g=="
         }
       },
       "is_incremental": false,
@@ -499,6 +495,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/adapter-health.md",
       "output": {
