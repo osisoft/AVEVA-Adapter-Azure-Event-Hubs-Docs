@@ -1,6 +1,6 @@
 - name: Adapter health
   href: Health/toc.yml
-  topicHref: Health/adapter-health.md
+  topicHref: ../main/V1.3/Health/adapter-health.md
 - name: Adapter diagnostics
   href: ../main/V1.3/Diagnostics/toc.yml
   topicHref: ../main/V1.3/Diagnostics/adapter-diagnostics.md
