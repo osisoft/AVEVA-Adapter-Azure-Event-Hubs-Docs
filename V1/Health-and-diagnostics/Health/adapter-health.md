@@ -19,4 +19,4 @@ The following health data is available:
 
 With a health endpoint configured to a PI server, you can use PI System Explorer to view the health of a given adapter. The element hierarchy is shown in the following image.
 
-![Health data](../images/health-data.PNG)
+![Health data](../../main/V1.3/images/health-data.PNG)
