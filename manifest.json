@@ -76,6 +76,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Health-and-diagnostics/Health/adapter-health.html",
+          "hash": "eMUlyaWrZeGQ63LtehaLWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/next-health-message-expected.md",
       "output": {
@@ -93,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health-and-diagnostics/Health/pi-adapter-for-azure-event-hubs-device-status.html",
-          "hash": "274X4Xmnbo+WWhN8O7TwZg=="
+          "hash": "bnvZqXJ3H+GDcnfiyXZo/g=="
         }
       },
       "is_incremental": false,
@@ -359,7 +374,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/health-endpoint-configuration.html",
-          "hash": "ksPYtgIchLaKZu/Ms2w0SA=="
+          "hash": "dQMaMVc4T3hCsoQdNt/WyA=="
         }
       },
       "is_incremental": false,
@@ -490,6 +505,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -524,7 +540,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/health-and-diagnostics.html",
-          "hash": "afhpN+mxA07iY6JDzVjA2w=="
+          "hash": "vrMMwxWj2r3jISFLeIdOmg=="
         }
       },
       "is_incremental": false,
@@ -1697,7 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "GECLURi2qQ0oHL+KLzSbkg=="
+          "hash": "YdwLuclJrei3e8YQbnhKSw=="
         }
       },
       "is_incremental": false,
@@ -1742,7 +1758,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 117,
+          "total_file_count": 118,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
