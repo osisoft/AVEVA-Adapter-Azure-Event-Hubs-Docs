@@ -8,9 +8,9 @@ PI Adapter for Azure Event Hubs is supported on a variety of platforms and proce
 
 | Operating System | Platform | Installation Kit | Processor(s) |
 |-------------------|-------------|----------------------------------|-------------|
-| Windows 10 Enterprise <br>Windows 10 IoT Enterprise | X64 | `EventHubs_win10-x64.msi`     | Intel/AMD 64-bit processors |
-| Debian 9, 10 <br>Ubuntu 18.04, 20.04 | X64 | `EventHubs_linux-x64.deb`     | Intel/AMD 64-bit processors |
-| Debian 9,10 <br>Ubuntu 18.04, 20.04 | Arm32 | `EventHubs_linux-arm.deb`  | Arm 32-bit processors |
-| Debian 9,10 <br>Ubuntu 18.04, 20.04 | Arm64 | `EventHubs_linux-arm64.deb`  | Arm 64-bit processors |
+| Windows 10 Enterprise <br>Windows 10 IoT Enterprise | x64 | `EventHubs_win10-x64.msi`     | Intel/AMD 64-bit processors |
+| Debian 9, 10 <br>Ubuntu 18.04, 20.04 | x64 | `EventHubs_linux-x64.deb`     | Intel/AMD 64-bit processors |
+| Debian 9,10 <br>Ubuntu 18.04, 20.04 | ARM32 | `EventHubs_linux-arm.deb`  | ARM 32-bit processors |
+| Debian 9,10 <br>Ubuntu 18.04, 20.04 | ARM64 | `EventHubs_linux-arm64.deb`  | ARM 64-bit processors |
 
 Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing PI Adapter for Modbus TCP with Docker containers, see [Install PI Adapter for Azure Event Hubs using Docker](xref:InstallPIAdapterForAzureEventHubsUsingDocker).
