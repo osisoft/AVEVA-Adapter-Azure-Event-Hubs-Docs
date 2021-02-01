@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Retrieve product version information </title>
+    <title>Configure a network proxy </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Retrieve product version information ">
+    <meta name="title" content="Configure a network proxy ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,26 +75,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="RetrieveProductVersionInformation1-3">
-<h1 id="retrieve-product-version-information">Retrieve product version information</h1>
+            <article class="content wrap" id="_content" data-uid="ConfigureANetworkProxy1-3">
+<h1 id="configure-a-network-proxy">Configure a network proxy</h1>
 
-<p>The product version information includes the application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.</p>
-<p>Complete the following steps to retrieve the product version information of a PI adapter:</p>
-<ol>
-<li>Use any of the <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>GET</code> command to the following endpoint: <code>http://localhost:5590/api/v1/Diagnostics/ProductInformation</code></p>
-<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>Example using <code>curl</code>:</p>
-<p><strong>Get product information for adapter hosted on port 5590</strong></p>
-<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
-</code></pre><p>Example result:</p>
-<pre><code class="lang-code">{
-&quot;Application Version&quot;:&quot;1.2.0.37&quot;,
-&quot;.Net Core Version&quot;:&quot;.NET Core 3.1.5&quot;,
-&quot;Operating System&quot;:&quot;Linux 4.15.0-106-generic #107-Ubuntu SMP Thu Jun 4 11:27:52 UTC 2020&quot;
-}
-</code></pre></li>
-</ol>
+<p>Some network architectures may need a network proxy between the PI adapter and the egress endpoint. The process for configuring the adapter to egress data through a network proxy varies depending on the proxy type.</p>
+<h2 id="https-forward-proxy">HTTPS forward proxy</h2>
+<p>For the adapter to use an HTTPS forward proxy while egressing, configure the <code>https_proxy</code> environment variable. The value of this environment variable must contain the URL of the proxy server, beginning with <code>http</code>. The format of the string is <code>[user[:password]@]http://hostname[:port]</code>.</p>
+<h3 id="https-proxy-environment-variable">HTTPS proxy environment variable</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>user</code></td>
+<td>Optional</td>
+<td>The user name for the HTTPS forward proxy.</td>
+</tr>
+<tr>
+<td> <code>password</code></td>
+<td>Optional</td>
+<td>The password for the HTTPS forward proxy specified user name. If you specify <code>user</code>, <code>password</code> remains optional.</td>
+</tr>
+<tr>
+<td> <code>port</code></td>
+<td>Optional</td>
+<td>If you do not specify <code>port</code>, the default <code>80</code> is used.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Usage of the <code>https_proxy</code> environment variable may affect other .NET or .NET Core applications. If you set this environment variable, it will affect the adapter egress endpoints and the adapter health endpoints.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-json">myUser@http://192.168.2.2
+myUser:myPassword@http://proxymachine.domain:3128
+http://proxymachine.domain
+</code></pre><p>In Windows, this may look something like:</p>
+<p><img src="../images/windows-network-proxy-environment-variable.png" alt="Windows HTTPS network proxy environment variable"></p>
+<p>For more information on how to configure system environment variables, refer to your platform specific documentation:</p>
+<ul>
+<li>Windows: <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">setx</a></li>
+<li>Ubuntu: <a href="https://help.ubuntu.com/community/EnvironmentVariables">EnvironmentVariables</a></li>
+<li>Debian: <a href="https://wiki.debian.org/EnvironmentVariables">EnvironmentVariables</a></li>
+<li>Docker: <a href="https://docs.docker.com/compose/environment-variables/">Environment variables in Compose</a></li>
+</ul>
+<p>Example of an architecture with an https forward proxy:</p>
+<p><img src="../images/forward-proxy.png" alt="Forward proxy"></p>
+<h2 id="reverse-proxy">Reverse proxy</h2>
+<p>For the adapter to use a reverse proxy while egressing, you must configure the reverse proxy as an egress endpoint.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-json">[{
+     &quot;Id&quot;: &quot;PI Web API Through Proxy&quot;,
+     &quot;Endpoint&quot;: &quot;https://&lt;reverseProxy&gt;:&lt;port&gt;/piwebapi/omf/&quot;,
+     &quot;UserName&quot;: &quot;&lt;piWebApiUser&gt;&quot;,
+     &quot;Password&quot;: &quot;&lt;piWebApiPassword&gt;&quot;
+}]
+</code></pre><p>Example of an architecture with a reverse proxy:</p>
+<p><img src="../images/reverse-proxy.png" alt="Reverse proxy"></p>
 </article>
           </div>
           
@@ -103,7 +143,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Administration/retrieve-product-version-information.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Configuration/configure-a-network-proxy.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
