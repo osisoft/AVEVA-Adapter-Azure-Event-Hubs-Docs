@@ -76,6 +76,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
       "output": {
@@ -88,6 +91,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/next-health-message-expected.md",
       "output": {
@@ -291,9 +297,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -330,12 +333,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
-          "hash": "xFi+AjVLaw0MbkzkpnPuTA=="
+          "hash": "YQXfcfL0a4oIIQ/ARvY/sg=="
         }
       },
       "is_incremental": false,
@@ -347,19 +353,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
-          "hash": "mV/EehspEJh0grSgm6pRjw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/toc.html",
-          "hash": "uMY4ymzQL4+/TZGMvhBV1g=="
+          "hash": "q6+eEGjZezhM33+Wd3cmQg=="
         }
       },
       "is_incremental": false,
@@ -522,9 +516,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/adapter-health.md",
       "output": {
@@ -561,9 +552,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/next-health-message-expected.md",
       "output": {
@@ -2006,7 +1994,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "YdwLuclJrei3e8YQbnhKSw=="
+          "hash": "trvuRPli8ppfhdxLcVWQTw=="
         }
       },
       "is_incremental": false,
