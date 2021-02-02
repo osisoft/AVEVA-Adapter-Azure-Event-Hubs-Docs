@@ -76,9 +76,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
       "output": {
@@ -147,7 +144,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html",
-          "hash": "RA/poSTvN6+mdzVQpxnRrw=="
+          "hash": "k1GQs6PSu50wuc2uGVCflA=="
         }
       },
       "is_incremental": false,
@@ -182,7 +179,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "0kGASxf2lchrfQWhVB9mJw=="
+          "hash": "u+uZkpiaDtgT4nCejfXWtA=="
         }
       },
       "is_incremental": false,
@@ -297,6 +294,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -333,9 +333,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -516,6 +513,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/adapter-health.md",
       "output": {
@@ -2001,12 +2001,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "pi-adapter-for-azure-event-hubs-overview.md",
       "output": {
         ".html": {
           "relative_path": "pi-adapter-for-azure-event-hubs-overview.html",
-          "hash": "IjrKL0F2u1FLkwJSAIT3zg=="
+          "hash": "TtGmp3MuY56YgZNn7L7tAw=="
         }
       },
       "is_incremental": false,

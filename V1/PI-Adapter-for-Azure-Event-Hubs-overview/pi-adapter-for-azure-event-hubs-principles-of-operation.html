@@ -88,9 +88,11 @@
 </ul>
 <p>For more details, see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a> and <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
-<p>The adapter communicates with the Azure Event Hubs devices through <!--Insert content here--></p>
+<p>The adapter communicates with the Azure Event Hubs platform using the <a href="https://www.amqp.org/about/what">AMQP (Advanced Message Queueing Protocol)</a>. Alternatively, the adapter can connect using AMQP over WebSockets using HTTPS protocol with corresponding adapter configuration. A Shared Access Signature (SAS) is required for the adapter to authenticate with the Azure Event Hub namespace, which is supplied by a valid connection string in the adapter&#39;s data source configuration.</p>
+<p>For more information, see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a>.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The adapter collects data from the <!-- Insert content here --> For more information see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
+<p>After data source and data selection items are configured, the adapter establishes a connection to each event hub within the event hub namespace for all event hubs specified in data selection items. Once a connection is established, the adapter begins consuming events from the event hubs and processes the events as soon as they are published by an event producer and become available to consumers.</p>
+<p>For more information see <a class="xref" href="../Configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
 <h3 id="data-types">Data types</h3>
 <p>The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.</p>
 <table>
