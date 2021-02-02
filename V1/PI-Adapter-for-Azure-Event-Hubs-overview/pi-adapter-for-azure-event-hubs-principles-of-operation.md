@@ -18,11 +18,15 @@ For more details, see [PI Adapter for Azure Event Hubs data source configuration
 
 ## Connection
 
-The adapter communicates with the Azure Event Hubs devices through <!--Insert content here-->
+The adapter communicates with the Azure Event Hubs platform using the [AMQP (Advanced Message Queueing Protocol)](https://www.amqp.org/about/what). Alternatively, the adapter can connect using AMQP over WebSockets using HTTPS protocol with corresponding adapter configuration. A Shared Access Signature (SAS) is required for the adapter to authenticate with the Azure Event Hub namespace, which is supplied by a valid connection string in the adapter's data source configuration.
+
+For more information, see [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration).
 
 ## Data collection
 
-The adapter collects data from the <!-- Insert content here --> For more information see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
+After data source and data selection items are configured, the adapter establishes a connection to each event hub within the event hub namespace for all event hubs specified in data selection items. Once a connection is established, the adapter begins consuming events from the event hubs and processes the events as soon as they are published by an event producer and become available to consumers.
+
+For more information see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
 
 ### Data types
 
