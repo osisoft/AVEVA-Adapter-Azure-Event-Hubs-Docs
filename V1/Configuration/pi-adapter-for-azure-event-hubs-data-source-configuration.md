@@ -16,7 +16,7 @@ Complete the following steps to configure an Azure Event Hubs data source:
     - For content structure, see [Azure Event Hubs data source examples](#azure-event-hubs-data-source-examples).
     - For a table of all available parameters, see [Azure Event Hubs data source parameters](#azure-event-hubs-data-source-parameters).
 2. Save the file. For example, `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
       **Note:** The following example uses AzureEventHubs1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-3).
 
