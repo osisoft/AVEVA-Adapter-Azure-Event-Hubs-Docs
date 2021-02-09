@@ -294,9 +294,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -326,13 +323,16 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
-          "hash": "aqT6a6kfwCXN/5+IF19W2A=="
+          "hash": "ph47v1bmY4h7Jnij6P416g=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -521,7 +521,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/adapter-health.html",
-          "hash": "NgDlEarMvGBv/xOSrDw/lw=="
+          "hash": "x+LZgJgjDiMHSaVrqRQXNA=="
         }
       },
       "is_incremental": false,
@@ -1124,7 +1124,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Health/adapter-health.html",
-          "hash": "nBtuAoHXXBM+8vnJp3RG4w=="
+          "hash": "Dg/gONh1y1thz/Tk7YYWXQ=="
         }
       },
       "is_incremental": false,
@@ -1739,7 +1739,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/adapter-health.html",
-          "hash": "2WQp/kXXRhT/M5WmHrg3Bw=="
+          "hash": "ml34m8iYeHfrVf8qnxZbwA=="
         }
       },
       "is_incremental": false,
