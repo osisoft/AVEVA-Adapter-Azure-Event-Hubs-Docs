@@ -184,6 +184,9 @@ references:
 - uid: InstallTheAdapter1-4
   name: Install the adapter
   href: V1/main/V1.4/Installation/install-the-adapter.html
+- uid: IntroductionToPIAdapters
+  name: Introduction to PI Adapters
+  href: V1/main/V1/introduction-to-pi-adapters.html
 - uid: IORate
   name: IO rate
   href: V1/main/V1/Diagnostics/io-rate.html
@@ -229,6 +232,9 @@ references:
 - uid: PIAdapterForAzureEventHubsPrinciplesOfOperation
   name: PI Adapter for Azure Event Hubs principles of operation
   href: V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html
+- uid: PIAdapterUsers
+  name: PI Adapter users
+  href: V1/main/V1/pi-adapter-users.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: V1/main/V1/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html
