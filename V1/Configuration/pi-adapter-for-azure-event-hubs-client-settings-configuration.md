@@ -53,6 +53,8 @@ The following parameters are available for configuring Azure Event Hubs client s
 | **CheckpointTimeoutSeconds** | | `integer`| The timeout in seconds for the checkpoint operation.<br><br>Default value: `60` |
 | **EventHubTransportType** | | `enum` | Identifies the protocol used internally by the client.<br><br>Allowed values: `AmqpTcp` and `AmqpWebSockets`<br>Default value: `AmqpTcp`|
 | **DeviceIdSystemPropertyName** | Optional | `string` | The name of the system property for the device id.<br><br>Default value: `iothub-connection-device-id` |
+| **EventProcessorClientMaximumRetries** | Optional | `integer` | The maximum amount of retries that the EventProcessorClient makes in case of client failures. <br><br>Default value: `5` |
+| **EventProcessorClientMaximumDelayInMin** | Optional |`integer` | The maximum delay for the timeout operation in minutes.<br><br>Default value: `5`|
 
 ## Azure Event Hubs client settings example
 
@@ -66,7 +68,9 @@ The following parameters are available for configuring Azure Event Hubs client s
    "BatchSizeForCheckpoint" : 50,
    "CheckpointTimeoutSeconds" : 60,
    "EventHubTransportType" : "AmqpTcp",
-   "DeviceIdSystemPropertyName" : "iothub-connection-device-id"
+   "DeviceIdSystemPropertyName" : "iothub-connection-device-id",
+   "EventProcessorClientMaximumRetries" : 5,
+   "EventProcessorClientMaximumDelayInMin" : 5 
 }
 ```
 

@@ -35,8 +35,6 @@ The following table lists Azure Event Hubs variable types that the adapter colle
 | Event Hubs data type | Stream data type |
 |------------------|------------------|
 | Boolean          | Boolean          |
-| Byte             | Int16            |
-| SByte            | Int16            |
 | Int16            | Int16            |
 | UInt16           | UInt16           |
 | Int32            | Int32            |
@@ -50,7 +48,7 @@ The following table lists Azure Event Hubs variable types that the adapter colle
 
 ## Stream creation
 
-The Azure Event Hubs adapter creates a stream with two properties for each selected Azure Event Hubs item. The properties are described in the following table.
+The Azure Event Hubs adapter creates a stream value with two properties for each selected Azure Event Hubs item. The properties are described in the following table.
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
