@@ -167,6 +167,18 @@
 <td><code>string</code></td>
 <td>The name of the system property for the device id.<br><br>Default value: <code>iothub-connection-device-id</code></td>
 </tr>
+<tr>
+<td><strong>EventProcessorClientMaximumRetries</strong></td>
+<td>Optional</td>
+<td><code>integer</code></td>
+<td>The maximum amount of retries that the EventProcessorClient makes in case of client failures. <br><br>Default value: <code>5</code></td>
+</tr>
+<tr>
+<td><strong>EventProcessorClientMaximumDelayInMin</strong></td>
+<td>Optional</td>
+<td><code>integer</code></td>
+<td>The maximum delay for the timeout operation in minutes.<br><br>Default value: <code>5</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="azure-event-hubs-client-settings-example">Azure Event Hubs client settings example</h2>
@@ -179,7 +191,9 @@
    &quot;BatchSizeForCheckpoint&quot; : 50,
    &quot;CheckpointTimeoutSeconds&quot; : 60,
    &quot;EventHubTransportType&quot; : &quot;AmqpTcp&quot;,
-   &quot;DeviceIdSystemPropertyName&quot; : &quot;iothub-connection-device-id&quot;
+   &quot;DeviceIdSystemPropertyName&quot; : &quot;iothub-connection-device-id&quot;,
+   &quot;EventProcessorClientMaximumRetries&quot; : 5,
+   &quot;EventProcessorClientMaximumDelayInMin&quot; : 5 
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

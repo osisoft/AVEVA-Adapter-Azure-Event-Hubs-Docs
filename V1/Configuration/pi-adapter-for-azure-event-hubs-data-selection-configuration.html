@@ -155,19 +155,19 @@
 <td><strong>ValueField</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The JsonPath expression to take value from a property.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The JsonPath expression<sup>1</sup>  to take value from a property.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>TimeField</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The JsonPath expression to take value to use as a timestamp from a property. <br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The JsonPath expression<sup>1</sup>  to take value to use as a timestamp from a property. <br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>DeviceId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The device Id associated with a stream, for example the Azure IoT Hub Device Id.</td>
+<td>The device Id associated with the IoT Hub.</td>
 </tr>
 <tr>
 <td><strong>DataType</strong></td>
@@ -175,8 +175,15 @@
 <td><code>string</code></td>
 <td>The expected data type of the values for the specified field. <br><br>Allowed value: OMF supported data types</td>
 </tr>
+<tr>
+<td><strong>TimeFormat</strong></td>
+<td>optional</td>
+<td><code>string</code></td>
+<td>The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> Specify <code>Adapter</code> to have the adapter supply the timestamp and ignore the TimeField. If you specify <code>null</code>, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats.</td>
+</tr>
 </tbody>
 </table>
+<p><sup>1</sup> <strong>Note:</strong> JsonPath expressions can be expensive to evaluate. For best performance, avoid complicated expressions in favor of direct references to data.</p>
 <h2 id="azure-event-hubs-data-selection-examples">Azure Event Hubs data selection examples</h2>
 <p>The following are examples of valid Azure Event Hubs data selection configurations:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
@@ -184,7 +191,7 @@
   {
     &quot;EventHubName&quot; : &quot;RandomEventHubName&quot;,
     &quot;ValueField&quot; : &quot;RandomValueField&quot;,
-    &quot;DataType&quot; : &quot;uint64&quot;,
+    &quot;DataType&quot; : &quot;uint64&quot;
   }
 ]
 </code></pre><h3 id="complete-data-selection-configuration">Complete data selection configuration</h3>
@@ -199,9 +206,8 @@
     &quot;ValueField&quot; : &quot;RandomValueField&quot;,
     &quot;TimeField&quot; : &quot;RandomTimeField&quot;,
     &quot;DeviceId&quot; : 7,
-    &quot;DataType&quot; : &quot;uint64&quot;
-
-
+    &quot;DataType&quot; : &quot;uint64&quot;,
+    &quot;TimeFormat&quot; : null    
   }
 ]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
