@@ -36,11 +36,11 @@ Complete the following steps to configure an Azure Event Hubs data source:
 
 ## Azure Event Hubs data source schema
 
-The full schema definition for the Azure Event Hubs data source configuration is in the `AzureEventHubs_DataSource_schema.json` file located in one of the following folders:
+The full schema definition for the Azure Event Hubs data source configuration is in the `EventHubs_DataSource_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AzureEventHubs\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AzureEventHubs/Schemas`
+Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
 ## Azure Event Hubs data source parameters
 
@@ -54,7 +54,7 @@ The following parameters are available for configuring an Azure Event Hubs data 
 | **ConsumerGroupName** | Required | `string` | The name of the consumer group as defined in the Azure Portal for event hub<br><br>Allowed value: Maximum of 256 characters per Azure limits.<br>Default value: `"$Default"` |
 | **BlobStorageConnectionString** | Required | `string` | The connection string for the Azure Blob Storage account which is used to store event hub checkpoints <br><br>Allowed value: The primary or secondary connection string as copied from the Azure portal.<br>Default value: `null`|
 | **CheckpointBlobContainerName** | Required | `string` | The name of the container in the Blob Storage account used to store event hub checkpoints. <br><br>Allowed value:  3-63 characters long; contains only letters, numbers, and dash characters per Azure restrictions.|
-| **TimeZone** | Optional | `` | The time zone associated with the Event Hub namespace.<br><br>Allowed value: IANA format, for example "America/Los_Angeles". For the complete list, see [iana Time Zone Database](https://www.iana.org/time-zones).
+| **TimeZone** | Optional | `string` | The time zone associated with the Event Hub namespace.<br><br>Allowed value: IANA format, for example "America/Los_Angeles". For the complete list, see [iana Time Zone Database](https://www.iana.org/time-zones).
 
 ## Azure Event Hubs data source examples
 
@@ -64,10 +64,10 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 ```json
 {
-    "EventHubNamespaceConnectionString" : " ",
-    "ConsumerGroupName" : " ",
-    "BlobStorageConnectionString" : " ",
-    "CheckpointBlobContainerName" : " "
+  "ConsumerGroupName": "$Default",
+  "CheckpointBlobContainerName": "<checkpoint container>",
+  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
+  "BlobStorageConnectionString": "<Azure Storage Account connection string>"
 }
 ```
 
@@ -75,12 +75,13 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 ```json
 {
-    "StreamIdPrefix" : null,
-    "DefaultStreamIdPattern" : "{Topic}.{ValueField}",
-    "EventHubNamespaceConnectionString" : " ",
-    "ConsumerGroupName" : " ",
-    "BlobStorageConnectionString" : " ",
-    "CheckpointBlobContainerName" : " "
+  "StreamIdPrefix": "EventHubs1.",
+  "DefaultStreamIdPattern": "{EventHubName}.{ValueField}",
+  "ConsumerGroupName": "$Default",
+  "CheckpointBlobContainerName": "<checkpoint container>",
+  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
+  "BlobStorageConnectionString": "<Azure Storage Account connection string>",
+  "TimeZone": "America/Los_Angeles"
 }
 ```
 
@@ -94,5 +95,3 @@ The following are examples of valid Azure Event Hubs data source configurations:
 | api/v1/configuration/_ComponentId_/DataSource | DELETE | Deletes the Azure Event Hubs data source configuration |
 
 **Note:** Replace _ComponentId_ with the Id of your Azure Event Hubs component, for example AzureEventHubs1.
-
-

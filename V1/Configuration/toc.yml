@@ -5,8 +5,6 @@
   topicHref: ../main/V1.3/Configuration/system-components-configuration.md
 - name: PI Adapter for Azure Event Hubs data source configuration 
   href: pi-adapter-for-azure-event-hubs-data-source-configuration.md
-- name: Discovery configuration
-  href: ../main/V1.3/Configuration/discovery-configuration.md
 - name: PI Adapter for Azure Event Hubs client settings configuration
   href: pi-adapter-for-azure-event-hubs-client-settings-configuration.md
 - name: PI Adapter for Azure Event Hubs data selection configuration
