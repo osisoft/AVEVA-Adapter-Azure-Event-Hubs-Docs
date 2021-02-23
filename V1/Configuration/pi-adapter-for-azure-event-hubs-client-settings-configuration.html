@@ -98,9 +98,9 @@
 </li>
 </ol>
 <h2 id="azure-event-hubs-client-settings-schema">Azure Event Hubs client settings schema</h2>
-<p>The full schema definition for the Azure Event Hubs client settings configuration is in the <code>AzureEventHubs_ClientSettings_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AzureEventHubs\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/AzureEventHubs/Schemas</code></p>
+<p>The full schema definition for the Azure Event Hubs client settings configuration is in the <code>EventHubs_ClientSettings_schema.json</code> file located in one of the following folders:</p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/EventHubs/Schemas</code></p>
 <h2 id="azure-event-hubs-client-settings-parameters">Azure Event Hubs client settings parameters</h2>
 <p>The following parameters are available for configuring Azure Event Hubs client settings:</p>
 <table>
@@ -127,37 +127,37 @@
 </tr>
 <tr>
 <td><strong>TrackLastEnqueuedEventProperties</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>boolean</code></td>
 <td>Indicates if the user should request information on the last enqueued event on the partition associated with a given event, and track that  information as events are received. <br><br>Allowed value: <code>true</code> or <code>false</code> <br>Default value: <code>false</code></td>
 </tr>
 <tr>
 <td><strong>CacheEventCount</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>integer</code></td>
 <td>The maximum amount of events read from the Event Hubs service and held in a local memory cache when reading is active and events are emitted to an enumerator for processing.<br><br>Default value: <code>100</code></td>
 </tr>
 <tr>
 <td><strong>PrefetchCount</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>integer</code></td>
 <td>The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. <strong>PrefetchCount</strong> is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than <code>2</code> times the <strong>CacheEventCount</strong>.</td>
 </tr>
 <tr>
 <td><strong>BatchSizeForCheckpoint</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>integer</code></td>
 <td>The number of events processed to trigger a checkpoint operation.<br><br>Default value: <code>50</code></td>
 </tr>
 <tr>
 <td><strong>CheckpointTimeoutSeconds</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>integer</code></td>
 <td>The timeout in seconds for the checkpoint operation.<br><br>Default value: <code>60</code></td>
 </tr>
 <tr>
 <td><strong>EventHubTransportType</strong></td>
-<td></td>
+<td>Optional</td>
 <td><code>enum</code></td>
 <td>Identifies the protocol used internally by the client.<br><br>Allowed values: <code>AmqpTcp</code> and <code>AmqpWebSockets</code><br>Default value: <code>AmqpTcp</code></td>
 </tr>
