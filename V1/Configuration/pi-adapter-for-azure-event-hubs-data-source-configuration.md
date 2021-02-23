@@ -64,10 +64,10 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 ```json
 {
-    "EventHubConnectionString" : " ",
-    "ConsumerGroupName" : " ",
-    "BlobStorageConnectionString" : " ",
-    "BlobContainerName" : " "
+  "ConsumerGroupName": "$Default",
+  "CheckpointBlobContainerName": "<checkpoint container>",
+  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
+  "BlobStorageConnectionString": "<Azure Storage Account connection string>"
 }
 ```
 
@@ -75,12 +75,12 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 ```json
 {
-    "StreamIdPrefix" : null,
-    "DefaultStreamIdPattern" : "{Topic}.{ValueField}",
-    "EventHubConnectionString" : " ",
-    "ConsumerGroupName" : " ",
-    "BlobStorageConnectionString" : " ",
-    "BlobContainerName" : " "
+  "StreamIdPrefix": "EventHubs1.",
+  "DefaultStreamIdPattern": "{EventHubName}.{ValueField}",
+  "ConsumerGroupName": "$Default",
+  "CheckpointBlobContainerName": "<checkpoint container>",
+  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
+  "BlobStorageConnectionString": "<Azure Storage Account connection string>"
 }
 ```
 
