@@ -155,7 +155,7 @@
 <tr>
 <td><strong>TimeZone</strong></td>
 <td>Optional</td>
-<td>``</td>
+<td><code>string</code></td>
 <td>The time zone associated with the Event Hub namespace.<br><br>Allowed value: IANA format, for example &quot;America/Los_Angeles&quot;. For the complete list, see <a href="https://www.iana.org/time-zones">iana Time Zone Database</a>.</td>
 </tr>
 </tbody>
@@ -176,7 +176,8 @@
   &quot;ConsumerGroupName&quot;: &quot;$Default&quot;,
   &quot;CheckpointBlobContainerName&quot;: &quot;&lt;checkpoint container&gt;&quot;,
   &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;Azure Event Hub Namespace connection string&gt;&quot;,
-  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;
+  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;,
+  &quot;TimeZone&quot;: &quot;America/Los_Angeles&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
