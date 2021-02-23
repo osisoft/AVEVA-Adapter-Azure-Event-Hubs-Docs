@@ -32,11 +32,11 @@ Complete the following steps to configure the Azure Event Hubs client settings:
 
 ## Azure Event Hubs client settings schema
 
-The full schema definition for the Azure Event Hubs client settings configuration is in the `AzureEventHubs_ClientSettings_schema.json` file located in one of the following folders:
+The full schema definition for the Azure Event Hubs client settings configuration is in the `EventHubs_ClientSettings_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AzureEventHubs\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AzureEventHubs/Schemas`
+Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
 ## Azure Event Hubs client settings parameters
 
@@ -46,12 +46,12 @@ The following parameters are available for configuring Azure Event Hubs client s
 |--------------------------|----------|------------|-------------|
 | **MaxInternalQueueSize** | Optional | `integer`  |  Specifies maximum number of value updates that can be held by the adapter in memory.<br><br>Allowed value: > `1000`<br>Default value: `500000`           |
 | **InternalQueuePollingIntervalInMs** | Optional | `integer` | Specified interval at which data is removed from internal queue. <br><br>Allowed value: Between `1` and `60000` milliseconds<br>Default value: `100` |
-| **TrackLastEnqueuedEventProperties** | | `boolean` | Indicates if the user should request information on the last enqueued event on the partition associated with a given event, and track that  information as events are received. <br><br>Allowed value: `true` or `false` <br>Default value: `false`|
-| **CacheEventCount** | | `integer` | The maximum amount of events read from the Event Hubs service and held in a local memory cache when reading is active and events are emitted to an enumerator for processing.<br><br>Default value: `100` |
-|**PrefetchCount** | | `integer` | The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. **PrefetchCount** is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than `2` times the **CacheEventCount**.|
-| **BatchSizeForCheckpoint** | | `integer`| The number of events processed to trigger a checkpoint operation.<br><br>Default value: `50` |
-| **CheckpointTimeoutSeconds** | | `integer`| The timeout in seconds for the checkpoint operation.<br><br>Default value: `60` |
-| **EventHubTransportType** | | `enum` | Identifies the protocol used internally by the client.<br><br>Allowed values: `AmqpTcp` and `AmqpWebSockets`<br>Default value: `AmqpTcp`|
+| **TrackLastEnqueuedEventProperties** | Optional | `boolean` | Indicates if the user should request information on the last enqueued event on the partition associated with a given event, and track that  information as events are received. <br><br>Allowed value: `true` or `false` <br>Default value: `false`|
+| **CacheEventCount** | Optional | `integer` | The maximum amount of events read from the Event Hubs service and held in a local memory cache when reading is active and events are emitted to an enumerator for processing.<br><br>Default value: `100` |
+|**PrefetchCount** | Optional | `integer` | The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. **PrefetchCount** is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than `2` times the **CacheEventCount**.|
+| **BatchSizeForCheckpoint** | Optional | `integer`| The number of events processed to trigger a checkpoint operation.<br><br>Default value: `50` |
+| **CheckpointTimeoutSeconds** | Optional | `integer`| The timeout in seconds for the checkpoint operation.<br><br>Default value: `60` |
+| **EventHubTransportType** | Optional | `enum` | Identifies the protocol used internally by the client.<br><br>Allowed values: `AmqpTcp` and `AmqpWebSockets`<br>Default value: `AmqpTcp`|
 | **DeviceIdSystemPropertyName** | Optional | `string` | The name of the system property for the device id.<br><br>Default value: `iothub-connection-device-id` |
 | **EventProcessorClientMaximumRetries** | Optional | `integer` | The maximum amount of retries that the EventProcessorClient makes in case of client failures. <br><br>Default value: `5` |
 | **EventProcessorClientMaximumDelayInMin** | Optional |`integer` | The maximum delay for the timeout operation in minutes.<br><br>Default value: `5`|

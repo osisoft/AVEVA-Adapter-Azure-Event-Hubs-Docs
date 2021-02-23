@@ -36,11 +36,11 @@ Complete the following steps to configure an Azure Event Hubs data source:
 
 ## Azure Event Hubs data source schema
 
-The full schema definition for the Azure Event Hubs data source configuration is in the `AzureEventHubs_DataSource_schema.json` file located in one of the following folders:
+The full schema definition for the Azure Event Hubs data source configuration is in the `EventHubs_DataSource_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AzureEventHubs\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AzureEventHubs/Schemas`
+Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
 ## Azure Event Hubs data source parameters
 

@@ -44,11 +44,11 @@ Complete the following steps to configure the Azure Event Hubs data selection:
 
 ## Azure Event Hubs data selection schema
 
-The full schema definition for the Azure Event Hubs data selection configuration is in the `AzureEventHubs_DataSelection_schema.json` file located in one of the following folders:
+The full schema definition for the Azure Event Hubs data selection configuration is in the `EventHubs_DataSelection_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AzureEventHubs\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AzureEventHubs/Schemas`
+Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
 ## Azure Event Hubs data selection parameters
 
