@@ -164,19 +164,19 @@
 <p>The following are examples of valid Azure Event Hubs data source configurations:</p>
 <h3 id="minimal-data-source-configuration">Minimal data source configuration</h3>
 <pre><code class="lang-json">{
-    &quot;EventHubConnectionString&quot; : &quot; &quot;,
-    &quot;ConsumerGroupName&quot; : &quot; &quot;,
-    &quot;BlobStorageConnectionString&quot; : &quot; &quot;,
-    &quot;BlobContainerName&quot; : &quot; &quot;
+  &quot;ConsumerGroupName&quot;: &quot;$Default&quot;,
+  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;checkpoint container&gt;&quot;,
+  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;Azure Event Hub Namespace connection string&gt;&quot;,
+  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;
 }
 </code></pre><h3 id="complete-data-source-configuration">Complete data source configuration</h3>
 <pre><code class="lang-json">{
-    &quot;StreamIdPrefix&quot; : null,
-    &quot;DefaultStreamIdPattern&quot; : &quot;{Topic}.{ValueField}&quot;,
-    &quot;EventHubConnectionString&quot; : &quot; &quot;,
-    &quot;ConsumerGroupName&quot; : &quot; &quot;,
-    &quot;BlobStorageConnectionString&quot; : &quot; &quot;,
-    &quot;BlobContainerName&quot; : &quot; &quot;
+  &quot;StreamIdPrefix&quot;: &quot;EventHubs1.&quot;,
+  &quot;DefaultStreamIdPattern&quot;: &quot;{EventHubName}.{ValueField}&quot;,
+  &quot;ConsumerGroupName&quot;: &quot;$Default&quot;,
+  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;checkpoint container&gt;&quot;,
+  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;Azure Event Hub Namespace connection string&gt;&quot;,
+  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
