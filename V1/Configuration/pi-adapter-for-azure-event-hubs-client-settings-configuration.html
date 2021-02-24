@@ -122,8 +122,8 @@
 <tr>
 <td><strong>InternalQueuePollingIntervalInMs</strong></td>
 <td>Optional</td>
-<td><code>integer</code></td>
-<td>Specified interval at which data is removed from internal queue. <br><br>Allowed value: Between <code>1</code> and <code>60000</code> milliseconds<br>Default value: <code>100</code></td>
+<td><code>string</code><br>(time-span)</td>
+<td>Specified interval at which data is removed from internal queue. <br><br>Allowed value: Between <code>1</code> and <code>60000</code> milliseconds<br>Default value: <code>0:00:00.05</code></td>
 </tr>
 <tr>
 <td><strong>TrackLastEnqueuedEventProperties</strong></td>
@@ -141,19 +141,25 @@
 <td><strong>PrefetchCount</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. <strong>PrefetchCount</strong> is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than <code>2</code> times the <strong>CacheEventCount</strong>.</td>
+<td>The number of events requested from the Event Hubs service and staged locally regardless of whether a reader is active. <strong>PrefetchCount</strong> is intended to maximize throughput by buffering service operations. <br><br>Allowed value: Must be greater than <code>2</code> times the <strong>CacheEventCount</strong>.<br>Default value: <code>300</code></td>
 </tr>
 <tr>
 <td><strong>BatchSizeForCheckpoint</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>The number of events processed to trigger a checkpoint operation.<br><br>Default value: <code>50</code></td>
+<td>The number of events processed to trigger a checkpoint operation.<br><br>Default value: <code>500</code></td>
 </tr>
 <tr>
-<td><strong>CheckpointTimeoutSeconds</strong></td>
+<td><strong>CheckpointingTimeoutSeconds</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
 <td>The timeout in seconds for the checkpoint operation.<br><br>Default value: <code>60</code></td>
+</tr>
+<tr>
+<td><strong>DeviceIdSystemPropertyName</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>The name of the system property for the device id.<br><br>Default value: <code>iothub-connection-device-id</code></td>
 </tr>
 <tr>
 <td><strong>EventHubTransportType</strong></td>
@@ -162,10 +168,10 @@
 <td>Identifies the protocol used internally by the client.<br><br>Allowed values: <code>AmqpTcp</code> and <code>AmqpWebSockets</code><br>Default value: <code>AmqpTcp</code></td>
 </tr>
 <tr>
-<td><strong>DeviceIdSystemPropertyName</strong></td>
+<td><strong>EventHubLoadBalancingStrategy</strong></td>
 <td>Optional</td>
-<td><code>string</code></td>
-<td>The name of the system property for the device id.<br><br>Default value: <code>iothub-connection-device-id</code></td>
+<td><code>enum</code></td>
+<td>Specifies partition ownership when performing load balancing. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.eventhubs.processor.loadbalancingstrategy?view=azure-dotnet">LoadBalancingStrategy Enum</a><br><br>Allowed values: <code>Balanced</code> or <code>Greedy</code><br>Default value: <code>Greedy</code></td>
 </tr>
 <tr>
 <td><strong>EventProcessorClientMaximumRetries</strong></td>
@@ -184,14 +190,15 @@
 <h2 id="azure-event-hubs-client-settings-example">Azure Event Hubs client settings example</h2>
 <pre><code class="lang-json">{
    &quot;MaxInternalQueueSize&quot; : 500000,
-   &quot;InternalQueuePollingIntervalInMs&quot; : 100,
+   &quot;InternalQueuePollingIntervalInMs&quot; : &quot;0:00:00.05&quot;,
    &quot;TrackLastEnqueuedEventProperties&quot; : false,
    &quot;CacheEventCount&quot; : 100,
    &quot;PrefetchCount&quot; : 300,
-   &quot;BatchSizeForCheckpoint&quot; : 50,
-   &quot;CheckpointTimeoutSeconds&quot; : 60,
-   &quot;EventHubTransportType&quot; : &quot;AmqpTcp&quot;,
+   &quot;BatchSizeForCheckpoint&quot; : 500,
+   &quot;CheckpointingTimeoutSeconds&quot; : 60,
    &quot;DeviceIdSystemPropertyName&quot; : &quot;iothub-connection-device-id&quot;,
+   &quot;EventHubTransportType&quot; : &quot;AmqpTcp&quot;,
+   &quot;EventHubLoadBalancingStrategy&quot;: &quot;Greedy&quot;,
    &quot;EventProcessorClientMaximumRetries&quot; : 5,
    &quot;EventProcessorClientMaximumDelayInMin&quot; : 5 
 }
