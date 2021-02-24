@@ -76,8 +76,8 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 ```json
 [
   {
-    "EventHubName" : "RandomEventHubName",
-    "ValueField" : "RandomValueField",
+    "EventHubName" : "SampleEventHubName",
+    "ValueField" : "SampleValueField",
     "DataType" : "uint64"
   }
 ]
@@ -90,13 +90,12 @@ The following are examples of valid Azure Event Hubs data selection configuratio
   {
     "Selected" : true,
     "Name" : null,
-    "StreamId" : "RandomStreamId",
+    "StreamId" : "SampleStreamId",
     "DataFilterId" : null,
-    "DataFilterCache": ,
-    "EventHubName" : "RandomEventHubName",
-    "ValueField" : "RandomValueField",
-    "TimeField" : "RandomTimeField",
-    "DeviceId" : 7,
+    "EventHubName" : "SampleEventHubName",
+    "ValueField" : "SampleValueField",
+    "TimeField" : "SampleTimeField",
+    "DeviceId" : "EventHub7",
     "DataType" : "uint64",
     "TimeFormat" : null    
   }
