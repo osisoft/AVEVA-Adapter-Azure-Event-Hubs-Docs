@@ -59,8 +59,8 @@ Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 | **StreamId**     | Optional | `string`  | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Id>.<ValueField>` |
 | **DataFilterId** | Optional | `string`  | The ID of the data filter. <br><br>Allowed value: any string <br>Default value: `null`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | **DataFilterCache** | Optional | `` | The cache to support data filtering. The cache stores previous and last value. |  |
 | **EventHubName** | Required | `string`  | The name of the event hub to collect data from. <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: `{EventHubName}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **ValueField**   | Required | `string`  | The JsonPath expression<sup>1</sup>  to take value from a property.<br><br>Allowed value: cannot be `null`, empty, or whitespace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **TimeField**    | Optional | `string`  | The JsonPath expression<sup>1</sup>  to take value to use as a timestamp from a property. <br>**Note:** The adapter generates a timestamp when `null` is specified.<br><br>Allowed value: cannot be `null`, empty, or whitespace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **ValueField**   | Required | `string`  | The JsonPath expression<sup>1</sup>  to take value from a property. A valid JsonPath expression starts with `$`.<br><br>Allowed value: cannot be `null`, empty, or whitespace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **TimeField**    | Optional | `string`  | The JsonPath expression<sup>1</sup> to take value to use as a timestamp from a property. A valid JsonPath expression starts with `$`.<br>**Note:** The adapter generates a timestamp when `null` is specified.<br><br>Allowed value: cannot be `null`, empty, or whitespace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **DeviceId**     | Optional | `string`  | The device Id associated with the IoT Hub.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | <br>If specified, the event is sent only if it originated from the specified device. If omitted, the event is sent to all streams  that match the selection. |
 | **DataType**     | Required | `string`  | The expected data type of the values for the specified field. <br><br>Allowed value: OMF supported data types                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **TimeFormat** | optional | `string` | The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>1</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the TimeField. If you specify `null`, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats.
@@ -69,7 +69,7 @@ Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
 ## Azure Event Hubs data selection examples
 
-The following are examples of valid Azure Event Hubs data selection configurations:
+The following are examples of valid Azure Event Hubs data selection configurations<sup>1</sup>:
 
 ### Minimal data selection configuration
 
@@ -77,7 +77,7 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 [
   {
     "EventHubName" : "SampleEventHubName",
-    "ValueField" : "SampleValueField",
+    "ValueField" : "$.TestNode[:1].Value",
     "DataType" : "uint64"
   }
 ]
@@ -93,13 +93,26 @@ The following are examples of valid Azure Event Hubs data selection configuratio
     "StreamId" : "SampleStreamId",
     "DataFilterId" : null,
     "EventHubName" : "SampleEventHubName",
-    "ValueField" : "SampleValueField",
-    "TimeField" : "SampleTimeField",
+    "ValueField" : "$.TestNode[:1].Value",
+    "TimeField" : "$.TestNode[:1].Time",
     "DeviceId" : "EventHub7",
     "DataType" : "uint64",
     "TimeFormat" : null    
   }
 ]
+```
+
+<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following Json payload structure:
+
+```json
+{
+"TestNode": [
+{
+"Time" : "02/17/2021 12:01:36 AM PST",
+"Value": "4578"
+}
+]
+}
 ```
 
 ## REST URLs
