@@ -95,5 +95,3 @@ The following are examples of valid Azure Event Hubs data source configurations:
 | api/v1/configuration/_ComponentId_/DataSource | DELETE | Deletes the Azure Event Hubs data source configuration |
 
 **Note:** Replace _ComponentId_ with the Id of your Azure Event Hubs component, for example AzureEventHubs1.
-
-
