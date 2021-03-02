@@ -108,11 +108,11 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 {
 "TimeStamp": "02/17/2021 12:01:36 AM PST",
 "Events": [
-{
+    {
 "Value": "4578",
 "DataType": "int"
-}
-]
+    }
+  ]
 }
 ```
 
