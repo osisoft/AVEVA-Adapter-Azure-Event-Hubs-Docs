@@ -18,7 +18,7 @@ PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. Wh
 
 OSIsoft recommends to use larger messages rather than smaller messages for the same amount of data to achieve optimal performance.<br>**Example:** 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.
 
-OSIsoft further recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JsonPath expressions to identify values and timestamps, resulting in lower performance.
+OSIsoft further recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, resulting in lower performance.
 
 ### Flat data
 
@@ -66,7 +66,7 @@ An Event Hub namespace in the same geographic region as the adapter ensures mini
 
 #### Partitions
 
-The OCS SDS service and PI Data Archive can both store sequential data. Out of order data is accepted, however, OSIsoft recommends to order data for optimal performance.
+The OCS SDS service and PI Data Archive can both store sequential data. Out of order data is accepted. However, OSIsoft recommends to order data for optimal performance.
 
 OSIsoft further recommends to use a single partition to preserve messages order even though Azure Event Hubs support multiple partitions for a single Event Hub for parallelism downstream.
 
