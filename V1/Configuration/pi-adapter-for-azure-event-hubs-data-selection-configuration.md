@@ -93,8 +93,8 @@ The following are examples of valid Azure Event Hubs data selection configuratio
     "StreamId" : "SampleStreamId",
     "DataFilterId" : null,
     "EventHubName" : "SampleEventHubName",
-    "ValueField" : "$.TestNode[:1].Value",
-    "TimeField" : "$.TestNode[:1].Time",
+    "ValueField": "$.Events[0].Value",
+    "TimeField": "$.TimeStamp",
     "DeviceId" : "EventHub7",
     "DataType" : "uint64",
     "TimeFormat" : null    
@@ -106,10 +106,11 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 
 ```json
 {
-"TestNode": [
+"TimeStamp": "02/17/2021 12:01:36 AM PST",
+"Events": [
 {
-"Time" : "02/17/2021 12:01:36 AM PST",
-"Value": "4578"
+"Value": "4578",
+"DataType": "int"
 }
 ]
 }
