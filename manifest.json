@@ -76,9 +76,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/adapter-health.md",
       "output": {
@@ -91,9 +88,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Health-and-diagnostics/Health/next-health-message-expected.md",
       "output": {
@@ -147,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-performance-best-practices.html",
-          "hash": "dC83GK/mX4/lfu9qfnRyQQ=="
+          "hash": "epkFGyqZjZg52FjKhNNHCw=="
         }
       },
       "is_incremental": false,
@@ -171,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release-notes/release-notes.html",
-          "hash": "lrGtzTbzUIRwqdj3wmgvjQ=="
+          "hash": "oF/S3ZUBQOI94e1LP/LXpA=="
         }
       },
       "is_incremental": false,
@@ -576,6 +570,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/adapter-health.md",
       "output": {
@@ -612,6 +609,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Health/next-health-message-expected.md",
       "output": {
@@ -948,9 +948,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -987,6 +984,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
