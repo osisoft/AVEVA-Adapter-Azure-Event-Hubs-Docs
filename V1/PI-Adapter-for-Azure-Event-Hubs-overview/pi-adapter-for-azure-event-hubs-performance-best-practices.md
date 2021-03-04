@@ -46,8 +46,16 @@ OSIsoft further recommends to use flat data rather than deeply nested data, as t
     "L1": {
         "L2": {
             "L3": {
-                "L4": {
-                }
+                "L4": [
+                  {
+                    "Id": "1",
+                    "Value": 0
+                  },
+                  {
+                    "Id": "2",
+                    "Value": 0
+                  }
+                ]
             }
         }
     }
@@ -137,3 +145,7 @@ This example uses a direct reference `$.Events[1].Value` to the index.
     "DataType": "string"
 }
 ```
+
+### Limitations
+
+As documented in the Known Issues section of the [Release Notes](xref:ReleaseNotes), attempting to configure 10,000 or more streams can result in a timeout.
