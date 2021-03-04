@@ -74,6 +74,10 @@ _No security-related information is applicable to this release_
 
 <!--*When vulnerabilities exist, product teams should decide which format works best specific to the release and/or is applicable.  Two different samples are provided below.*-->
 
+## Documentation overview
+
+**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments.
+
 ## Technical support and resources
 
 <!--*Provide a cross-reference to the Technical Support and feedback section. For example,*-->
