@@ -5,7 +5,7 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 0.1.0.362  
+PI Adapter for Azure Event Hubs 0.1  
 
 ## Overview
 
@@ -20,7 +20,7 @@ The following problems and enhancements have been deferred until a future releas
 <!--*Use bullets and tables as necessary (table format below).* -->
 Item | Description
 ---- | -----------
-*{ item # }* | *{ problem/enhancement description }*
+197937 | Timeout may occur when submitting a POST for data selection configurations to the adapter that contain more than 10,000 streams.
 
 ## Setup
 
