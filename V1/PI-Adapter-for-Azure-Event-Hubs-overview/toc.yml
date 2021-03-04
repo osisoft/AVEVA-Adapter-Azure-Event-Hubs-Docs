@@ -1,2 +1,4 @@
 - name: PI Adapter for Azure Event Hubs principles of operation
   href: pi-adapter-for-azure-event-hubs-principles-of-operation.md
+- name: PI Adapter for Azure Event Hubs performance best practices
+  href: pi-adapter-for-azure-event-hubs-performance-best-practices.md
