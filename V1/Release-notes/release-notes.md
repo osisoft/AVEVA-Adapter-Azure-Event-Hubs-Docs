@@ -11,7 +11,6 @@ PI Adapter for Azure Event Hubs 0.1
 
 PI Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from Event Hubs to OMF endpoints in OSIsoft Cloud Services or PI Servers.  For more information, refer to [PI Adapter for Azure Event Hubs overview](xref:index). 
 
-<!--Insert a brief description of your product here and a cross-reference for more information.  If these release notes cover service packs or patches in addition to the major release numbers, briefly identify each version covered.-->
 
 ## Known issues
 
