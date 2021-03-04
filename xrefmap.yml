@@ -196,6 +196,9 @@ references:
 - uid: IORate1-4
   name: IO rate
   href: V1/main/V1.4/Diagnostics/io-rate.html
+- uid: JSONPathSyntaxForValueRetrieval
+  name: JSONPath syntax for value retrieval
+  href: V1/main/V1.3/Configuration/Text-parser/jsonpath-syntax-for-value-retrieval.html
 - uid: LoggingConfiguration
   name: Logging configuration
   href: V1/main/V1/Configuration/logging-configuration.html
@@ -229,6 +232,9 @@ references:
 - uid: PIAdapterForAzureEventHubsOverview
   name: PI Adapter for Azure Event Hubs overview
   href: pi-adapter-for-azure-event-hubs-overview.html
+- uid: PIAdapterForAzureEventHubsPerformanceBestPractices
+  name: PI Adapter for Azure Event Hubs performance best practices
+  href: V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-performance-best-practices.html
 - uid: PIAdapterForAzureEventHubsPrinciplesOfOperation
   name: PI Adapter for Azure Event Hubs principles of operation
   href: V1/PI-Adapter-for-Azure-Event-Hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html
@@ -334,6 +340,9 @@ references:
 - uid: TechnicalSupportAndFeedback1-4
   name: Technical support and feedback
   href: V1/main/V1.4/technical-support-and-feedback.html
+- uid: TextParser
+  name: Text parser
+  href: V1/main/V1.3/Configuration/Text-parser/text-parser.html
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
@@ -352,3 +361,6 @@ references:
 - uid: UninstallTheAdapter1-4
   name: Uninstall the adapter
   href: V1/main/V1.4/Installation/uninstall-the-adapter.html
+- uid: XPathAndCSVSyntaxForValueRetrieval
+  name: XPath and CSV syntax for value retrieval
+  href: V1/main/V1.3/Configuration/Text-parser/xpath-and-csv-syntax-for-value-retrieval.html

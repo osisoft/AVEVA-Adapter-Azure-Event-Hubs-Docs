@@ -161,7 +161,7 @@
 <td><strong>TimeField</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The JsonPath expression<sup>1</sup>  to take value to use as a timestamp from a property. <br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
+<td>The JsonPath expression<sup>1</sup> to take value to use as a timestamp from a property.<br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace.</td>
 </tr>
 <tr>
 <td><strong>DeviceId</strong></td>
@@ -177,7 +177,7 @@
 </tr>
 <tr>
 <td><strong>TimeFormat</strong></td>
-<td>optional</td>
+<td>Optional</td>
 <td><code>string</code></td>
 <td>The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> Specify <code>Adapter</code> to have the adapter supply the timestamp and ignore the TimeField. If you specify <code>null</code>, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats.</td>
 </tr>
@@ -185,12 +185,12 @@
 </table>
 <p><sup>1</sup> <strong>Note:</strong> JsonPath expressions can be expensive to evaluate. For best performance, avoid complicated expressions in favor of direct references to data.</p>
 <h2 id="azure-event-hubs-data-selection-examples">Azure Event Hubs data selection examples</h2>
-<p>The following are examples of valid Azure Event Hubs data selection configurations:</p>
+<p>The following are examples of valid Azure Event Hubs data selection configurations<sup>1</sup>:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
 <pre><code class="lang-json">[
   {
     &quot;EventHubName&quot; : &quot;SampleEventHubName&quot;,
-    &quot;ValueField&quot; : &quot;SampleValueField&quot;,
+    &quot;ValueField&quot; : &quot;$.TestNode[:1].Value&quot;,
     &quot;DataType&quot; : &quot;uint64&quot;
   }
 ]
@@ -202,13 +202,23 @@
     &quot;StreamId&quot; : &quot;SampleStreamId&quot;,
     &quot;DataFilterId&quot; : null,
     &quot;EventHubName&quot; : &quot;SampleEventHubName&quot;,
-    &quot;ValueField&quot; : &quot;SampleValueField&quot;,
-    &quot;TimeField&quot; : &quot;SampleTimeField&quot;,
+    &quot;ValueField&quot;: &quot;$.Events[0].Value&quot;,
+    &quot;TimeField&quot;: &quot;$.TimeStamp&quot;,
     &quot;DeviceId&quot; : &quot;EventHub7&quot;,
     &quot;DataType&quot; : &quot;uint64&quot;,
     &quot;TimeFormat&quot; : null    
   }
 ]
+</code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following JSON payload structure:</p>
+<pre><code class="lang-json">{
+&quot;TimeStamp&quot;: &quot;02/17/2021 12:01:36 AM PST&quot;,
+&quot;Events&quot;: [
+    {
+&quot;Value&quot;: &quot;4578&quot;,
+&quot;DataType&quot;: &quot;int&quot;
+    }
+  ]
+}
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>

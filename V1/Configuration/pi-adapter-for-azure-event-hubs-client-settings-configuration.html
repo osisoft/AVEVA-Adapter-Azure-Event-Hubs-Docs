@@ -171,7 +171,7 @@
 <td><strong>EventHubLoadBalancingStrategy</strong></td>
 <td>Optional</td>
 <td><code>enum</code></td>
-<td>Specifies partition ownership when performing load balancing. For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.eventhubs.processor.loadbalancingstrategy?view=azure-dotnet">LoadBalancingStrategy Enum</a><br><br>Allowed values: <code>Balanced</code> or <code>Greedy</code><br>Default value: <code>Greedy</code></td>
+<td>The load balancing strategy used by the internal Event Hub client used by the adapter. For more information, see Microsoft&#39;s <a href="https://docs.microsoft.com/en-us/dotnet/api/azure.messaging.eventhubs.processor.loadbalancingstrategy?view=azure-dotnet">LoadBalancingStrategy Enum</a>.<br><br><strong>Note:</strong> This setting is irrelevant when you use the recommended Event Hub configuration (single partition).<br><br>Allowed values: <code>Balanced</code> or <code>Greedy</code><br>Default value: <code>Greedy</code></td>
 </tr>
 <tr>
 <td><strong>EventProcessorClientMaximumRetries</strong></td>
