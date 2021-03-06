@@ -30,7 +30,7 @@ Complete the following steps to configure an Azure Event Hubs data source:
 
     **Note:** Run this command from the same directory where the file is located.
 
-4. Configure data selection. For more information, see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration1-2).
+4. Configure data selection. For more information, see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
 
     **Note:** You can decide to have a default data selection file generated automatically or you can create the data selection file yourself.
 
