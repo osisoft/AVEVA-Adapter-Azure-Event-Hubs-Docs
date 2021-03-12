@@ -38,8 +38,6 @@ Complete the following steps to configure an Azure Event Hubs data selection. Us
     <br/>
     <br/>
 
-7. Configure data selection.
-
 ## Azure Event Hubs data selection schema
 
 The full schema definition for the Azure Event Hubs data selection configuration is in the `EventHubs_DataSelection_schema.json` file located in one of the following folders:

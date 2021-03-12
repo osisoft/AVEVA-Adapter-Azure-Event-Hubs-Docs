@@ -38,7 +38,7 @@ Complete the following steps to configure an Azure Event Hubs data source. Use t
     <br/>
     <br/>
 
-7. Configure data source.
+7. Configure data selection.
 
 ## Azure Event Hubs data source schema
 
