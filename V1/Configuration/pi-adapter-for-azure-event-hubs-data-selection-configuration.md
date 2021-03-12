@@ -20,21 +20,21 @@ Complete the following steps to configure an Azure Event Hubs data selection. Us
 
     For a table of all available parameters, see [Azure Event Hubs data selection parameters](#azure-event-hubs-data-selection-parameters).
 
-4. Save the file. For example, as `ConfigureDataSource.json`.
+4. Save the file. For example, as `ConfigureClientSettings.json`.
 
-5. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+5. Open a command line session. Change directory to the location of `ConfigureClientSettings.json`.
 
-6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the client settings configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/AzureEventHubs1/DataSelection"
+    curl -d "@ConfigureClientSettings.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/AzureEventHubs1/DataSelection"
     ```
 
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `AzureEventHubs1`, update the endpoint with your chosen component ID.
-    * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
+    * For a list of other REST operations you can perform, like updating or deleting a client settings configuration, see [REST URLs](#rest-urls).
     <br/>
     <br/>
 
