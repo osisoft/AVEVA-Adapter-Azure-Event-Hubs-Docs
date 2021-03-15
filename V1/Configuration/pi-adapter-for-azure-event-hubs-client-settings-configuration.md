@@ -8,27 +8,35 @@ The client settings configuration is automatically generated when a new data sou
 
 ## Configure Azure Event Hubs client settings
 
-Complete the following steps to configure the Azure Event Hubs client settings:
+Complete the following steps to configure Azure Event Hubs client settings. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/ClientSettings` REST endpoint to initialize the configuration.
 
-1. Using any text editor, create a file that contains the Azure Event Hubs client settings in the JSON format.
-    - For content structure, see [Azure Event Hubs client settings example](#azure-event-hubs-client-settings-example).
-    - For all available parameters, see [Azure Event Hubs client settings](#azure-event-hubs-client-settings-parameters).
-2. Save the file. For example, `ConfigureClientSettings.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command to its appropriate endpoint:
+1. Using a text editor, create an empty text file.
 
-    **Note:** The following example uses AzureEventHubs1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
-  
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+2. Copy and paste an example configuration for Azure Event Hubs client settings into the file.
 
-    **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/ClientSettings/`
+    For sample JSON, see [Azure Event Hubs client settings example](#azure-event-hubs-client-settings-example).
 
-      Example using `curl`:
+3. Update the example JSON parameters for your environment.
+
+    For a table of all available parameters, see [Azure Event Hubs client settings parameters](#azure-event-hubs-client-settings-parameters).
+
+4. Save the file. For example, as `ConfigureClientSettings.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureClientSettings.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the client settings configuration.
 
     ```bash
     curl -d "@ConfigureClientSettings.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/AzureEventHubs1/ClientSettings"
     ```
 
-    **Note:** Run this command from the same directory where the file is located.
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If you use a component ID other than `AzureEventHubs1`, update the endpoint with your chosen component ID.
+    * For a list of other REST operations you can perform, like updating or deleting a client settings configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## Azure Event Hubs client settings schema
 

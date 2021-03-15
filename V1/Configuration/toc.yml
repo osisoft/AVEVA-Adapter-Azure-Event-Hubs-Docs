@@ -26,3 +26,5 @@
   href: ../main/V1.3/Configuration/buffering-configuration.md
 - name: Logging configuration
   href: ../main/V1.3/Configuration/logging-configuration.md
+- name: PI Adapter for Azure Event Hubs configuration examples
+  href: pi-adapter-for-azure-event-hubs-configuration-examples.md
