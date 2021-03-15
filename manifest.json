@@ -227,7 +227,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/Templates/Markdown Release Notes template-V1.html",
-          "hash": "Y/sCr9lOTWaQE+3FDy9+Tw=="
+          "hash": "yjm+v0vkRi2BOUCYdC/GtQ=="
         }
       },
       "is_incremental": false,
@@ -251,7 +251,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Administration/delete-an-adapter-component.html",
-          "hash": "4EsE856iJPP6TRIHhhEz8g=="
+          "hash": "gagZNGuhSwod3CZsubialQ=="
         }
       },
       "is_incremental": false,
@@ -275,7 +275,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Administration/start-and-stop-an-adapter.html",
-          "hash": "7JZcB2R/tsEHW0T+OltwCQ=="
+          "hash": "9d1fwpAc8VQTpe1wB+rrtg=="
         }
       },
       "is_incremental": false,
@@ -287,7 +287,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Administration/start-and-stop-ingress-component.html",
-          "hash": "sJKWDQMXtlXrCDGqYOl4jQ=="
+          "hash": "9R/snC3RFuop+DWIzc+AwA=="
         }
       },
       "is_incremental": false,
@@ -347,7 +347,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/buffering-configuration.html",
-          "hash": "51YaIYCnHUlu06/tabaT4w=="
+          "hash": "4wC5ga1Vb7kVH2SQX8piiw=="
         }
       },
       "is_incremental": false,
@@ -386,7 +386,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/data-filters-configuration.html",
-          "hash": "b1U/zKj1yywdFSE706NCow=="
+          "hash": "Pl8CWZYOqSV7bHyL4D6oag=="
         }
       },
       "is_incremental": false,
@@ -398,7 +398,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
-          "hash": "W9Y+qxGYsJ6oSH9kpnMIHg=="
+          "hash": "YOv4uW9FhHef6mhI2/wm1w=="
         }
       },
       "is_incremental": false,
@@ -434,7 +434,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/egress-endpoints-configuration.html",
-          "hash": "sNv6SG8ocPsp9G7kNtzWOw=="
+          "hash": "imMcbadgoC3rcK3GHuLyGw=="
         }
       },
       "is_incremental": false,
@@ -458,7 +458,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/health-endpoint-configuration.html",
-          "hash": "o31Tk22UFF44XQTf+1U4ow=="
+          "hash": "ljM3MD3UL4Tnf63QLDOw/A=="
         }
       },
       "is_incremental": false,
@@ -470,7 +470,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/logging-configuration.html",
-          "hash": "koZ70I5XuVkDwFd4PkB9cA=="
+          "hash": "SOhTxzlUn7ciCLkxDpRxkQ=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/schedules-configuration.html",
-          "hash": "s4GGn3UYcUqf6kTNkI0dcg=="
+          "hash": "8ghWyWC7F+PDaG3jA/QF7g=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/system-and-adapter-configuration.html",
-          "hash": "UfAzjVjQ49iJEA3dTBWuow=="
+          "hash": "9LlZF7kLIOM3pwNYPUhQVQ=="
         }
       },
       "is_incremental": false,
@@ -506,7 +506,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/system-components-configuration.html",
-          "hash": "50YNWPK8Dt+DXyMMHWdKJg=="
+          "hash": "Ye+PDcF2871F7r04sCQEZw=="
         }
       },
       "is_incremental": false,
@@ -650,7 +650,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Installation/install-the-adapter.html",
-          "hash": "t5+Q+j7xveGHTvU5mJQtgQ=="
+          "hash": "GFjGjFhLPq0eS8GwHl0ejA=="
         }
       },
       "is_incremental": false,
@@ -686,7 +686,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Metadata/adapter-metadata.html",
-          "hash": "o+deVs4/pL3vvyBhYcZiqA=="
+          "hash": "owVviGtSH5uC14JEakES4w=="
         }
       },
       "is_incremental": false,
@@ -698,7 +698,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "jud0AHpl8fREgEAXcmhE5g=="
+          "hash": "bJzlTBzMK93wuYGqeSyA3w=="
         }
       },
       "is_incremental": false,
@@ -866,7 +866,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Administration/delete-an-adapter-component.html",
-          "hash": "MZNTcAiBMMbMwxTT/NgM6g=="
+          "hash": "Kah/+GBCrAmkCX8rL8+zpQ=="
         }
       },
       "is_incremental": false,
@@ -890,7 +890,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Administration/start-and-stop-an-adapter.html",
-          "hash": "ZyTglBL9HV/8n0Gv3PDrzw=="
+          "hash": "tJR1x2c0fhj4Rrk4hg+fjg=="
         }
       },
       "is_incremental": false,
@@ -902,7 +902,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Administration/start-and-stop-ingress-component.html",
-          "hash": "yA30ph9RPMeu3b6sF+6MsA=="
+          "hash": "FOXjC+IknwVVpCm7rGQJ6Q=="
         }
       },
       "is_incremental": false,
@@ -938,7 +938,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/buffering-configuration.html",
-          "hash": "ie6BUBe6EMuR8bCuaStmdQ=="
+          "hash": "YLl/xGf5/bVmEyrqtGs50A=="
         }
       },
       "is_incremental": false,
@@ -957,6 +957,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
       "output": {
@@ -974,7 +977,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/data-filters-configuration.html",
-          "hash": "6G5j/OYcWBrbrRLq1coXHQ=="
+          "hash": "6G3KU9E29fxKAuklyd4ZzQ=="
         }
       },
       "is_incremental": false,
@@ -986,16 +989,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/discovery-configuration.html",
-          "hash": "MGO4GmSq/aZBveMBR4WG7w=="
+          "hash": "POqfMeEgHKTeAWPr/MYQeg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
       "output": {
@@ -1037,7 +1037,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/egress-endpoints-configuration.html",
-          "hash": "TKkfL2mU4hzH729QRj12nA=="
+          "hash": "KWKiKx5dc0ExPufkHDr44w=="
         }
       },
       "is_incremental": false,
@@ -1061,7 +1061,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/health-endpoint-configuration.html",
-          "hash": "mOu0NhfOo7Y9XSvO8bcyWQ=="
+          "hash": "LHsYDtDT4TViqa65+RhhLw=="
         }
       },
       "is_incremental": false,
@@ -1073,7 +1073,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/logging-configuration.html",
-          "hash": "zlSWkluvQAtlFxzD6SF5Ow=="
+          "hash": "CCEJ5vixrr3WwRExItGPrA=="
         }
       },
       "is_incremental": false,
@@ -1085,7 +1085,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/schedules-configuration.html",
-          "hash": "vLHi5w5uu2L+vmVAZcuW8g=="
+          "hash": "Ad2rC5ND3uAqItzm+xC+nA=="
         }
       },
       "is_incremental": false,
@@ -1097,7 +1097,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/system-and-adapter-configuration.html",
-          "hash": "/pc05D+gzIUPwRo9pO3rhg=="
+          "hash": "AqCEYjKb8oL1se47aZy21g=="
         }
       },
       "is_incremental": false,
@@ -1109,7 +1109,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/system-components-configuration.html",
-          "hash": "e3jdNrvirnHnILgISyt6uw=="
+          "hash": "zaBJMWcTPfpjWRlC/ERzLA=="
         }
       },
       "is_incremental": false,
@@ -1253,7 +1253,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Installation/install-the-adapter.html",
-          "hash": "IsHE44dJvgXN/krhF6w7+w=="
+          "hash": "+njpi4JuRX+GdzdJOUovUw=="
         }
       },
       "is_incremental": false,
@@ -1289,7 +1289,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Metadata/adapter-metadata.html",
-          "hash": "XKMGVg0Uj+K7ah2NKFSTOA=="
+          "hash": "BSTNcwczRUGPE4/ktR5mEQ=="
         }
       },
       "is_incremental": false,
@@ -1313,7 +1313,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "0T44ZNgh/BXFXAGQLR/PTA=="
+          "hash": "FyN5nxUg230mBKmzojdd2Q=="
         }
       },
       "is_incremental": false,
@@ -1520,7 +1520,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/delete-an-adapter-component.html",
-          "hash": "qQPvEvMyfmybX3ViqBePIg=="
+          "hash": "cNgD7+rM5fi+X3cgrA13ug=="
         }
       },
       "is_incremental": false,
@@ -1544,7 +1544,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/start-and-stop-an-adapter.html",
-          "hash": "ee61iHHyb4wjBR+z60dRQQ=="
+          "hash": "nxRrzO1Nj6F5nyuPwIFSVg=="
         }
       },
       "is_incremental": false,
@@ -1556,7 +1556,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/start-and-stop-ingress-component.html",
-          "hash": "At/lFBvs4DiPycir611a8Q=="
+          "hash": "1WQpCTkUhwZAYACIt7UmOA=="
         }
       },
       "is_incremental": false,
@@ -1592,7 +1592,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/buffering-configuration.html",
-          "hash": "ZXvPzPIgnbwXHrFM9d6qbQ=="
+          "hash": "VyqUUctxYosGCuSHvx4pRQ=="
         }
       },
       "is_incremental": false,
@@ -1616,7 +1616,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/data-filters-configuration.html",
-          "hash": "y4r7DadlFfqs3OoMUMPoOA=="
+          "hash": "ZsYNJQuRZ0JDbjOMUjHa4g=="
         }
       },
       "is_incremental": false,
@@ -1652,7 +1652,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/egress-endpoints-configuration.html",
-          "hash": "HZpm6aDjGSJgaUGmNFND2Q=="
+          "hash": "JDq1KuuVdl01acFreVMEGw=="
         }
       },
       "is_incremental": false,
@@ -1664,7 +1664,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/general-configuration.html",
-          "hash": "m8nB45b1FT+f0etVDo0kaQ=="
+          "hash": "oLVeDmixAd7KaNoOpnwRRg=="
         }
       },
       "is_incremental": false,
@@ -1676,7 +1676,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/health-endpoint-configuration.html",
-          "hash": "aaGQrvV1yrOTBopMfyPljA=="
+          "hash": "KJXwsqSQ1RFJ5rilFGdoew=="
         }
       },
       "is_incremental": false,
@@ -1688,7 +1688,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/logging-configuration.html",
-          "hash": "0LiKc1UHon4gDjHtlpipOQ=="
+          "hash": "w8pyqii7aLuQrXCjWzk7FA=="
         }
       },
       "is_incremental": false,
@@ -1700,7 +1700,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/schedules-configuration.html",
-          "hash": "XCi+fHojtWUvGEp1qh3ygA=="
+          "hash": "S3d0KQPE6mTcbg+bBeypJw=="
         }
       },
       "is_incremental": false,
@@ -1712,7 +1712,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/system-and-adapter-configuration.html",
-          "hash": "gPJhhLKhMqsX/9a/9vInVQ=="
+          "hash": "pWNkA7M7/FLn91SmMWn7yw=="
         }
       },
       "is_incremental": false,
@@ -1724,7 +1724,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/system-components-configuration.html",
-          "hash": "uqrbaVRawr97HhGTxoGpZw=="
+          "hash": "R+F6sP6OAv9rI9KQwa+0RQ=="
         }
       },
       "is_incremental": false,
@@ -1880,7 +1880,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/install-the-adapter.html",
-          "hash": "fskjR5tI9OKfMkRkSo047w=="
+          "hash": "2NUbjEJI6TzoA9fdgiD2CA=="
         }
       },
       "is_incremental": false,
@@ -1904,7 +1904,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Metadata/adapter-metadata.html",
-          "hash": "gxTi4cvrJsnqPoRMrMU8fQ=="
+          "hash": "q98mGMbTyQq/1sSLZuhOvg=="
         }
       },
       "is_incremental": false,
@@ -1928,7 +1928,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "w4Ke5avXzSJVTNMOd3RhrQ=="
+          "hash": "YVMbmSwIg8RkEs3l9PBXJQ=="
         }
       },
       "is_incremental": false,
