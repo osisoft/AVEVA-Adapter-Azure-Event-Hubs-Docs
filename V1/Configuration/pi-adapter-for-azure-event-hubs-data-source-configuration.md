@@ -40,6 +40,8 @@ Complete the following steps to configure an Azure Event Hubs data source. Use t
 
 7. Configure data selection.
 
+    For more information, see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration)
+
 ## Azure Event Hubs data source schema
 
 The full schema definition for the Azure Event Hubs data source configuration is in the `EventHubs_DataSource_schema.json` file located in one of the following folders:
