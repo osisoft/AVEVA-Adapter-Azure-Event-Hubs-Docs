@@ -12,7 +12,7 @@ Dynamic data is sent every minute to configured health endpoints.
 
 The following health data is available:
 
-- [Device status](xref:DeviceStatus1-3)
+- [PI Adapter for Azure Event Hubs device status](xref:PIAdapterForAzureEventHubsDeviceStatus)
 - [Next Health Message Expected](xref:NextHealthMessageExpected1-3)
 
 ## AF structure
