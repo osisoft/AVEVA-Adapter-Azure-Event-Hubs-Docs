@@ -4,7 +4,7 @@
   href: ../main/v1.3/configuration/text-parser/jsonpath/toc.yml
   topicHref: ../main/v1.3/configuration/text-parser/text-parser.md
 - name: System components configuration
-  href: ../main/v1.3/configuration/system configuration/toc.yml
+  href: ../main/v1.3/configuration/system-configuration/toc.yml
   topicHref: ../main/v1.3/configuration/system-components-configuration.md
 - name: PI Adapter for Azure Event Hubs data source configuration 
   href: pi-adapter-for-azure-event-hubs-data-source-configuration.md
