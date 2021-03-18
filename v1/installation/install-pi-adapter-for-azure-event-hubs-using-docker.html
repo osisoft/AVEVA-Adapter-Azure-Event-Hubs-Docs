@@ -136,7 +136,7 @@ WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 COPY eventhubsdockerstart.sh /
 RUN chmod +x /eventhubsdockerstart.sh
-ADD ./eventhubs_linux-x64.tar.gz .
+ADD ./EventHubs_linux-x64.tar.gz .
 ENTRYPOINT [&quot;/eventhubsdockerstart.sh&quot;]
 </code></pre></li>
 <li><p>Copy the <code>EventHubs_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
