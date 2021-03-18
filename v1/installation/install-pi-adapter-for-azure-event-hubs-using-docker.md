@@ -88,7 +88,7 @@ This topic provides examples of how to create a Docker container with the Azure 
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY eventhubsdockerstart.sh /
 	RUN chmod +x /eventhubsdockerstart.sh
-	ADD ./eventhubs_linux-x64.tar.gz .
+	ADD ./EventHubs_linux-x64.tar.gz .
 	ENTRYPOINT ["/eventhubsdockerstart.sh"]
 	```
 
