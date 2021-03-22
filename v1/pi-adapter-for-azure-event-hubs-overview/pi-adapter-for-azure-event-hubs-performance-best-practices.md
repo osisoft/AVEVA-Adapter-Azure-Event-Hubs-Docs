@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsPerformanceBestPractices
 
 # PI Adapter for Azure Event Hubs performance best practices
 
-The performance of an adapter, and PI Adapter for Azure Event Hubs specifically, is dependent upon a number of factors, such as egress limits, data shape, and data selections. Use the following performance guidelines and best practices when setting up an adapter.
+The performance of an adapter, and PI Adapter for Azure Event Hubs specifically, is dependent <!--- jokim Mar0322: ...is dependent -> depends... --->upon a number of factors, such as egress limits, data shape, and data selections. Use the following performance guidelines and best practices when setting up an adapter.
 
 ## Egress limits
 
@@ -14,11 +14,11 @@ On a virtual machine with 4 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hub
 
 ## Data shape
 
-PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the TimeField and ValueField.
+PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the TimeField and ValueField. <!--- jokim Mar0322: ...can we tighten up this sentence to be more definite? or are we not really sure? assumed seems not sure... --->
 
-OSIsoft recommends to use larger messages rather than smaller messages for the same amount of data to achieve optimal performance.<br>**Example:** 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.
+OSIsoft recommends to use <!--- jokim Mar0322: ...to use -> using... ---> larger messages rather than smaller messages for the same amount of data to achieve optimal performance.<br>**Example:** 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.
 
-OSIsoft further recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, resulting in lower performance.
+OSIsoft further <!--- jokim Mar0322: ..."further" feels like this sentence is dependent on the previous tip. is it?... ---> recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, resulting in lower performance.
 
 ### Flat data
 
@@ -64,7 +64,7 @@ OSIsoft further recommends to use flat data rather than deeply nested data, as t
 
 ## Data selections
 
-Data selection related to the Event Hubs themselves and the configuration of the ValueField and TimeField parameters highly affect performance of the adapter.
+Data selection related to the Event Hubs themselves <!--- jokim Mar0322: Do we need "themselves"? ---> and the configuration of the ValueField and TimeField parameters highly affect performance of the adapter.
 
 ### Event Hub
 
@@ -82,7 +82,7 @@ OSIsoft further recommends to use a single partition to preserve messages order 
 
 A single throughput unit for Azure Event Hubs allows for ingress of up to 1MB per second or 1000 events (JSON messages). Each message contains as many individual data endpoint events as are configured in the data selections for that Event Hub.
 
-**Example:** 100 data selections that use Event Hub A and 10 events that are sent to the Event Hub every second results in 1000 events per second sent to the data endpoint.<br>Consider this many-to-one relationship between the events sent to Event Hub and events sent to the data endpoint, when selecting the appropriate throughput units for your Event Hub.
+**Example:** 100 data selections that use Event Hub A and 10 events that are sent to the Event Hub every second results in 1000 events per second sent to the data endpoint.<br>Consider this many-to-one relationship between the events sent to Event Hub and events sent to the data endpoint, when selecting the appropriate throughput units for your Event Hub. <!--- jokim Mar0322: why consider? because of resource issues?. --->
 
 ### ValueField and TimeField JSONPath
 
