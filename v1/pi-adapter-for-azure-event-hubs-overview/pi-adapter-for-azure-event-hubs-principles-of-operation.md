@@ -8,9 +8,9 @@ This adapter's operations focus on data collection and stream creation.
 
 ## Adapter configuration
 
-For the Azure Event Hubs adapter to start data collection, configure the following:
+For the Azure Event Hubs adapter to start data collection, configure the following: <!--- jokim Mar0322: configure the following items --->
 
-- Data source: Provide the data source from which the adapter should collect data.
+- Data source: Provide the data source from which the adapter should collect data. <!--- jokim Mar0322: remove periods in a bulleted list --->
 - Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
@@ -30,7 +30,7 @@ For more information see [PI Adapter for Azure Event Hubs data selection configu
 
 ### Data types
 
-The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.
+The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.<!--- jokim Mar0322: ...and types of streams created... --->
 
 | Event Hubs data type | Stream data type |
 |------------------|------------------|
@@ -55,17 +55,17 @@ The Azure Event Hubs adapter creates a stream value with two properties for each
 | `Timestamp`   | String    | The response time of the stream data from the Azure Event Hubs device |
 | `Value`       | Specified by the data selection | The value of the stream data from the Azure Event Hubs device |
 
-Certain metadata are sent with each stream created. The following metadata are common for every adapter type:
+Certain metadata are sent with each stream created. <!--- jokim Mar0322: passive->active voice pls --->The following metadata are common for every adapter type:
 
 - **ComponentId**: Specifies the data source, for example, _EventHubs1_
 - **ComponentType**: Specifies the type of adapter, for example, _EventHubs_
 
-Metadata specific to the Azure Event Hubs adapter are:
+Metadata specific to the Azure Event Hubs adapter are: <!--- jokim Mar0322: ...are as follows: --->
 
 - **EventHubName**: Contains the Azure Event Hub name configured in the data selection item.
 - **DeviceId**: Contains the Device Id configured in the data selection item (IoT Hub integration only).
 
-**Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the Azure Event Hubs adapter, the following metadata is sent for the individual level:
+**Note:** A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in [General configuration](xref:GeneralConfiguration). For the Azure Event Hubs adapter, the following metadata is sent for the individual level: <!--- jokim Mar0322: "Azure Event Hubs send the following metadata for the individual level"? --->
 
 - `None`: No metadata
 - `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
