@@ -117,7 +117,7 @@ Complete the following steps to run the container:
 
 Port `5590` is accessible from the host and you can make REST calls to Azure Event Hubs adapter from applications on the local host computer. In this example, all data stored by the Azure Event Hubs adapter is stored in the container itself. When you delete the container, the stored data is also deleted.
 
-### Provide persistent storage for the Docker container
+### Provide persistent storage for the Docker container <!--- jokim Mar0322:Is this an mutually exclusive OR with the previous section? Either do the previous sectoin or do this section? --->
 
 Complete the following steps to run the container:
 
