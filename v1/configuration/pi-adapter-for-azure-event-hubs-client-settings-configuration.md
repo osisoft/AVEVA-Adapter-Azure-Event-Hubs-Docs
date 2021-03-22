@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsClientSettingsConfiguration
 
 # PI Adapter for Azure Event Hubs client settings configuration
 
-The client settings configuration is automatically generated when a new data source is added. If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.
+The client settings configuration is automatically generated when a new data source is added. <!--- jokim Mar0322: passive->active voice pls --->If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.
 
 ## Configure Azure Event Hubs client settings
 
@@ -34,7 +34,7 @@ Complete the following steps to configure Azure Event Hubs client settings. Use 
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `AzureEventHubs1`, update the endpoint with your chosen component ID.
-    * For a list of other REST operations you can perform, like updating or deleting a client settings configuration, see [REST URLs](#rest-urls).
+    * For a list of other REST operations you can perform, like <!--- jokim Mar0322: such as ---> updating or deleting a client settings configuration, see [REST URLs](#rest-urls).
     <br/>
     <br/>
 
