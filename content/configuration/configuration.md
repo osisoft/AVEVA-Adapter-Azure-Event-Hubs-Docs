@@ -14,7 +14,7 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 Complete the following steps to establish a data flow from a Azure Event Hubs data source device to a data endpoint.
 
-1. Configure one or several Azure Event Hubs system components.<br>See [System components configuration](xref:SystemComponentsConfiguration1-3#configure-system-components).
+1. Configure one or several Azure Event Hubs system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
 
 2. Configure a Azure Event Hubs data source for each Azure Event Hubs device.<br>See [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration#configure-azure-event-hubs-data-source).
 

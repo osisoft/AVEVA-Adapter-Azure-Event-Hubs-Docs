@@ -1,5 +1,5 @@
 ---
-uid: AdapterHealth1-3
+uid: AdapterHealth
 ---
 
 # Adapter health
@@ -13,7 +13,7 @@ Dynamic data is sent every minute to configured health endpoints.
 The following health data is available:
 
 - [PI Adapter for Azure Event Hubs device status](xref:PIAdapterForAzureEventHubsDeviceStatus)
-- [Next Health Message Expected](xref:NextHealthMessageExpected1-3)
+- [Next Health Message Expected](xref:NextHealthMessageExpected)
 
 ## AF structure
 
