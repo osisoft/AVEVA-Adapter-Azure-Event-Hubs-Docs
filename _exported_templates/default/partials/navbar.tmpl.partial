@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{_rel}}v1/index.html" width="46">
+      <a class="navbar-brand" href="{{_rel}}content/index.html" width="46">
         <img id="logo" src="{{_rel}}content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System" > 
       </a>
     </div>
