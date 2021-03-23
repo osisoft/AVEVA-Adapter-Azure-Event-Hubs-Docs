@@ -1,0 +1,30 @@
+- name: Configuration tools
+  href: ../main/shared-content/configuration/configuration-tools.md
+- name: Text parser
+  href: ../main/shared-content/configuration/text-parser/jsonpath/toc.yml
+  topicHref: ../main/shared-content/configuration/text-parser/text-parser.md
+- name: System components configuration
+  href: ../main/shared-content/configuration/system-configuration/toc.yml
+  topicHref: ../main/shared-content/configuration/system-components-configuration.md
+- name: PI Adapter for Azure Event Hubs data source configuration 
+  href: pi-adapter-for-azure-event-hubs-data-source-configuration.md
+- name: PI Adapter for Azure Event Hubs client settings configuration
+  href: pi-adapter-for-azure-event-hubs-client-settings-configuration.md
+- name: PI Adapter for Azure Event Hubs data selection configuration
+  href: pi-adapter-for-azure-event-hubs-data-selection-configuration.md
+- name: Data filters configuration
+  href: ../main/shared-content/configuration/data-filters-configuration.md
+- name: Egress endpoints configuration
+  href: ../main/shared-content/configuration/egress-endpoint-configuration/toc.yml
+  topicHref: ../main/shared-content/configuration/egress-endpoints-configuration.md
+- name: Health endpoint configuration
+  href: ../main/shared-content/configuration/health-endpoint-configuration.md
+- name: General configuration
+  href: ../main/shared-content/metadata/toc.yml
+  topicHref: ../main/shared-content/configuration/general-configuration.md
+- name: Buffering configuration
+  href: ../main/shared-content/configuration/buffering-configuration.md
+- name: Logging configuration
+  href: ../main/shared-content/configuration/logging-configuration.md
+- name: PI Adapter for Azure Event Hubs configuration examples
+  href: pi-adapter-for-azure-event-hubs-configuration-examples.md

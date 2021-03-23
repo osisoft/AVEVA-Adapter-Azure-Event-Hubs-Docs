@@ -22,4 +22,4 @@ The adapter supports the following statuses:
 | `Shutdown`        | Connectivity to Event Hubs is being closed                                                    |
 | `NotConfigured`   | The adapter configuration does not have any data selection items defined with Event Hub names |
 
-For more information on health data supported by the adapter, see [Adapter health](xref:AdapterHealth1-3).
+For more information on health data supported by the adapter, see [Adapter health](xref:AdapterHealth).
