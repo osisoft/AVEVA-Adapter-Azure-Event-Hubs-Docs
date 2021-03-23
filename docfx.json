@@ -29,7 +29,7 @@
     ],
     "resource": [
       {
-        "files": ["v1/images/**", "v1/main/v1/images/**", "v1/main/v1.3/images/**", "v1/main/v1.4/images/**"]
+        "files": ["v1/images/**", "content/main/shared-content/images/**", "content/main/shared-content/images/**", "content/main/shared-content/images/**"]
       }
     ],
     "overwrite": [
