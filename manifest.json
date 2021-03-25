@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -109,6 +109,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "v1/health-and-diagnostics/health/adapter-health.md",
       "output": {
@@ -471,6 +474,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.3/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
       "output": {
@@ -579,9 +585,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.3/health/adapter-health.md",
       "output": {
@@ -1128,9 +1131,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "v1/main/v1.4/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
       "output": {
