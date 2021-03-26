@@ -8,7 +8,7 @@ PI Adapters produce different kinds of health data that can be egressed to diffe
 
 ## Available health data
 
-Dynamic data is sent every minute to configured health endpoints.
+The adapter sends dynamic data to configured health endpoints every minute.
 
 The following health data is available:
 
