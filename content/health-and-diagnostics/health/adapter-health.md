@@ -1,5 +1,5 @@
 ---
-uid: AdapterHealth
+uid: PIAdapterForAzureEventHubsHealth
 ---
 
 # Adapter health

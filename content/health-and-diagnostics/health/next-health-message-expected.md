@@ -1,5 +1,5 @@
 ---
-uid: NextHealthMessageExpected
+uid: PIAdapterForAzureEventHubsNextHealthMessageExpected
 ---
 
 # Next health message expected
