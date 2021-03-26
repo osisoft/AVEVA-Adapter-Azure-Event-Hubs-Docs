@@ -98,7 +98,7 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 ]
 ```
 
-<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified, in other words, what the data source returns. The previous examples use the following JSON payload structure:
+<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:
 
 ```json
 {
