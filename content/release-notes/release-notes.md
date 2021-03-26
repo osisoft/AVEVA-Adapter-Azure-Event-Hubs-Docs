@@ -66,13 +66,13 @@ OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://ww
 
 This section is intended to provide relevant security-related information to guide your installation or upgrade decision. OSIsoft is proactively disclosing aggregate information about the number and severity of PI Adapter for Azure Event Hubs security vulnerabilities that are fixed in this release.
 
-<!--*Provide an overview of the types of security vulnerabilities fixed in this release*-->
+No additional security vulnerabilities are applicable to this release. Sub-components of this release contain known vulnerabilities which are not exploitable in PI Adapter for MQTT. 
 
-<!--*NOTE:  If NO security vulnerabilities are identified in the current release, please use the following italicized statement:*-->
+The following table lists the known vulnerabilities and their mitigation in this product.
 
-_No security-related information is applicable to this release_
-
-<!--*When vulnerabilities exist, product teams should decide which format works best specific to the release and/or is applicable.  Two different samples are provided below.*-->
+ Component | Version | CVE or Reference | CVSS | Mitigation
+ --------- | ------- | -----------------| ------ | ----------
+ json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.8 | No code paths result in json parsing and subsequent serialization resulting in DoS vulnerability.
 
 ## Documentation overview
 
