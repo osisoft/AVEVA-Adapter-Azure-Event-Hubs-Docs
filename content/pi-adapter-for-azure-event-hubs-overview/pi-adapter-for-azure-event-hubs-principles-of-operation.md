@@ -8,11 +8,11 @@ This adapter's operations focus on data collection and stream creation.
 
 ## Adapter configuration
 
-For the Azure Event Hubs adapter to start data collection, configure the following:
+For the Azure Event Hubs adapter to start data collection, configure the following items:
 
-- Data source: Provide the data source from which the adapter should collect data.
-- Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data.
-- Logging: Set up the logging attributes to manage the adapter logging behavior.
+- Data source: Provide the data source from which the adapter should collect data
+- Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data
+- Logging: Set up the logging attributes to manage the adapter logging behavior
 
 For more details, see [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration) and [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
 
@@ -30,7 +30,7 @@ For more information see [PI Adapter for Azure Event Hubs data selection configu
 
 ### Data types
 
-The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams that will be created.
+The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams created.
 
 | Event Hubs data type | Stream data type |
 |------------------|------------------|
@@ -60,7 +60,7 @@ Certain metadata are sent with each stream created. The following metadata are c
 - **ComponentId**: Specifies the data source, for example, _EventHubs1_
 - **ComponentType**: Specifies the type of adapter, for example, _EventHubs_
 
-Metadata specific to the Azure Event Hubs adapter are:
+The following metadata is specific to Azure Event Hubs:
 
 - **EventHubName**: Contains the Azure Event Hub name configured in the data selection item.
 - **DeviceId**: Contains the Device Id configured in the data selection item (IoT Hub integration only).

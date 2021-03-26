@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsPerformanceBestPractices
 
 # PI Adapter for Azure Event Hubs performance best practices
 
-The performance of an adapter, and PI Adapter for Azure Event Hubs specifically, is dependent upon a number of factors, such as egress limits, data shape, and data selections. Use the following performance guidelines and best practices when setting up an adapter.
+The performance of an adapter, and PI Adapter for Azure Event Hubs specifically, depends upon a number of factors, such as egress limits, data shape, and data selections. Use the following performance guidelines and best practices when setting up an adapter.
 
 ## Egress limits
 
@@ -16,9 +16,9 @@ On a virtual machine with 4 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hub
 
 PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the TimeField and ValueField.
 
-OSIsoft recommends to use larger messages rather than smaller messages for the same amount of data to achieve optimal performance.<br>**Example:** 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.
+OSIsoft recommends using larger messages rather than smaller messages for the same amount of data to achieve optimal performance.<br>**Example:** 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.
 
-OSIsoft further recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, resulting in lower performance.
+OSIsoft also recommends to use flat data rather than deeply nested data, as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, resulting in lower performance.
 
 ### Flat data
 
@@ -64,7 +64,7 @@ OSIsoft further recommends to use flat data rather than deeply nested data, as t
 
 ## Data selections
 
-Data selection related to the Event Hubs themselves and the configuration of the ValueField and TimeField parameters highly affect performance of the adapter.
+Data selection related to the Event Hubs and the configuration of the ValueField and TimeField parameters highly affect performance of the adapter.
 
 ### Event Hub
 

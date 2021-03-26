@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsClientSettingsConfiguration
 
 # PI Adapter for Azure Event Hubs client settings configuration
 
-The client settings configuration is automatically generated when a new data source is added. If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.
+The client settings configuration is automatically generated when you add a new data source. If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.
 
 ## Configure Azure Event Hubs client settings
 
