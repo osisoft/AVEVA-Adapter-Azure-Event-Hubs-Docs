@@ -16,6 +16,12 @@ For the Azure Event Hubs adapter to start data collection, configure the followi
 
 For more details, see [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration) and [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
 
+## Azure requirements
+
+In addition to the configuration of a data source, data selection, and logging, you need to configure an [Event Hub](https://azure.microsoft.com/en-us/services/event-hubs/) and an [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account. Azure Blob Storage is required to store the previously read checkpoint for PI Adapter for Azure Event Hubs in case of disconnection.
+
+For more information on how to create an event hub, see [Quickstart: Create an event hub using Azure portal](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create) and for more information on how to create a storage account, see [Create a storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal). 
+
 ## Connection
 
 The adapter communicates with the Azure Event Hubs platform using the [AMQP (Advanced Message Queueing Protocol)](https://www.amqp.org/about/what). Alternatively, the adapter can connect using AMQP over WebSockets using HTTPS protocol with corresponding adapter configuration. A Shared Access Signature (SAS) is required for the adapter to authenticate with the Azure Event Hub namespace, which is supplied by a valid connection string in the adapter's data source configuration.
