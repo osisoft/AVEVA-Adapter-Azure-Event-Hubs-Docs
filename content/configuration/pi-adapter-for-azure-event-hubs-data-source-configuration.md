@@ -97,9 +97,9 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSource  | GET | Retrieves the Azure Event Hubs data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | POST | Creates the Azure Event Hubs data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | PUT | Configures or updates the Azure Event Hubs data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | DELETE | Deletes the Azure Event Hubs data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the data source configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `POST` | Creates the data source configuration. The adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `POST` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the data source configuration. Overwrites any active data source configuration. If no configuration is active, the adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `PUT` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the data source configuration. After the request is received, the adapter stops collecting data. |
 
-**Note:** Replace _ComponentId_ with the Id of your Azure Event Hubs component, for example AzureEventHubs1.
+**Note:** Replace \<ComponentId\> with the Id of your Azure Event Hubs component, for example AzureEventHubs1.
