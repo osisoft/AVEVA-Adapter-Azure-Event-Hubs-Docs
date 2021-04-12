@@ -82,9 +82,9 @@
 <h2 id="adapter-configuration">Adapter configuration</h2>
 <p>For the Azure Event Hubs adapter to start data collection, configure the following items:</p>
 <ul>
-<li>Data source: Provide the data source from which the adapter should collect data</li>
-<li>Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data</li>
-<li>Logging: Set up the logging attributes to manage the adapter logging behavior</li>
+<li>Data source: Provide the data source from which the adapter should collect data.</li>
+<li>Data selection: Select Azure Event Hubs items to which the adapter should subscribe for data.</li>
+<li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
 <p>For more details, see <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a> and <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
 <h2 id="azure-requirements">Azure requirements</h2>
@@ -94,7 +94,7 @@
 <p>The adapter communicates with the Azure Event Hubs platform using the <a href="https://www.amqp.org/about/what">AMQP (Advanced Message Queueing Protocol)</a>. Alternatively, the adapter can connect using AMQP over WebSockets using HTTPS protocol with corresponding adapter configuration. A Shared Access Signature (SAS) is required for the adapter to authenticate with the Azure Event Hub namespace, which is supplied by a valid connection string in the adapter&#39;s data source configuration.</p>
 <p>For more information, see <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">PI Adapter for Azure Event Hubs data source configuration</a>.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>After data source and data selection items are configured, the adapter establishes a connection to each event hub within the event hub namespace for all event hubs specified in data selection items. Once a connection is established, the adapter begins consuming events from the event hubs and processes the events as soon as they are published by an event producer and become available to consumers.</p>
+<p>After you configure data source and data selection items, the adapter establishes a connection to each event hub within the event hub namespace for all event hubs specified in data selection items. Once a connection is established, the adapter begins consuming events from the event hubs and processes the events as soon as they are published by an event producer and become available to consumers.</p>
 <p>For more information see <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
 <h3 id="data-types">Data types</h3>
 <p>The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams created.</p>
@@ -175,17 +175,17 @@
 </tr>
 </tbody>
 </table>
-<p>Certain metadata are sent with each stream created. The following metadata are common for every adapter type:</p>
+<p>Certain metadata are sent with each created stream. The following metadata are common for every adapter type:</p>
 <ul>
 <li><strong>ComponentId</strong>: Specifies the data source, for example, <em>EventHubs1</em></li>
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>EventHubs</em></li>
 </ul>
-<p>The following metadata is specific to Azure Event Hubs:</p>
+<p>The following metadata are specific to Azure Event Hubs:</p>
 <ul>
-<li><strong>EventHubName</strong>: Contains the Azure Event Hub name configured in the data selection item.</li>
-<li><strong>DeviceId</strong>: Contains the Device Id configured in the data selection item (IoT Hub integration only).</li>
+<li><strong>EventHubName</strong>: Contains the Azure Event Hub name configured in the data selection item</li>
+<li><strong>DeviceId</strong>: Contains the Device Id configured in the data selection item (IoT Hub integration only)</li>
 </ul>
-<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/shared-content/configuration/general-configuration.html">General configuration</a>. For the Azure Event Hubs adapter, the following metadata is sent for the individual level:</p>
+<p><strong>Note:</strong> A configured metadata level allows you to set the amount of metadata for the adapter. Specify the metadata level in <a class="xref" href="../main/shared-content/configuration/general-configuration.html">General configuration</a>. For the Azure Event Hubs adapter, the following metadata are sent for the individual level:</p>
 <ul>
 <li><code>None</code>: No metadata</li>
 <li><code>Low</code>: AdapterType (ComponentType) and DataSource (ComponentId)</li>
