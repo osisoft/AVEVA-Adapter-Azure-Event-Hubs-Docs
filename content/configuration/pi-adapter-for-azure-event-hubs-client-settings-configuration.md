@@ -85,8 +85,8 @@ The following parameters are available for configuring Azure Event Hubs client s
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
 | api/v1/configuration/_ComponentId_/ClientSettings  | GET | Retrieves the Azure Event Hubs client settings configuration |
-| api/v1/configuration/_ComponentId_/ClientSettings  | PUT | Configures or updates the Azure Event Hubs client settings  configuration |
-| api/v1/configuration/_ComponentId_/ClientSettings | DELETE | Deletes the Azure Event Hubs client settings  configuration |
-| api/v1/configuration/_ComponentId_/ClientSettings | PATCH | Allows partial updating of configured client settings fields. |
+| api/v1/configuration/_ComponentId_/ClientSettings  | PUT | Configures or updates the Azure Event Hubs client settings configuration |
+| api/v1/configuration/_ComponentId_/ClientSettings | DELETE | Deletes the Azure Event Hubs client settings configuration |
+| api/v1/configuration/_ComponentId_/ClientSettings | PATCH | Allows partial updating of configured client settings fields |
 
 **Note:** Replace _ComponentId_ with the Id of your Azure Event Hubs component, for example AzureEventHubs1.
