@@ -1,3 +1,2 @@
 - name: PI Adapter for Azure Event Hubs TCP 1.2
-  href: content/toc.yml
-  topicHref: content/index.md
+  href: content/index.md
