@@ -1,6 +1,3 @@
-- name: PI Adapter for Azure Event Hubs overview
-  href: index.md
-  topicHref: pi-adapter-for-azure-event-hubs-overview/toc.yml
 - name: Installation
   href: installation/toc.yml
   topicHref: main/shared-content/installation/installation.md
