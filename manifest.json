@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/agent/_work/1/s",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "DLLQCknjkV2kIY8ZTJKnSg=="
+          "hash": "AGzkn8o0f/irx3nfCAv2Ww=="
         }
       },
       "is_incremental": false,
@@ -293,7 +293,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/discovery-configuration.html",
-          "hash": "WSduZmDpsj7im1d6tutS/Q=="
+          "hash": "upq40wnuj5crUjCr9/Toyg=="
         }
       },
       "is_incremental": false,
@@ -353,7 +353,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.html",
-          "hash": "Incp7z1uao6wNZ2JQJO+wQ=="
+          "hash": "VVvIZ01/+fnoDnPvRIpRPQ=="
         }
       },
       "is_incremental": false,
@@ -437,7 +437,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
-          "hash": "2BIdndIfl/PXWR57gzLaEg=="
+          "hash": "CN//fCX+FMpCt0YnBWFm2g=="
         }
       },
       "is_incremental": false,
@@ -845,7 +845,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "/a/eyupzAgzCHhWfc0Y9aw=="
+          "hash": "qSX+sKKegx4NJ/fKBHSF5g=="
         }
       },
       "is_incremental": false,
