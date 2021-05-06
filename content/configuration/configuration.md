@@ -18,16 +18,16 @@ This Quick Start guides you through setup of each configuration file available f
 
 1. Configure one or more Azure Event Hubs system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
 
-2. Configure a Azure Event Hubs data source for each Azure Event Hubs device.<br>See [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration#configure-azure-event-hubs-data-source).
+2. Configure an Azure Event Hubs data source for each Azure Event Hubs device.<br>See [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration#configure-azure-event-hubs-data-source).
 
 3. **Optional**: Configure client settings.<br> See [PI Adapter for Azure Event Hubs client settings configuration](xref:PIAdapterForAzureEventHubsClientSettingsConfiguration#configure-azure-event-hubs-client-settings).
 
-4. Configure a Azure Event Hubs data selection for each Azure Event Hubs data source.<br>See [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#configure-azure-event-hubs-data-selection).
+4. Configure an Azure Event Hubs data selection for each Azure Event Hubs data source.<br>See [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#configure-azure-event-hubs-data-selection).
 
 5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
 
-- [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
-- [Configure a network proxy](xref:ConfigureANetworkProxy)
+    - [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
+    - [Configure a network proxy](xref:ConfigureANetworkProxy)
 
 6. Configure one or more egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
 
