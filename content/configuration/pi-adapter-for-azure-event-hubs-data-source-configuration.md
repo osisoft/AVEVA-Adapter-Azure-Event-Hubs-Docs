@@ -14,11 +14,11 @@ Complete the following steps to configure an Azure Event Hubs data source. Use t
 
 2. Copy and paste an example configuration for an Azure Event Hubs data source into the file.
 
-    [Azure Event Hubs data source examples](#data-source-examples)
+    For sample JSON, see [Data source examples](#data-source-examples)
 
 3. Update the example JSON parameters for your environment.
 
-    [Azure Event Hubs data source parameters](#data-source-parameters)
+    For a table of all available parameters, see [Data source parameters](#data-source-parameters)
 
 4. Save the file. For example, as `ConfigureDataSource.json`.
 

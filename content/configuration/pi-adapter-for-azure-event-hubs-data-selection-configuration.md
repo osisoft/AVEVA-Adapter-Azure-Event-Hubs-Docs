@@ -14,11 +14,11 @@ Complete the following steps to configure an Azure Event Hubs data selection. Us
 
 2. Copy and paste an example configuration for an Azure Event Hubs data selection into the file.
 
-    [Data selection examples](#data-selection-examples)
+    For sample JSON, see [Data selection examples](#data-selection-examples).
 
 3. Update the example JSON parameters for your environment.
 
-    [Data selection parameters](#data-selection-parameters)
+    For a table of all available parameters, see [Data selection parameters](#data-selection-parameters).
 
 4. Save the file. For example, as `ConfigureClientSettings.json`.
 

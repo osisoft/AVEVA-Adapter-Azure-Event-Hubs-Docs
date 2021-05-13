@@ -14,11 +14,11 @@ Complete the following steps to configure Azure Event Hubs client settings. Use 
 
 2. Copy and paste an example configuration for Azure Event Hubs client settings into the file.
 
-    [Client settings example](#client-settings-example)
+    For sample JSON, see [Client settings example](#client-settings-example).
 
 3. Update the example JSON parameters for your environment.
 
-    [Client settings parameters](#client-settings-parameters)
+    For a table of all available parameters, see [Client settings parameters](#client-settings-parameters).
 
 4. Save the file. For example, as `ConfigureClientSettings.json`.
 
