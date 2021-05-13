@@ -2,13 +2,13 @@
 uid: PIAdapterForAzureEventHubsConfigurationExamples
 ---
 
-# PI Adapter for Azure Event Hubs configuration examples
+# Configuration examples
 
-The following tables provide examples for all configurations available for PI Adapter for Azure Event Hubs.
+The following tables provide examples for all configurations available for PI Adapter for Azure Event Hubs (AEH).
 
 **Note:** The examples in this topic are using the default port number `5590`. If you selected a different port number, replace it with that value.
 
-## System components configuration with two Azure Event Hubs adapter instances
+## System components configuration: Two AEH adapter instances
 
 ```json
 [
@@ -27,7 +27,7 @@ The following tables provide examples for all configurations available for PI Ad
 ]
 ```
 
-## Azure Event Hubs adapter configuration
+## Adapter configuration
 
 ```json
 {
