@@ -2,7 +2,7 @@
 uid: PIAdapterForAzureEventHubsDataSourceConfiguration
 ---
 
-# Data source configuration
+# Data source
 
 To use the adapter, you must configure the data source from which it polls data, an event hub, and a storage account. For more information on event hubs and the storage account, see [PI Adapter for Azure Event Hubs principles of operation](xref:PIAdapterForAzureEventHubsPrinciplesOfOperation#azure-requirements).
 

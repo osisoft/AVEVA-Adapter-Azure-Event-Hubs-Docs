@@ -2,7 +2,7 @@
 uid: InstallPIAdapterForAzureEventHubsUsingDocker
 ---
 
-# Adapter install using Docker
+# Installation using Docker
 
 Docker is a set of tools that you can use on Linux to manage application deployments.
 
@@ -73,6 +73,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ADD ./eventhubs_linux-arm.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
+
     **ARM64**
 
     ```bash
