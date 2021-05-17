@@ -6,7 +6,7 @@ uid: PIAdapterForAzureEventHubsDataSourceConfiguration
 
 To use the adapter, you must configure the data source from which it polls data, an event hub, and a storage account. For more information on event hubs and the storage account, see [PI Adapter for Azure Event Hubs principles of operation](xref:PIAdapterForAzureEventHubsPrinciplesOfOperation#azure-requirements).
 
-## To configure the data source
+## Configure the data source
 
 Complete the following steps to configure an Azure Event Hubs data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to initialize the configuration.
 

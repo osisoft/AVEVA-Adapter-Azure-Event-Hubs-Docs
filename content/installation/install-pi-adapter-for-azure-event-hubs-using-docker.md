@@ -10,7 +10,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 This topic provides examples of how to create a Docker container with the Azure Event Hubs adapter.
 
-## To create a startup script
+## CSreate a startup script
 
 To create a startup script for the adapter, follow the instructions below.
 
@@ -50,13 +50,12 @@ To create a startup script for the adapter, follow the instructions below.
         exec /EventHubs_linux-x64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
-    
+
 2. Name the script `eventhubsdockerstart.sh` and save it to the directory where you plan to create the container.
 
-## To create a Docker container
+## Create a Docker container
 
 To create a Docker container that runs the adapter, follow the instructions below.
-
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
@@ -112,7 +111,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 
 The following procedures contain instructions on how to run the adapter inside a Docker container with different options enabled.
 
-### To run the Docker container with REST access enabled
+### Run the Docker container with REST access enabled
 
 To run the adapter inside a Docker container with access to its REST API from the local host, complete the following steps:
 
@@ -125,7 +124,7 @@ To run the adapter inside a Docker container with access to its REST API from th
 
 Port `5590` is accessible from the host and you can make REST calls to Azure Event Hubs adapter from applications on the local host computer. In this example, all data stored by the Azure Event Hubs adapter is stored in the container itself. When you delete the container, the stored data is also deleted.
 
-### To run the Docker container with persistent storage
+### Run the Docker container with persistent storage
 
 To run the adapter inside a Docker container while using the host for persistent storage, complete the following steps. This procedure also enables access to the adapter REST API from the local host.
 
@@ -138,7 +137,7 @@ To run the adapter inside a Docker container while using the host for persistent
 
 Port `5590` is accessible from the host and you can make REST calls to Azure Event Hubs adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/eventhubs`. You can specify any directory.
 
-### To change port number
+### Change port number
 
 To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the adapter using port `6000` instead of `5590`, use the following command:
 
@@ -152,6 +151,6 @@ This command accesses the REST API with port `6000` instead of port `5590`. The 
 curl http://localhost:6000/api/v1/configuration
 ```
 
-### To remove REST access
+### Remove REST access
 
 If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be of value where you want to host an application in the same container as Azure Event Hubs adapter but do not want to have external REST access enabled.
