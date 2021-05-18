@@ -2,7 +2,7 @@
 uid: InstallPIAdapterForAzureEventHubsUsingDocker
 ---
 
-# Installation using Docker
+# Install using Docker
 
 Docker is a set of tools that you can use on Linux to manage application deployments.
 
@@ -10,7 +10,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 This topic provides examples of how to create a Docker container with the Azure Event Hubs adapter.
 
-## CSreate a startup script
+## Create a startup script
 
 To create a startup script for the adapter, follow the instructions below.
 
