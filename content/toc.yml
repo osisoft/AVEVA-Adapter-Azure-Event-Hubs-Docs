@@ -21,16 +21,16 @@
     - topicUid: PIAdapterForAzureEventHubsClientSettingsConfiguration
     - topicUid: PIAdapterForAzureEventHubsDataSelectionConfiguration
     - topicUid: DataFiltersConfiguration
-    - topicUid: EgressEndpointsConfiguration
-      items:
-      - topicUid: PrepareEgressDestinations
-      - topicUid: ConfigureANetworkProxy
-    - topicUid: HealthEndpointConfiguration
     - topicUid: GeneralConfiguration
       items:
       - topicUid: AdapterMetadata
     - topicUid: BufferingConfiguration
     - topicUid: LoggingConfiguration
+    - topicUid: EgressEndpointsConfiguration
+      items:
+      - topicUid: PrepareEgressDestinations
+      - topicUid: ConfigureANetworkProxy
+    - topicUid: HealthEndpointConfiguration
     - topicUid: PIAdapterForAzureEventHubsConfigurationExamples
 - topicUid: Administration
   items:

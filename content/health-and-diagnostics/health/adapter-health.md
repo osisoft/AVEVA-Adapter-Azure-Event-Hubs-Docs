@@ -2,7 +2,7 @@
 uid: PIAdapterForAzureEventHubsHealth
 ---
 
-# Adapter health
+# Health
 
 PI Adapters produce different kinds of health data that can be egressed to different health endpoints.
 

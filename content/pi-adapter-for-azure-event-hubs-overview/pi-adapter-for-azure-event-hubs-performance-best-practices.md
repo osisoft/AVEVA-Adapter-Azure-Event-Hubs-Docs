@@ -2,7 +2,7 @@
 uid: PIAdapterForAzureEventHubsPerformanceBestPractices
 ---
 
-# PI Adapter for Azure Event Hubs performance best practices
+# Performance best practices
 
 The performance of an adapter, PI Adapter for Azure Event Hubs, specifically, depends upon a number of factors, like egress limits, data shape, and data selections. Use the following performance guidelines and best practices when you set up an adapter.
 

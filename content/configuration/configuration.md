@@ -16,24 +16,35 @@ This Quick Start guides you through setup of each configuration file available f
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-1. Configure one or more Azure Event Hubs system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
+1. Configure one or more Azure Event Hubs system components.
 
-2. Configure an Azure Event Hubs data source for each Azure Event Hubs device.<br>See [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration#configure-azure-event-hubs-data-source).
+    See <xref:SystemComponentsConfiguration>.
 
-3. **Optional**: Configure client settings.<br> See [PI Adapter for Azure Event Hubs client settings configuration](xref:PIAdapterForAzureEventHubsClientSettingsConfiguration#configure-azure-event-hubs-client-settings).
+2. Configure an Azure Event Hubs data source for each Azure Event Hubs device.
 
-4. Configure an Azure Event Hubs data selection for each Azure Event Hubs data source.<br>See [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#configure-azure-event-hubs-data-selection).
+    See <xref:PIAdapterForAzureEventHubsDataSourceConfiguration>.
 
-5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
+3. **Optional**: Configure client settings.
 
-    - [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
-    - [Configure a network proxy](xref:ConfigureANetworkProxy)
+    See <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration>.
 
-6. Configure one or more egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
+4. Configure an Azure Event Hubs data selection for each Azure Event Hubs data source.
 
-7. **Optional**: Configure health endpoints, general (diagnostics and metadata), buffering, and logging. See the following topics:
+    See <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration>.
 
-    - [Health endpoint configuration](xref:HealthEndpointConfiguration#configure-health-endpoint)
-    - [General configuration](xref:GeneralConfiguration#configure-general)
-    - [Buffering configuration](xref:BufferingConfiguration#configure-buffering)
-    - [Logging configuration](xref:LoggingConfiguration#configure-logging)
+5. **Optional**: Configure data filters, diagnostics and metadata, buffering, and logging.
+
+    See the following topics:
+
+    - <xref:DataFiltersConfiguration>
+    - <xref:GeneralConfiguration>
+    - <xref:BufferingConfiguration>
+    - <xref:LoggingConfiguration><br/><br/>
+
+6. Configure one or more egress and health endpoints. If there is a proxy between the adapter and your egress endpoints, define it.
+
+    See the following topics:
+
+    - <xref:EgressEndpointsConfiguration>
+    - <xref:ConfigureANetworkProxy>
+    - <xref:HealthEndpointConfiguration>

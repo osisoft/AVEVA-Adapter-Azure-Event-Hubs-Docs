@@ -2,25 +2,28 @@
 uid: PIAdapterForAzureEventHubsDataSourceConfiguration
 ---
 
-# PI Adapter for Azure Event Hubs data source configuration
+# Data source
 
 To use the adapter, you must configure the data source from which it polls data, an event hub, and a storage account. For more information on event hubs and the storage account, see [PI Adapter for Azure Event Hubs principles of operation](xref:PIAdapterForAzureEventHubsPrinciplesOfOperation#azure-requirements).
 
-## Configure Azure Event Hubs data source
+## Configure the data source
 
 Complete the following steps to configure an Azure Event Hubs data source. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to initialize the configuration.
 
 1. Using a text editor, create an empty text file.
+
 2. Copy and paste an example configuration for an Azure Event Hubs data source into the file.
 
-    For sample JSON, see [Azure Event Hubs data source examples](#azure-event-hubs-data-source-examples).
+    For sample JSON, see [Data source examples](#data-source-examples)
 
 3. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [Azure Event Hubs data source parameters](#azure-event-hubs-data-source-parameters).
+    For a table of all available parameters, see [Data source parameters](#data-source-parameters)
 
 4. Save the file. For example, as `ConfigureDataSource.json`.
+
 5. Open a command line session. Change the directory to the location of `ConfigureDataSource.json`.
+
 6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
 
     ```bash
@@ -32,21 +35,20 @@ Complete the following steps to configure an Azure Event Hubs data source. Use t
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number you used.
     * If you use a component ID other than `AzureEventHubs1`, update the endpoint with your chosen component ID.
     * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
-    <br/>
-
+    <br/><br/>
 
 7. Configure the data selection.
 
-    For more information, see [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration)
+    For more information, see <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration>.
 
-## Azure Event Hubs data source schema
+## Data source schema
 
 The full schema definition for the Azure Event Hubs data source configuration is in the `EventHubs_DataSource_schema.json` file located in one of the following folders:
 
 * Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 * Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
-## Azure Event Hubs data source parameters
+## Data source parameters
 
 The following parameters are available for configuring an Azure Event Hubs data source:
 
@@ -60,7 +62,7 @@ The following parameters are available for configuring an Azure Event Hubs data 
 | **CheckpointBlobContainerName** | Required | `string` | The name of the container in the Blob Storage account used to store event hub checkpoints <br><br>Allowed value:  3-63 characters long; contains only letters, numbers, and dash characters per Azure restrictions.|
 | **TimeZone** | Optional | `string` | The time zone associated with the Event Hub namespace<br><br>Allowed value: IANA format, for example "America/Los_Angeles". For the complete list, see [iana Time Zone Database](https://www.iana.org/time-zones).
 
-## Azure Event Hubs data source examples
+## Data source examples
 
 The following are examples of valid Azure Event Hubs data source configurations:
 
