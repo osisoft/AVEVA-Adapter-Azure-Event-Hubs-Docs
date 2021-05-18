@@ -12,12 +12,39 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 ## Quick start
 
-Complete the following steps to establish a data flow from a Azure Event Hubs data source device to a data endpoint.
+This Quick Start guides you through setup of each configuration file available for PI Adapter for Azure Event Hubs. As you complete each step, perform each required configuration to establish a data flow from a data source to one or more endpoints. Some configurations are optional.
 
-1. Configure one or several Azure Event Hubs system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
+**Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-2. Configure a Azure Event Hubs data source for each Azure Event Hubs device.<br>See [PI Adapter for Azure Event Hubs data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration#configure-azure-event-hubs-data-source).
+1. Configure one or more Azure Event Hubs system components.
 
-3. Configure a Azure Event Hubs data selection for each Azure Event Hubs data source.<br>See [PI Adapter for Azure Event Hubs data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#configure-azure-event-hubs-data-selection).
+    See <xref:SystemComponentsConfiguration>.
 
-4. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
+2. Configure an Azure Event Hubs data source for each Azure Event Hubs device.
+
+    See <xref:PIAdapterForAzureEventHubsDataSourceConfiguration>.
+
+3. **Optional**: Configure client settings.
+
+    See <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration>.
+
+4. Configure an Azure Event Hubs data selection for each Azure Event Hubs data source.
+
+    See <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration>.
+
+5. **Optional**: Configure data filters, diagnostics and metadata, buffering, and logging.
+
+    See the following topics:
+
+    - <xref:DataFiltersConfiguration>
+    - <xref:GeneralConfiguration>
+    - <xref:BufferingConfiguration>
+    - <xref:LoggingConfiguration><br/><br/>
+
+6. Configure one or more egress and health endpoints. If there is a proxy between the adapter and your egress endpoints, define it.
+
+    See the following topics:
+
+    - <xref:EgressEndpointsConfiguration>
+    - <xref:ConfigureANetworkProxy>
+    - <xref:HealthEndpointConfiguration>

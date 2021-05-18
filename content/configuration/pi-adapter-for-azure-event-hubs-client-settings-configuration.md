@@ -2,25 +2,28 @@
 uid: PIAdapterForAzureEventHubsClientSettingsConfiguration
 ---
 
-# PI Adapter for Azure Event Hubs client settings configuration
+# Client settings
 
 The client settings configuration is automatically generated when you add a new data source. If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.
 
-## Configure Azure Event Hubs client settings
+## Configure client settings
 
 Complete the following steps to configure Azure Event Hubs client settings. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/ClientSettings` REST endpoint to initialize the configuration.
 
 1. Using a text editor, create an empty text file.
+
 2. Copy and paste an example configuration for Azure Event Hubs client settings into the file.
 
-    For sample JSON, see [Azure Event Hubs client settings example](#azure-event-hubs-client-settings-example).
+    For sample JSON, see [Client settings example](#client-settings-example).
 
 3. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [Azure Event Hubs client settings parameters](#azure-event-hubs-client-settings-parameters).
+    For a table of all available parameters, see [Client settings parameters](#client-settings-parameters).
 
 4. Save the file. For example, as `ConfigureClientSettings.json`.
+
 5. Open a command line session. Change the directory to the location of `ConfigureClientSettings.json`.
+
 6. Enter the following cURL command (which uses the `PUT` method) to initialize the client settings configuration.
 
     ```bash
@@ -35,14 +38,14 @@ Complete the following steps to configure Azure Event Hubs client settings. Use 
     <br/>
     <br/>
 
-## Azure Event Hubs client settings schema
+## Client settings schema
 
 The full schema definition for the Azure Event Hubs client settings configuration is in the `EventHubs_ClientSettings_schema.json` file located in one of the following folders:
 
 * Windows: `%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas`
 * Linux: `/opt/OSIsoft/Adapters/EventHubs/Schemas`
 
-## Azure Event Hubs client settings parameters
+## Client settings parameters
 
 The following parameters are available for configuring Azure Event Hubs client settings:
 
@@ -61,7 +64,7 @@ The following parameters are available for configuring Azure Event Hubs client s
 | **EventProcessorClientMaximumRetries** | Optional | `integer` | The maximum amount of retries that the EventProcessorClient makes in case of client failures <br><br>Default value: `5` |
 | **EventProcessorClientMaximumDelayInMin** | Optional |`integer` | The maximum delay for the timeout operation in minutes<br><br>Default value: `5`|
 
-## Azure Event Hubs client settings example
+## Client settings example
 
 ```json
 {

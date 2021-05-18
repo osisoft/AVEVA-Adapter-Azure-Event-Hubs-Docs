@@ -2,7 +2,7 @@
 uid: PIAdapterForAzureEventHubsPrinciplesOfOperation
 ---
 
-# PI Adapter for Azure Event Hubs principles of operation
+# Principles of operation
 
 This adapter's operations focus on data collection and stream creation.
 
