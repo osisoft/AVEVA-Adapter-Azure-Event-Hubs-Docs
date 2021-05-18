@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PI Adapter for Azure Event Hubs data selection configuration </title>
+    <title>Data selection </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PI Adapter for Azure Event Hubs data selection configuration ">
+    <meta name="title" content="Data selection ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,22 +76,24 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="PIAdapterForAzureEventHubsDataSelectionConfiguration">
-<h1 id="pi-adapter-for-azure-event-hubs-data-selection-configuration">PI Adapter for Azure Event Hubs data selection configuration</h1>
+<h1 id="data-selection">Data selection</h1>
 
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.</p>
-<h2 id="configure-azure-event-hubs-data-selection">Configure Azure Event Hubs data selection</h2>
+<h2 id="to-configure-data-selection">To configure data selection</h2>
 <p>Complete the following steps to configure an Azure Event Hubs data selection. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Using a text editor, create an empty text file.</li>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
 <li><p>Copy and paste an example configuration for an Azure Event Hubs data selection into the file.</p>
-<p> For sample JSON, see <a href="#azure-event-hubs-data-selection-examples">Azure Event Hubs data selection examples</a>.</p>
+<p> For sample JSON, see <a href="#data-selection-examples">Data selection examples</a>.</p>
 </li>
 <li><p>Update the example JSON parameters for your environment.</p>
-<p> For a table of all available parameters, see <a href="#azure-event-hubs-data-selection-parameters">Azure Event Hubs data selection parameters</a>.</p>
+<p> For a table of all available parameters, see <a href="#data-selection-parameters">Data selection parameters</a>.</p>
 </li>
 <li><p>Save the file. For example, as <code>ConfigureClientSettings.json</code>.</p>
 </li>
-<li>Open a command line session. Change the directory to the location of <code>ConfigureClientSettings.json</code>.</li>
+<li><p>Open a command line session. Change the directory to the location of <code>ConfigureClientSettings.json</code>.</p>
+</li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the client settings configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureClientSettings.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/AzureEventHubs1/DataSelection&quot;
 </code></pre><p> <strong>Notes:</strong></p>
@@ -104,13 +106,13 @@
 </ul>
 </li>
 </ol>
-<h2 id="azure-event-hubs-data-selection-schema">Azure Event Hubs data selection schema</h2>
+<h2 id="data-selection-schema">Data selection schema</h2>
 <p>The full schema definition for the Azure Event Hubs data selection configuration is in the <code>EventHubs_DataSelection_schema.json</code> file located in one of the following folders:</p>
 <ul>
 <li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas</code></li>
 <li>Linux: <code>/opt/OSIsoft/Adapters/EventHubs/Schemas</code></li>
 </ul>
-<h2 id="azure-event-hubs-data-selection-parameters">Azure Event Hubs data selection parameters</h2>
+<h2 id="data-selection-parameters">Data selection parameters</h2>
 <table>
 <thead>
 <tr>
@@ -183,8 +185,8 @@
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> <strong>Note:</strong> JsonPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.</p>
-<h2 id="azure-event-hubs-data-selection-examples">Azure Event Hubs data selection examples</h2>
+<p><sup>1</sup> <strong>Note:</strong> JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.</p>
+<h2 id="data-selection-examples">Data selection examples</h2>
 <p>The following are examples of valid Azure Event Hubs data selection configurations<sup>1</sup>:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
 <pre><code class="lang-json">[
@@ -211,21 +213,56 @@
 ]
 </code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:</p>
 <pre><code class="lang-json">{
-&quot;TimeStamp&quot;: &quot;02/17/2021 12:01:36 AM PST&quot;,
-&quot;Events&quot;: [
+  &quot;TimeStamp&quot;: &quot;02/17/2021 12:01:36 AM PST&quot;,
+  &quot;Events&quot;: [
     {
-&quot;Value&quot;: &quot;4578&quot;,
-&quot;DataType&quot;: &quot;int&quot;
+      &quot;Value&quot;: &quot;4578&quot;,
+      &quot;DataType&quot;: &quot;int&quot;
     }
   ]
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
-<p>| api/v1/configuration/&lt;ComponentId>/DataSelection  | <code>GET</code> | Retrieves the data selection configuration, including all data selection items. |
-| api/v1/configuration/&lt;ComponentId>/DataSelection  | <code>PUT</code> | Configures or updates the data selection configuration. The adapter starts collecting data for each data selection item when the following conditions are met:<br><br>&bull; The data selection configuration <code>PUT</code> request is received.<br>&bull; A data source configuration is active. |
-| api/v1/configuration/&lt;ComponentId>/DataSelection | <code>DELETE</code> | Deletes the active data selection configuration. The adapter stops collecting data. |
-| api/v1/configuration/&lt;ComponentId>/DataSelection | <code>PATCH</code> | Allows partial updates of configured data selection items.<br><br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each item in the array must include its <strong>StreamId</strong>. |
-| api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId> | <code>PUT</code> | Updates or creates a new data selection item by <strong>StreamId</strong>. For new items, the adapter starts collecting data after the request is received. |
-| api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId> | <code>DELETE</code> | Deletes a data selection item from the configuration by <strong>StreamId</strong>. The adapter stops collecting data for the deleted item. |</p>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>GET</code></td>
+<td>Retrieves the data selection configuration, including all data selection items.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the data selection configuration. The adapter starts collecting data for each data selection item when the following conditions are met:<br><br>&bull; The data selection configuration <code>PUT</code> request is received.<br>&bull; A data source configuration is active.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>DELETE</code></td>
+<td>Deletes the active data selection configuration. The adapter stops collecting data.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection</td>
+<td><code>PATCH</code></td>
+<td>Allows partial updates of configured data selection items.<br><br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each item in the array must include its <strong>StreamId</strong>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId></td>
+<td><code>PUT</code></td>
+<td>Updates or creates a new data selection item by <strong>StreamId</strong>. For new items, the adapter starts collecting data after the request is received.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/&lt;ComponentId>/DataSelection/&lt;StreamId></td>
+<td><code>DELETE</code></td>
+<td>Deletes a data selection item from the configuration by <strong>StreamId</strong>. The adapter stops collecting data for the deleted item.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Note:</strong> Replace &lt;ComponentId> with the Id of your Azure Event Hubs component, for example AzureEventHubs1.</p>
 </article>
           </div>

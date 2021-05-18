@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PI Adapter for Azure Event Hubs client settings configuration </title>
+    <title>Client settings </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PI Adapter for Azure Event Hubs client settings configuration ">
+    <meta name="title" content="Client settings ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,22 +76,24 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="PIAdapterForAzureEventHubsClientSettingsConfiguration">
-<h1 id="pi-adapter-for-azure-event-hubs-client-settings-configuration">PI Adapter for Azure Event Hubs client settings configuration</h1>
+<h1 id="client-settings">Client settings</h1>
 
 <p>The client settings configuration is automatically generated when you add a new data source. If you experience problems with timeouts or when Azure Event Hubs limits are exceeded in terms of browse or subscription operation, you can change the client settings configuration.</p>
-<h2 id="configure-azure-event-hubs-client-settings">Configure Azure Event Hubs client settings</h2>
+<h2 id="configure-client-settings">Configure client settings</h2>
 <p>Complete the following steps to configure Azure Event Hubs client settings. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/ClientSettings</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Using a text editor, create an empty text file.</li>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
 <li><p>Copy and paste an example configuration for Azure Event Hubs client settings into the file.</p>
-<p> For sample JSON, see <a href="#azure-event-hubs-client-settings-example">Azure Event Hubs client settings example</a>.</p>
+<p> For sample JSON, see <a href="#client-settings-example">Client settings example</a>.</p>
 </li>
 <li><p>Update the example JSON parameters for your environment.</p>
-<p> For a table of all available parameters, see <a href="#azure-event-hubs-client-settings-parameters">Azure Event Hubs client settings parameters</a>.</p>
+<p> For a table of all available parameters, see <a href="#client-settings-parameters">Client settings parameters</a>.</p>
 </li>
 <li><p>Save the file. For example, as <code>ConfigureClientSettings.json</code>.</p>
 </li>
-<li>Open a command line session. Change the directory to the location of <code>ConfigureClientSettings.json</code>.</li>
+<li><p>Open a command line session. Change the directory to the location of <code>ConfigureClientSettings.json</code>.</p>
+</li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the client settings configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureClientSettings.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/AzureEventHubs1/ClientSettings&quot;
 </code></pre><p> <strong>Notes:</strong></p>
@@ -104,13 +106,13 @@
 </ul>
 </li>
 </ol>
-<h2 id="azure-event-hubs-client-settings-schema">Azure Event Hubs client settings schema</h2>
+<h2 id="client-settings-schema">Client settings schema</h2>
 <p>The full schema definition for the Azure Event Hubs client settings configuration is in the <code>EventHubs_ClientSettings_schema.json</code> file located in one of the following folders:</p>
 <ul>
 <li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas</code></li>
 <li>Linux: <code>/opt/OSIsoft/Adapters/EventHubs/Schemas</code></li>
 </ul>
-<h2 id="azure-event-hubs-client-settings-parameters">Azure Event Hubs client settings parameters</h2>
+<h2 id="client-settings-parameters">Client settings parameters</h2>
 <p>The following parameters are available for configuring Azure Event Hubs client settings:</p>
 <table>
 <thead>
@@ -196,7 +198,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="azure-event-hubs-client-settings-example">Azure Event Hubs client settings example</h2>
+<h2 id="client-settings-example">Client settings example</h2>
 <pre><code class="lang-json">{
    &quot;MaxInternalQueueSize&quot; : 500000,
    &quot;InternalQueuePollingIntervalInMs&quot; : &quot;0:00:00.05&quot;,

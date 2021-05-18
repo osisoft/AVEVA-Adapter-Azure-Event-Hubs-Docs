@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/agent/_work/1/s",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "YnASmueqCS67HixVfs//pQ=="
+          "hash": "Dg195fK52jhEaqhxFvekLg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html",
-          "hash": "hNdgFj5gDqeNUaf607YPPA=="
+          "hash": "a+LHN8nUBoycF19Wqkg5Fg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-configuration-examples.html",
-          "hash": "Pa2m1YymVlrWFLHhgpUfVw=="
+          "hash": "599Hg7mUg9e2NzDfOqE8JA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "AGzkn8o0f/irx3nfCAv2Ww=="
+          "hash": "Y43+420laNbs4ENZmaMzDg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html",
-          "hash": "62ahuJx7ET3fl4cW3LRLCQ=="
+          "hash": "kSSioHDPr2rTcPqyW3WrlA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "content/health-and-diagnostics/health/adapter-health.html",
-          "hash": "3s5ZMJkbbDKq/SxlHdREqw=="
+          "hash": "L+AGPOPxVTlXg0204nzwyw=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "content/health-and-diagnostics/health/pi-adapter-for-azure-event-hubs-device-status.html",
-          "hash": "0xztck0RDSnOLizdBP7mEA=="
+          "hash": "Fl1OpHmza9cIbt2N9mAadA=="
         }
       },
       "is_incremental": false,
@@ -137,7 +137,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "92htdCQiVYtZjxp7+wLaOA=="
+          "hash": "0L8VkPKlhJX9EELXKLGCIA=="
         }
       },
       "is_incremental": false,
@@ -149,7 +149,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/install-pi-adapter-for-azure-event-hubs-using-docker.html",
-          "hash": "LbUT+W4jj+BUIrgKmdBaxw=="
+          "hash": "2SoaqDBqe0qo6UrLSa7EEg=="
         }
       },
       "is_incremental": false,
@@ -253,11 +253,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/buffering-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/buffering.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/buffering-configuration.html",
-          "hash": "5kkG0Iqecp8QCjabn6ByUA=="
+          "relative_path": "content/main/shared-content/configuration/buffering.html",
+          "hash": "bqlWUGfA+lUeRlDEzj6/1g=="
         }
       },
       "is_incremental": false,
@@ -277,11 +277,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/data-filters-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/data-filters.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/data-filters-configuration.html",
-          "hash": "fGs8R79vGBtQ5qTtkXvd1Q=="
+          "relative_path": "content/main/shared-content/configuration/data-filters.html",
+          "hash": "lbq+lJP1eZxIFwBylrLgcg=="
         }
       },
       "is_incremental": false,
@@ -289,11 +289,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/discovery-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/discovery-configuration.html",
-          "hash": "W46XPMMccTUPBIQThPenBA=="
+          "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
+          "hash": "xR8IBwNg7aPaUo8w/rdgaA=="
         }
       },
       "is_incremental": false,
@@ -301,11 +301,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "source_relative_path": "content/main/shared-content/configuration/discovery.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
-          "hash": "ixCVvi+AZ8UE+zXpUkaS/w=="
+          "relative_path": "content/main/shared-content/configuration/discovery.html",
+          "hash": "VPCmveOVwhZskCXLpmGtqA=="
         }
       },
       "is_incremental": false,
@@ -313,11 +313,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
-          "hash": "slW9/2R2Tb0G9aYvo/fdjw=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
+          "hash": "ScptKP/lr4YPHpTgKMEPkw=="
         }
       },
       "is_incremental": false,
@@ -325,11 +325,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.html",
-          "hash": "b6qcQD4UjjYyiwCxzPPB1w=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html",
+          "hash": "6EhTZRgmJSI6HGnJcLJFzA=="
         }
       },
       "is_incremental": false,
@@ -337,11 +337,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/general-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/general-configuration.html",
-          "hash": "SfwTpP33aIi9A92J9/Nmzw=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
+          "hash": "ETDPSjR03v29uQYKztW6sA=="
         }
       },
       "is_incremental": false,
@@ -349,11 +349,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/health-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.html",
-          "hash": "VVvIZ01/+fnoDnPvRIpRPQ=="
+          "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
+          "hash": "V+E85IAHaldIXvEcvYc6uQ=="
         }
       },
       "is_incremental": false,
@@ -361,11 +361,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/logging-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/logging.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/logging-configuration.html",
-          "hash": "R1vwTGLfh+pzlSbRvYbd0w=="
+          "relative_path": "content/main/shared-content/configuration/logging.html",
+          "hash": "CyfaJgzQlOfX9knv7YvFqg=="
         }
       },
       "is_incremental": false,
@@ -373,11 +373,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/schedules-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/schedules.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/schedules-configuration.html",
-          "hash": "TcFkDVG0ITT5mYyZUuI4Dg=="
+          "relative_path": "content/main/shared-content/configuration/schedules.html",
+          "hash": "af63Jkr0VzxWpXlakqjwog=="
         }
       },
       "is_incremental": false,
@@ -385,11 +385,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.html",
-          "hash": "vjv/1CyukrzDqh6/UF4wjw=="
+          "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
+          "hash": "3bJxvy1PqE3vTgCp9zNnaQ=="
         }
       },
       "is_incremental": false,
@@ -397,23 +397,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-components-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-components.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-components-configuration.html",
-          "hash": "RO5/8lJlxeCTGi3ej/2XXw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "content/main/shared-content/configuration/text-parser/all-file-types/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/configuration/text-parser/all-file-types/toc.html",
-          "hash": "+oxGA9S3veLADY7S+Vw+nw=="
+          "relative_path": "content/main/shared-content/configuration/system-components.html",
+          "hash": "a357G1c7XNDHI9y/5DUmow=="
         }
       },
       "is_incremental": false,
@@ -449,7 +437,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
-          "hash": "PlH9HKVD9nfS6U1Ky0rubg=="
+          "hash": "0A4ueIin00K5rhCuxBoODg=="
         }
       },
       "is_incremental": false,
@@ -457,11 +445,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.html",
-          "hash": "VnyubGd6Essh61bTxK5gmg=="
+          "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
+          "hash": "/8ElPrEdo6gqKpwwuwMzCg=="
         }
       },
       "is_incremental": false,
@@ -469,11 +457,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/egress.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.html",
-          "hash": "Ri+kEQytGCAVCuj1AFeDNw=="
+          "relative_path": "content/main/shared-content/diagnostics/egress.html",
+          "hash": "wwBO+by/RTdskpH+TNNw6w=="
         }
       },
       "is_incremental": false,
@@ -529,23 +517,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/health/adapter-health.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/health/adapter-health.html",
-          "hash": "c/H8VkBOaQ+HQLkxkY3DTQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/health/device-status.md",
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/device-status.html",
-          "hash": "r67MA6ywyrvGFvWoww0NBA=="
+          "hash": "LONyBs7yRvWj+F0gV3MnAQ=="
         }
       },
       "is_incremental": false,
@@ -557,7 +533,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "19/vC1P8PhghYMybGUh4Gg=="
+          "hash": "5mJdZpAU3gWYEep28+zENg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/health/health.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/health/health.html",
+          "hash": "5ULlLljvIt+BVj6oPaqg0w=="
         }
       },
       "is_incremental": false,
@@ -569,19 +557,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/next-health-message-expected.html",
-          "hash": "B++TySEDA76bQAXVwQKLUQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "content/main/shared-content/health/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/health/toc.html",
-          "hash": "H9NBmOusFSL1Sryu8K7DeQ=="
+          "hash": "f5+N8i4oTdPL/YUEV5MOLw=="
         }
       },
       "is_incremental": false,
@@ -757,11 +733,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/metadata/adapter-metadata.md",
+      "source_relative_path": "content/main/shared-content/metadata/metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/metadata/adapter-metadata.html",
-          "hash": "cxu1fDo/QT7Hjr0seVnKYA=="
+          "relative_path": "content/main/shared-content/metadata/metadata.html",
+          "hash": "JOgnWwRHdGtrNZFzWRZXrw=="
         }
       },
       "is_incremental": false,
@@ -781,11 +757,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.md",
+      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshooting.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "iXINvad5+fKgmA/ZeFbqig=="
+          "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
+          "hash": "gDuOJL5LhzWbWgEZ2gv3tg=="
         }
       },
       "is_incremental": false,
@@ -809,7 +785,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-performance-best-practices.html",
-          "hash": "wg50ipScWWj0nT6rzchiBw=="
+          "hash": "ZUuQuxB1pCn211xR1qaMsQ=="
         }
       },
       "is_incremental": false,
@@ -821,7 +797,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html",
-          "hash": "O5NGjCKPOIuEPfbzGHP2+w=="
+          "hash": "rRTZZf9NEk9A7FdEEpVgpg=="
         }
       },
       "is_incremental": false,
@@ -845,7 +821,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "qSX+sKKegx4NJ/fKBHSF5g=="
+          "hash": "VopYgUaxEppKH2tedPjjNQ=="
         }
       },
       "is_incremental": false,

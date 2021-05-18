@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PI Adapter for Azure Event Hubs configuration examples </title>
+    <title>Configuration examples </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PI Adapter for Azure Event Hubs configuration examples ">
+    <meta name="title" content="Configuration examples ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,11 +76,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="PIAdapterForAzureEventHubsConfigurationExamples">
-<h1 id="pi-adapter-for-azure-event-hubs-configuration-examples">PI Adapter for Azure Event Hubs configuration examples</h1>
+<h1 id="configuration-examples">Configuration examples</h1>
 
 <p>The following tables provide examples for all configurations available for PI Adapter for Azure Event Hubs.</p>
 <p><strong>Note:</strong> The examples in this topic are using the default port number <code>5590</code>. If you selected a different port number, replace it with that value.</p>
-<h2 id="system-components-configuration-with-two-azure-event-hubs-adapter-instances">System components configuration with two Azure Event Hubs adapter instances</h2>
+<h2 id="system-components-configuration">System components configuration</h2>
+<p>The following JSON is an example of a system components configuration. It contains two instances of the Azure Event Hubs adapter.</p>
 <pre><code class="lang-json">[
     {
         &quot;ComponentId&quot;: &quot;AzureEventHubs1&quot;,
@@ -95,7 +96,7 @@
         &quot;ComponentType&quot;: &quot;OmfEgress&quot;
     }
 ]
-</code></pre><h2 id="azure-event-hubs-adapter-configuration">Azure Event Hubs adapter configuration</h2>
+</code></pre><h2 id="adapter-configuration">Adapter configuration</h2>
 <pre><code class="lang-json">{
     &quot;AzureEventHubs1&quot;: {
         &quot;Logging&quot;: {

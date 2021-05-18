@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PI Adapter for Azure Event Hubs data source configuration </title>
+    <title>Data source </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PI Adapter for Azure Event Hubs data source configuration ">
+    <meta name="title" content="Data source ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,22 +76,24 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="PIAdapterForAzureEventHubsDataSourceConfiguration">
-<h1 id="pi-adapter-for-azure-event-hubs-data-source-configuration">PI Adapter for Azure Event Hubs data source configuration</h1>
+<h1 id="data-source">Data source</h1>
 
 <p>To use the adapter, you must configure the data source from which it polls data, an event hub, and a storage account. For more information on event hubs and the storage account, see <a class="xref" href="../pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html#azure-requirements">PI Adapter for Azure Event Hubs principles of operation</a>.</p>
-<h2 id="configure-azure-event-hubs-data-source">Configure Azure Event Hubs data source</h2>
+<h2 id="configure-the-data-source">Configure the data source</h2>
 <p>Complete the following steps to configure an Azure Event Hubs data source. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSource</code> REST endpoint to initialize the configuration.</p>
 <ol>
-<li>Using a text editor, create an empty text file.</li>
+<li><p>Using a text editor, create an empty text file.</p>
+</li>
 <li><p>Copy and paste an example configuration for an Azure Event Hubs data source into the file.</p>
-<p> For sample JSON, see <a href="#azure-event-hubs-data-source-examples">Azure Event Hubs data source examples</a>.</p>
+<p> For sample JSON, see <a href="#data-source-examples">Data source examples</a></p>
 </li>
 <li><p>Update the example JSON parameters for your environment.</p>
-<p> For a table of all available parameters, see <a href="#azure-event-hubs-data-source-parameters">Azure Event Hubs data source parameters</a>.</p>
+<p> For a table of all available parameters, see <a href="#data-source-parameters">Data source parameters</a></p>
 </li>
 <li><p>Save the file. For example, as <code>ConfigureDataSource.json</code>.</p>
 </li>
-<li>Open a command line session. Change the directory to the location of <code>ConfigureDataSource.json</code>.</li>
+<li><p>Open a command line session. Change the directory to the location of <code>ConfigureDataSource.json</code>.</p>
+</li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data source configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/AzureEventHubs1/DataSource&quot;
 </code></pre><p> <strong>Notes:</strong></p>
@@ -99,20 +101,20 @@
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number you used.</li>
 <li>If you use a component ID other than <code>AzureEventHubs1</code>, update the endpoint with your chosen component ID.</li>
 <li>For a list of other REST operations you can perform, like updating or deleting a data source configuration, see <a href="#rest-urls">REST URLs</a>.
-<br></li>
+<br><br></li>
 </ul>
 </li>
 <li><p>Configure the data selection.</p>
-<p> For more information, see <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a></p>
+<p> For more information, see <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection</a>.</p>
 </li>
 </ol>
-<h2 id="azure-event-hubs-data-source-schema">Azure Event Hubs data source schema</h2>
+<h2 id="data-source-schema">Data source schema</h2>
 <p>The full schema definition for the Azure Event Hubs data source configuration is in the <code>EventHubs_DataSource_schema.json</code> file located in one of the following folders:</p>
 <ul>
 <li>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\EventHubs\Schemas</code></li>
 <li>Linux: <code>/opt/OSIsoft/Adapters/EventHubs/Schemas</code></li>
 </ul>
-<h2 id="azure-event-hubs-data-source-parameters">Azure Event Hubs data source parameters</h2>
+<h2 id="data-source-parameters">Data source parameters</h2>
 <p>The following parameters are available for configuring an Azure Event Hubs data source:</p>
 <table>
 <thead>
@@ -168,7 +170,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="azure-event-hubs-data-source-examples">Azure Event Hubs data source examples</h2>
+<h2 id="data-source-examples">Data source examples</h2>
 <p>The following are examples of valid Azure Event Hubs data source configurations:</p>
 <h3 id="minimal-data-source-configuration">Minimal data source configuration</h3>
 <pre><code class="lang-json">{
