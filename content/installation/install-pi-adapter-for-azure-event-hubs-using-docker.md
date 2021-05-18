@@ -2,7 +2,7 @@
 uid: InstallPIAdapterForAzureEventHubsUsingDocker
 ---
 
-# Install using Docker
+# Installation using Docker
 
 Docker is a set of tools that you can use on Linux to manage application deployments.
 
