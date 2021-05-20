@@ -52,5 +52,7 @@
     - topicUid: ErrorRate
   - topicUid: EgressDiagnostics
 - topicUid: TroubleshootTheAdapter
+  items:
+  - topicUid: TroubleshootPIAdapterForAzureEventHubs
 - topicUid: ReleaseNotes
 - topicUid: TechnicalSupportAndFeedback

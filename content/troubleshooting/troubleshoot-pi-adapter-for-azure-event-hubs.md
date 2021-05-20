@@ -10,26 +10,30 @@ PI Adapter for Azure Event Hubs provides troubleshooting features that enable yo
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. Navigate to [data source configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration) and verify that the parameter values are correct.
+1. If the adapter is failing to collect any data, navigate to <xref:PIAdapterForAzureEventHubsDataSourceConfiguration> and verify that the following parameter values are correct.
 
     | Parameter                             | Description |
     |---------------------------------------|-------------|
+    | **StreamIdPrefix**                    | If you have recently updated this prefix setting, you must [restart the adapter](xref:StartAndStopAnAdapter) for the change to take effect. |
     | **EventHubNamespaceConnectionString** | Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot connect to the AEH namespace. |
     | **ConsumerGroupName**                 | Verify that the group name is entered correctly. If the group name is entered incorrectly, the adapter cannot read the event stream. |
-    | **BlobStorageConnectionString**       | Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot connect to the Azure Blob Storage account. |
-    | **CheckpointBlobContainerName**       | Verify that the container name is entered correctly. If the name is entered incorrectly, the adapter cannot connect to the container in the Azure Blob Storage account. |
+    | **BlobStorageConnectionString**       | Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
+    | **CheckpointBlobContainerName**       | Verify that the container name is entered correctly. If the name is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
 
-2. Navigate to [data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration) and verify that the following data selection items are correct:
+2. If specific data streams or sub-streams are not updating, navigate to <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration> and verify that the following data selection items are correct:
 
     | Parameter           | Description |
     |---------------------|-------------|
+    | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
     | **EventHubName**    | The event hub name is valid. If the name is invalid, the adapter cannot collect data. |
     | **ValueField**      | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload. |
     | **TimeField**       | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload. |
     | **DataType**        | The correct data type is referenced. An incorrect data type causes data conversion to fail. |
     | **TimeFormat**      | The correct time format is referenced. A time format that does not match the value from **TimeField** means that the adapter cannot convert timestamp from the AEH payload. |
 
-3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
+3. If the adapter is performing suboptimal, navigate to <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration> and review the configuration for any custom values that override default settings. Default client settings fit most use cases, so customized settings are more likely to cause issues.
+
+4. Navigate to <xref:EgressEndpointsConfiguration>. For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
     * For a PI server or EDS endpoint, verify **UserName** and **Password**.
     * For an OCS endpoint, verify **ClientId** and **ClientSecret**.
