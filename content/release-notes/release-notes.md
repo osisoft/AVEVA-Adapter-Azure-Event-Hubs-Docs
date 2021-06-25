@@ -5,8 +5,8 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0<br>
-Adapter framework 1.3 
+PI Adapter for Azure Event Hubs 1.0.0.10<br>
+Adapter framework 1.3.1.1 
 
 ## Overview
 
@@ -46,7 +46,7 @@ Refer to [Uninstall the adapter](xref:UninstallTheAdapter).
 
 <!-- For information on how to complete this section, please refer to the [Security Wiki](https://dev.azure.com/osieng/engineering/_wiki/wikis/Architecture.wiki/15575/SDL-practice-described-in-release-notes)-->
 
-### OSIsoft’s commitment
+### OSIsoft's commitment
 
 Because the PI System often serves as a barrier protecting control system networks and mission-critical infrastructure assets, OSIsoft is committed to (1) delivering a high-quality product and (2) communicating clearly what security issues have been addressed. This release of PI Adapter for Azure Event Hubs is the highest quality and most secure version of the PI Adapter for Azure Event Hubs released to date. OSIsoft's commitment to improving the PI System is ongoing, and each future version should raise the quality and security bar even further.
 
@@ -54,7 +54,7 @@ Because the PI System often serves as a barrier protecting control system networ
 
 The practice of publicly disclosing internally discovered vulnerabilities is consistent with the [Common Industrial Control System Vulnerability Disclosure Framework](https://ics-cert.us-cert.gov/sites/default/files/ICSJWG-Archive/ICSJWG_Vulnerability_Disclosure_Framework_Final_1.pdf) developed by the [Industrial Control Systems Joint Working Group (ICSJWG)](https://ics-cert.us-cert.gov/Industrial-Control-Systems-Joint-Working-Group-ICSJWG). Despite the increased risk posed by greater transparency, OSIsoft is sharing this information to help you make an informed decision about when to upgrade to ensure your PI System has the best available protection.
 
-For more information, refer to OSIsoft’s [Ethical Disclosure Policy](https://www.osisoft.com/ethical-disclosure-policy).
+For more information, refer to OSIsoft's [Ethical Disclosure Policy](https://www.osisoft.com/ethical-disclosure-policy).
 
 To report a security vulnerability, refer to OSIsoft's [Report a Security Vulnerability](https://www.osisoft.com/report-a-security-vulnerability).
 
