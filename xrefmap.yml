@@ -151,6 +151,9 @@ references:
 - uid: TextParser
   name: Text parser
   href: content/main/shared-content/configuration/text-parser/text-parser.html
+- uid: TroubleshootPIAdapterForAzureEventHubs
+  name: Troubleshoot PI Adapter for Azure Event Hubs
+  href: content/troubleshooting/troubleshoot-pi-adapter-for-azure-event-hubs.html
 - uid: TroubleshootTheAdapter
   name: Troubleshooting
   href: content/main/shared-content/troubleshooting/troubleshooting.html

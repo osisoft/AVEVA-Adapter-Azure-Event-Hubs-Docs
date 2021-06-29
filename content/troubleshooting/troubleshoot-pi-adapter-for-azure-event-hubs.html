@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshoot PI Adapter for Azure Event Hubs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshoot PI Adapter for Azure Event Hubs ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TroubleshootPIAdapterForAzureEventHubs">
+<h1 id="troubleshoot-pi-adapter-for-azure-event-hubs">Troubleshoot PI Adapter for Azure Event Hubs</h1>
+
+<p>PI Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the <a href="https://my.osisoft.com/">OSIsoft Customer Portal</a>.</p>
+<h2 id="check-configurations">Check configurations</h2>
+<p>Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.</p>
+<ol>
+<li><p>If the adapter is failing to collect any data, navigate to <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html">Data source</a> and verify that the following parameter values are correct.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>StreamIdPrefix</strong></td>
+<td>If you have recently updated this prefix setting, you must <a class="xref" href="../main/shared-content/administration/start-and-stop-an-adapter.html">restart the adapter</a> for the change to take effect.</td>
+</tr>
+<tr>
+<td><strong>EventHubNamespaceConnectionString</strong></td>
+<td>Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot connect to the AEH namespace.</td>
+</tr>
+<tr>
+<td><strong>ConsumerGroupName</strong></td>
+<td>Verify that the group name is entered correctly. If the group name is entered incorrectly, the adapter cannot read the event stream.</td>
+</tr>
+<tr>
+<td><strong>BlobStorageConnectionString</strong></td>
+<td>Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection.</td>
+</tr>
+<tr>
+<td><strong>CheckpointBlobContainerName</strong></td>
+<td>Verify that the container name is entered correctly. If the name is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>If specific data streams or sub-streams are not updating, navigate to <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection</a> and verify that the following data selection items are correct:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>StreamId</strong></td>
+<td>If you using a custom stream ID that is not being generated, verify that it follows the <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html#data-selection-parameters">stream ID rules</a>. If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration.</td>
+</tr>
+<tr>
+<td><strong>EventHubName</strong></td>
+<td>The event hub name is valid. If the name is invalid, the adapter cannot collect data.</td>
+</tr>
+<tr>
+<td><strong>ValueField</strong></td>
+<td>The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload.</td>
+</tr>
+<tr>
+<td><strong>TimeField</strong></td>
+<td>The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload.</td>
+</tr>
+<tr>
+<td><strong>DataType</strong></td>
+<td>The correct data type is referenced. An incorrect data type causes data conversion to fail.</td>
+</tr>
+<tr>
+<td><strong>TimeFormat</strong></td>
+<td>The correct time format is referenced. A time format that does not match the value from <strong>TimeField</strong> means that the adapter cannot convert timestamp from the AEH payload.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>If the adapter is performing suboptimal, navigate to <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html">Client settings</a> and review the configuration for any custom values that override default settings. Default client settings fit most use cases, so customized settings are more likely to cause issues.</p>
+</li>
+<li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints.html">Egress endpoints</a>. For each configured endpoint, verify that the <strong>Endpoint</strong> and authentication properties are correct.</p>
+<ul>
+<li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
+<li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="check-connectivity">Check connectivity</h2>
+<p>Perform the following steps to verify active connections to the data source and egress endpoints.</p>
+<ol>
+<li><p>Based on your egress endpoints, verify that data values are updating.</p>
+<ul>
+<li><p>For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a Web browser to send the request. For more information, see <a href="https://techsupport.osisoft.com/Documentation/PI-Web-API/help/controllers/point.html">PI Web API Reference</a>.</p>
+<p>  Alternatively, use any PI Client software to read point values from the PI Data Archive directly.</p>
+</li>
+<li><p>For OCS, view the OCS portal to verify that data streams are updating. For more information, see <a href="https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html">Getting started with trend data</a>.</p>
+<p>  Alternatively, you can use Postman to send an API request to verify data streams. For more information, see <a href="https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html">API calls for reading data</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>If configured, use a health endpoint to determine the status of the adapter.</p>
+<p> For more information, see <a class="xref" href="../main/shared-content/health/health-and-diagnostics.html">Health and diagnostics</a>.</p>
+</li>
+</ol>
+<h2 id="check-logs">Check logs</h2>
+<p>Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.</p>
+<ol>
+<li><p>Navigate to the logs directory:</p>
+<ul>
+<li>Windows: <code>%ProgramData%\OSIsoft\Adapters\BACnet\Logs</code></li>
+<li>Linux: <code>/usr/share/OSIsoft/Adapters/BACnet/Logs</code></li>
+</ul>
+</li>
+<li><p>Optional: Change the log level of the adapter to receive more information and context.</p>
+<p> For more information, see <a class="xref" href="../main/shared-content/configuration/logging.html">Logging configuration</a>.</p>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/troubleshooting/troubleshoot-pi-adapter-for-azure-event-hubs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2020 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

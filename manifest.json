@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "DL3GuWFqCsih10M4fEJnJg=="
+          "hash": "VwftGNsF48RksqyAkgtTug=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "Y43+420laNbs4ENZmaMzDg=="
+          "hash": "72hR+L47diHaAEKiCL0r1g=="
         }
       },
       "is_incremental": false,
@@ -197,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/administration.html",
-          "hash": "anjJ+Eal1u0ixUKrSbh73w=="
+          "hash": "76PH8hiBZ0K/r0DqSzRcXQ=="
         }
       },
       "is_incremental": false,
@@ -269,7 +269,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/configuration-tools.html",
-          "hash": "e9LMgOTb/aXZi7oAXAqgjg=="
+          "hash": "+tz4ZHm4leLI2cEQamkotA=="
         }
       },
       "is_incremental": false,
@@ -809,7 +809,7 @@
       "output": {
         ".html": {
           "relative_path": "content/release-notes/release-notes.html",
-          "hash": "6t+imE9wErUkhYrCXVDA2g=="
+          "hash": "NiWCXrR/AT1x5H3gh25DlQ=="
         }
       },
       "is_incremental": false,
@@ -821,7 +821,19 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "VopYgUaxEppKH2tedPjjNQ=="
+          "hash": "MHxPRM4IXW3gGOmR/tMHlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-azure-event-hubs.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-azure-event-hubs.html",
+          "hash": "ykAjkTXq2lAAgxreIDTK3A=="
         }
       },
       "is_incremental": false,
@@ -866,7 +878,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 57,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
