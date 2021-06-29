@@ -72,7 +72,7 @@ The following table lists the known vulnerabilities and their mitigation in this
 
  Component | Version | CVE or Reference | CVSS | Mitigation
  --------- | ------- | -----------------| ------ | ----------
- json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.8 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability.
+ json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.7 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability.
 
 ## Documentation overview
 
