@@ -19,6 +19,9 @@
       - topicUid: SystemAndAdapterConfiguration
     - topicUid: PIAdapterForAzureEventHubsDataSourceConfiguration
     - topicUid: PIAdapterForAzureEventHubsClientSettingsConfiguration
+    - topicUid: DiscoveryConfiguration
+      items:
+      - topicUid: PIAdapterAzureEventHubsDataSourceDiscover
     - topicUid: PIAdapterForAzureEventHubsDataSelectionConfiguration
     - topicUid: DataFiltersConfiguration
     - topicUid: GeneralConfiguration
