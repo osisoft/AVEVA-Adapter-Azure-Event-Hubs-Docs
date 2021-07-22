@@ -55,10 +55,10 @@ The full schema definition for the Azure Event Hubs data selection configuration
 | **DataFilterId** | Optional | `string` | The ID of the data filter <br><br>Allowed value: any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. | **DataFilterCache** | Optional | `` | The cache to support data filtering. The cache stores previous and last value. |  |
 | **EventHubName** | Required | `string` | The name of the event hub to collect data from <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: `{EventHubName}` |
 | **ValueField** | <sup>1</sup> | `string` | The JSONPath expression<sup>2</sup> to take value from a property<br><br>Allowed value: cannot be `null`, empty, or whitespace |
-| **DataFields** | <sup>1</sup> | `string` | A `ComplexTypeMapping` that maps JSONPath expressions of fields to property names. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)
+[Complex data type examples](#complex-data-type-field-mapping-examples)
 | **TimeField** | Optional | `string` | The JSONPath expression<sup>2</sup> to take value to use as a timestamp from a property<br>**Note:** The adapter generates a timestamp when `null` is specified. |
 | **DeviceId** | Optional | `string` | The device Id associated with the IoT Hub. | <br>If specified, the event is sent only if it originated from the specified device. If omitted, the event is sent to all streams  that match the selection. |
-| **DataType** | Required | `string` | The expected data type of the values for the specified field. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)<br><br>Allowed value: OMF supported data types |
+[Complex data type examples](#complex-data-type-field-mapping-examples)
 | **TimeFormat** | Optional | `string` | The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>2</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the TimeField. If you specify `null`, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats. |
 
 <sup>1</sup>: `DataFields` and `ValueField` are mutually exclusive. You must define one or the other, but not both.<br>
@@ -113,20 +113,20 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 }
 ```
 
-## Complex data type examples 
+## Complex data type field mapping examples 
 
-When working with the `DataFields` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types supported by [OCS](https://docs.osisoft.com/bundle/ocs/page/developer-guide/sequential-data-store-dev/sds-types-dev.html) as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
+When working with the `DataFields` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types field mappings as JSONPath expressions. [OCS](https://docs.osisoft.com/bundle/ocs/page/developer-guide/sequential-data-store-dev/sds-types-dev.html) supports these field mappings. PI Adapter for Azure Event Hubs supports the following complex data type field mappings: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
 
 ### `TimeIndexed.Coordinates` Example
 
 ```json
-{\"X\",\"$['xValue']\"}, {\"Y\",\"$['yValue']\"}, {\"Z\",\"$['zValue']\"}
+{"X","$['xValue']"}, {"Y","$['yValue']"}, {"Z","$['zValue']"}
 ```
 
 ### `TimeIndexed.GeoLocation` Example
 
 ```json
-{\"Latitude\", \"$['latitudeValue']\"}, {\"Longitude\", \"$['longitudeValue']\"}
+{"Latitude", "$['latitudeValue']"}, {"Longitude", "$['longitudeValue']"}
 ```
 
 
