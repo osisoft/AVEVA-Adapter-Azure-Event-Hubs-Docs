@@ -54,17 +54,19 @@ The full schema definition for the Azure Event Hubs data selection configuration
 | **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom identifier follows the **stream ID rules**:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores ("__")<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Id>.<ValueField>` . |
 | **DataFilterId** | Optional | `string` | The ID of the data filter <br><br>Allowed value: any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. | **DataFilterCache** | Optional | `` | The cache to support data filtering. The cache stores previous and last value. |  |
 | **EventHubName** | Required | `string` | The name of the event hub to collect data from <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: `{EventHubName}` |
-| **ValueField** | Required | `string` | The JsonPath expression<sup>1</sup>  to take value from a property<br><br>Allowed value: cannot be `null`, empty, or whitespace |
-| **TimeField** | Optional | `string` | The JsonPath expression<sup>1</sup> to take value to use as a timestamp from a property<br>**Note:** The adapter generates a timestamp when `null` is specified. |
+| **ValueField**<sup>1</sup> | Required | `string` | The JSONPath expression<sup>2</sup> to take value from a property<br><br>Allowed value: cannot be `null`, empty, or whitespace |
+| **DataField**<sup>1</sup> | Required | `string` | A `ComplexTypeMapping` that maps JSONPath expressions of fields to property names. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)
+| **TimeField** | Optional | `string` | The JSONPath expression<sup>2</sup> to take value to use as a timestamp from a property<br>**Note:** The adapter generates a timestamp when `null` is specified. |
 | **DeviceId** | Optional | `string` | The device Id associated with the IoT Hub. | <br>If specified, the event is sent only if it originated from the specified device. If omitted, the event is sent to all streams  that match the selection. |
-| **DataType** | Required | `string` | The expected data type of the values for the specified field <br><br>Allowed value: OMF supported data types |
-| **TimeFormat** | Optional | `string` | The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>1</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the TimeField. If you specify `null`, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats. |
+| **DataType** | Required | `string` | The expected data type of the values for the specified field. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)<br><br>Allowed value: OMF supported data types |
+| **TimeFormat** | Optional | `string` | The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>2</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the TimeField. If you specify `null`, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats. |
 
-<sup>1</sup> **Note:** JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.
+<sup>1</sup>: `DataFields` and `ValueField` are mutually exclusive. You must define one or the other, but not both.<br>
+<sup>2</sup>: JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.
 
 ## Data selection examples
 
-The following are examples of valid Azure Event Hubs data selection configurations<sup>1</sup>:
+The following are examples of valid Azure Event Hubs data selection configurations:
 
 ### Minimal data selection configuration
 
@@ -97,7 +99,7 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 ]
 ```
 
-<sup>1</sup> **Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:
+**Note:** Both **ValueField** and **TimeField** require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:
 
 ```json
 {
@@ -110,6 +112,23 @@ The following are examples of valid Azure Event Hubs data selection configuratio
   ]
 }
 ```
+
+## Complex data type examples 
+
+When working with the `DataField` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types as JSONPath expressions. The following complex data types are supported: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
+
+### `TimeIndexed.Coordinates` Example
+
+```json
+{\"X\",\"$['xValue']\"}, {\"Y\",\"$['yValue']\"}, {\"Z\",\"$['zValue']\"}
+```
+
+### `TimeIndexed.GeoLocation` Example
+
+```json
+{\"Latitude\", \"$['latitudeValue']\"}, {\"Longitude\", \"$['longitudeValue']\"}
+```
+
 
 ## REST URLs
 
