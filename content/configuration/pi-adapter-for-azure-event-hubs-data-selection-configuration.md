@@ -55,7 +55,7 @@ The full schema definition for the Azure Event Hubs data selection configuration
 | **DataFilterId** | Optional | `string` | The ID of the data filter <br><br>Allowed value: any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. | **DataFilterCache** | Optional | `` | The cache to support data filtering. The cache stores previous and last value. |  |
 | **EventHubName** | Required | `string` | The name of the event hub to collect data from <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: `{EventHubName}` |
 | **ValueField**<sup>1</sup> | Required | `string` | The JSONPath expression<sup>2</sup> to take value from a property<br><br>Allowed value: cannot be `null`, empty, or whitespace |
-| **DataField**<sup>1</sup> | Required | `string` | A `ComplexTypeMapping` that maps JSONPath expressions of fields to property names. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)
+| **DataFields**<sup>1</sup> | Required | `string` | A `ComplexTypeMapping` that maps JSONPath expressions of fields to property names. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)
 | **TimeField** | Optional | `string` | The JSONPath expression<sup>2</sup> to take value to use as a timestamp from a property<br>**Note:** The adapter generates a timestamp when `null` is specified. |
 | **DeviceId** | Optional | `string` | The device Id associated with the IoT Hub. | <br>If specified, the event is sent only if it originated from the specified device. If omitted, the event is sent to all streams  that match the selection. |
 | **DataType** | Required | `string` | The expected data type of the values for the specified field. Supported complex data types are `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.<br><br>[Complex data type examples](#complex-data-type-examples)<br><br>Allowed value: OMF supported data types |
@@ -115,7 +115,7 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 
 ## Complex data type examples 
 
-When working with the `DataField` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types supported by [OCS](https://docs.osisoft.com/bundle/ocs/page/developer-guide/sequential-data-store-dev/sds-types-dev.html) as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
+When working with the `DataFields` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types supported by [OCS](https://docs.osisoft.com/bundle/ocs/page/developer-guide/sequential-data-store-dev/sds-types-dev.html) as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
 
 ### `TimeIndexed.Coordinates` Example
 
