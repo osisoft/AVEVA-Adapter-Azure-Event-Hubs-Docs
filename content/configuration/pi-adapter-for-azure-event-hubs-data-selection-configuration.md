@@ -115,11 +115,7 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 
 ## Complex data type examples 
 
-<<<<<<< HEAD
 When working with the `DataField` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types supported by [OCS](https://docs.osisoft.com/bundle/ocs/page/developer-guide/sequential-data-store-dev/sds-types-dev.html) as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
-=======
-When working with the `DataField` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types as JSONPath expressions. The following complex data types are supported: `TimeIndexed.Coordinates` and `TimeIndexed.GeoLocation`.
->>>>>>> ddf95356b479124578c4a27ff028602babc7fbc4
 
 ### `TimeIndexed.Coordinates` Example
 
