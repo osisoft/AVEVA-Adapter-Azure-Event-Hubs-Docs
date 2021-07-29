@@ -152,22 +152,4 @@ This example uses a direct reference `$.Events[1].Value` to the index.
 
 ### Limitations
 
-<<<<<<< HEAD
 As documented in the Known Issues section of the [Release Notes](xref:ReleaseNotes), attempting to configure 10,000 or more streams can result in a timeout.
-
-## Client settings
-
-When configuring <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration>, OSIsoft recommends using WebSockets over TCP as the client transport type, as it performs better.
-
-On a virtual machine with 4 GB RAM and 2 vCPUs, PI Adapter for Azure Event Hubs sends up to 1,000 more events per second when using WebSockets.
-
-```json
-{
-   ...
-   "EventHubTransportType" : "AmqpWebSockets",
-   ...
-}
-```
-=======
-As documented in the Known Issues section of the [Release Notes](xref:ReleaseNotes), attempting to configure 10,000 or more streams can result in a timeout.
->>>>>>> parent of 904e8a4 (adding Keaton's performance recommendation passage)
