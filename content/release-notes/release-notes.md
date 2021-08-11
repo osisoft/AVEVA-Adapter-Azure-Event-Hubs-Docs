@@ -5,22 +5,30 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0.0.10<br>
-Adapter framework 1.3.1.1 
+PI Adapter for Azure Event Hubs {VERSION_PLACEHOLDER}
+Adapter framework {VERSION_PLACEHOLDER} 
 
 ## Overview
 
-PI Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from Event Hubs to OMF endpoints in OSIsoft Cloud Services or PI Servers.  For more information, refer to [PI Adapter for Azure Event Hubs overview](xref:index). 
+We are pleased to announce the release of PI Adapter for Azure Event Hubs {VERSION_PLACEHOLDER}. This is the first general availability release for the adapter. 
 
+## New features
 
-## Known issues
+The following new features have been added since the lighthouse release of PI Adapter for Azure Event Hubs. 
 
-The following problems and enhancements have been deferred until a future release.
+Feature | Description
+--------|------------
+Data Discovery | PI Adapter for Azure Event Hubs now allows you to perform a discovery query against a configured data source to automatically generate a data selection configuration rather than creating one manually. For more information, see <xref:DiscoveryConfiguration>.
+Complex Data Types | PI Adapter for Azure Event Hubs now offers limited support for mapping complex data types. For more information, see [Complex data type field mapping examples](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#complex-data-type-field-mapping-examples). 
+
+## Resolved issues
+
+The following issues have been resolved since the lighthouse release:
 
 <!--*Use bullets and tables as necessary (table format below).* -->
 Item | Description
 ---- | -----------
-197937 | Timeout may occur when submitting a POST for data selection configurations to the adapter that contain more than 10,000 streams.
+197937 | When submitting a POST for data selection configurations to the adapter that contains more than 10,000 streams, a timeout no longer occurs.
 
 ## Setup
 
