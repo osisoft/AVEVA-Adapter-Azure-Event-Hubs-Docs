@@ -14,7 +14,7 @@ On a virtual machine with 4 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hub
 
 ## Data shape
 
-PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the `TimeField` and `ValueField`.
+PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the `IndexField` and `ValueField`.
 
 OSIsoft recommends using larger messages rather than smaller messages for the same amount of data to achieve optimal performance.
 
@@ -66,7 +66,7 @@ OSIsoft also recommends that you use flat data rather than deeply nested data as
 
 ## Data selections
 
-Data selection related to the Event Hubs and the configuration of the `ValueField` and `TimeField` parameters highly affect performance of the adapter.
+Data selection related to the Event Hubs and the configuration of the `ValueField` and `IndexField` parameters highly affect performance of the adapter.
 
 ### Event Hub
 
@@ -88,7 +88,7 @@ A single throughput unit for Azure Event Hubs allows for ingress of up to 1MB pe
 
 Consider this many-to-one relationship between the events sent to Event Hub and events sent to the data endpoint when you select the appropriate throughput units for your Event Hub.
 
-### ValueField and TimeField JSONPath
+### ValueField and IndexField JSONPath
 
 OSIsoft recommends that you use the most direct reference possible to refer to a data item when you configure data selections. Evaluating JSONPath expressions can be expensive.
 
@@ -125,8 +125,8 @@ This example has a query `$.Events[?(@.Id == "1")].Value` of the events collecti
     "EventHubName": "hub",
     "DeviceId": null,
     "ValueField": "$.Events[?(@.Id == \u00271\u0027)].Value",
-    "TimeField": "$.TimeStamp",
-    "TimeFormat": null,
+    "IndexField": "$.TimeStamp",
+    "IndexFormat": null,
     "DataType": "string"
 }
 ```
@@ -144,8 +144,8 @@ This example uses a direct reference `$.Events[1].Value` to the index.
     "EventHubName": "hub",
     "DeviceId": null,
     "ValueField": "$.Events[1].Value",
-    "TimeField": "$.TimeStamp",
-    "TimeFormat": null,
+    "IndexField": "$.TimeStamp",
+    "IndexFormat": null,
     "DataType": "string"
 }
 ```
