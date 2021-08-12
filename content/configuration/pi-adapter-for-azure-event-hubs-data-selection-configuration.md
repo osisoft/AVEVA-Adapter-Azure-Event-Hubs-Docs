@@ -118,13 +118,13 @@ The following are examples of valid Azure Event Hubs data selection configuratio
 
 When working with the `DataFields` or `DataType` [data selection parameters](#data-selection-parameters), you can provide complex data types field mappings as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: `Coordinates` and `Geolocation`.
 
-### `Coordinates` Example
+### `Coordinates` example
 
 ```json
 {"X": "$['xValue']", "Y": "$['yValue']", "Z": "$['zValue']"}
 ```
 
-### `Geolocation` Example
+### `Geolocation` example
 
 ```json
 {"Latitude": "$['latitudeValue']", "Longitude": "$['longitudeValue']"}
