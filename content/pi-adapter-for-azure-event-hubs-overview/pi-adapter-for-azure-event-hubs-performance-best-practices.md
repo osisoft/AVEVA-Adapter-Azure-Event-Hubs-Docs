@@ -150,6 +150,3 @@ This example uses a direct reference `$.Events[1].Value` to the index.
 }
 ```
 
-### Limitations
-
-As documented in the Known Issues section of the [Release Notes](xref:ReleaseNotes), attempting to configure 10,000 or more streams can result in a timeout.
