@@ -8,7 +8,7 @@ The performance of an adapter, PI Adapter for Azure Event Hubs, specifically, de
 
 ## Egress limits
 
-On a virtual machine with 4 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hubs is capable of sending up to 20,000 events per second to an OCS namespace or PI Web API OMF endpoint.
+On a virtual machine with 8 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hubs is capable of sending up to 20,000 events per second to an OCS namespace or PI Web API OMF endpoint.
 
 **Note:** A many-to-one relationship exists between JSON messages sent to Event Hub and time indexed events sent to the data endpoints. For more information, see [Throughput units](#throughput-units).
 
