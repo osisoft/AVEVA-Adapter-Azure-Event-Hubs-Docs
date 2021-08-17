@@ -54,7 +54,7 @@ The following parameters are available for configuring an Azure Event Hubs data 
 
 | Parameter                     | Required | Type      | Description |
 |-------------------------------|----------|-----------|-------------|
-| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `Azure Event Hubs1.{Topic}.{ValueField}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
+| **StreamIdPrefix**            | Optional         | `string`  | Specifies what prefix is used for Stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the Stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `AzureEventHubs1.{Topic}.{ValueField}`<br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: `null`            |
 | **DefaultStreamIdPattern**    | Optional         | `string`  |  Specifies the default stream Id pattern to use. Possible parameters: `{Topic}`, `{ValueField}`, `{DataType}`. <br><br>Allowed value: any string<br>Default value: `{Topic}.{ValueField}`           |
 | **EventHubNamespaceConnectionString** | Required | `string`| The connection string for the Event Hub namespace<br><br>Allowed value:  The primary or secondary connection string as copied from the Azure portal.<br>Default value: `null`|
 | **ConsumerGroupName** | Required | `string` | The name of the consumer group as defined in the Azure Portal for event hub<br><br>Allowed value: Maximum of 256 characters per Azure limits.<br>Default value: `"$Default"` |
@@ -70,10 +70,10 @@ The following are examples of valid Azure Event Hubs data source configurations:
 
 ```json
 {
-  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
-  "BlobStorageConnectionString": "<Azure Storage Account connection string>",
+  "EventHubNamespaceConnectionString": "<AzureEventHubNamespaceConnectionString>",
+  "BlobStorageConnectionString": "<AzureStorageAccountConnectionString>",
   "ConsumerGroupName": "$Default",
-  "CheckpointBlobContainerName": "<checkpoint container>"
+  "CheckpointBlobContainerName": "<CheckpointContainer>"
 }
 ```
 
@@ -83,10 +83,10 @@ The following are examples of valid Azure Event Hubs data source configurations:
 {
   "StreamIdPrefix": "EventHubs1.",
   "DefaultStreamIdPattern": "{EventHubName}.{ValueField}",
-  "EventHubNamespaceConnectionString": "<Azure Event Hub Namespace connection string>",
-  "BlobStorageConnectionString": "<Azure Storage Account connection string>",
+  "EventHubNamespaceConnectionString": "<AzureEventHubNamespaceConnectionString>",
+  "BlobStorageConnectionString": "<AzureStorageAccountConnectionString>",
   "ConsumerGroupName": "$Default",
-  "CheckpointBlobContainerName": "<checkpoint container>",
+  "CheckpointBlobContainerName": "<CheckpointContainer>",
   "TimeZone": "America/Los_Angeles"
 }
 ```

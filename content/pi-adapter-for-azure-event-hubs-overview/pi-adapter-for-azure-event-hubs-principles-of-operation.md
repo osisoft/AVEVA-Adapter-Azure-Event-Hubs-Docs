@@ -36,21 +36,24 @@ For more information see [PI Adapter for Azure Event Hubs data selection configu
 
 ### Data types
 
-The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams created.
+The following table lists PI Adapter for Azure Event Hubs supported data type names (case-insensitive) and types of streams created.
 
-| Event Hubs data type | Stream data type |
+| Event Hubs data type names | Stream data type |
 |------------------|------------------|
 | Boolean          | Boolean          |
-| Int16            | Int16            |
-| UInt16           | UInt16           |
-| Int32            | Int32            |
-| UInt32           | UInt32           |
 | Int64            | Int64            |
+| Int32            | Int32            |
+| Int16            | Int16            |
 | UInt64           | UInt64           |
-| Float            | Float32          |
-| Double           | Float64          |
-| DateTime         | DateTime         |
+| UInt32           | UInt32           |
+| UInt16           | UInt16           |
+| Float64          | Float64          |
+| Float32          | Float32          |
+| Float16          | Float32          |
+| Date-Time         | DateTime         |
 | String           | String           |
+
+**Note:** PI Adapter for Azure Event Hubs also supports a limited number of complex data types. For more information, see [Complex data type field mapping examples](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#complex-data-type-field-mapping-examples).
 
 ## Stream creation
 

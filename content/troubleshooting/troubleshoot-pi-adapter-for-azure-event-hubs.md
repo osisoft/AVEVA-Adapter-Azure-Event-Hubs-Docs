@@ -62,8 +62,8 @@ Perform the following steps to view the adapter and endpoint logs to isolate iss
 
 1. Navigate to the logs directory:
 
-   * Windows: `%ProgramData%\OSIsoft\Adapters\BACnet\Logs`
-   * Linux: `/usr/share/OSIsoft/Adapters/BACnet/Logs`
+   * Windows: `%ProgramData%\OSIsoft\Adapters\EventHubs\Logs`
+   * Linux: `/usr/share/OSIsoft/Adapters/EventHubs/Logs`
 
 2. Optional: Change the log level of the adapter to receive more information and context.
 

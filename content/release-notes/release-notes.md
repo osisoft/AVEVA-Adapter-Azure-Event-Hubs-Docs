@@ -17,7 +17,6 @@ PI Adapter for Azure Event Hubs is a data-collection component that transfers ti
 
 The following problems and enhancements have been deferred until a future release.
 
-<!--*Use bullets and tables as necessary (table format below).* -->
 Item | Description
 ---- | -----------
 197937 | Timeout may occur when submitting a POST for data selection configurations to the adapter that contain more than 10,000 streams.
