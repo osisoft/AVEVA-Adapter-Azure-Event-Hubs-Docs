@@ -36,7 +36,7 @@ For more information see [PI Adapter for Azure Event Hubs data selection configu
 
 ### Data types
 
-The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams created.
+The following table lists PI Adapter for Azure Event Hubs supported data type names (case-insensitive) and types of streams created.
 
 | Event Hubs data type names | Stream data type |
 |------------------|------------------|
