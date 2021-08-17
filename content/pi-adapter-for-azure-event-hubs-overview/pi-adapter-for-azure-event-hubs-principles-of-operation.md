@@ -50,7 +50,7 @@ The following table lists Azure Event Hubs variable types that the adapter colle
 | Float64          | Float64          |
 | Float32          | Float32          |
 | Float16          | Float32          |
-| Date-ime         | DateTime         |
+| Date-Time         | DateTime         |
 | String           | String           |
 
 **Note:** PI Adapter for Azure Event Hubs also supports a limited number of complex data types. For more information, see [Complex data type field mapping examples](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#complex-data-type-field-mapping-examples).
