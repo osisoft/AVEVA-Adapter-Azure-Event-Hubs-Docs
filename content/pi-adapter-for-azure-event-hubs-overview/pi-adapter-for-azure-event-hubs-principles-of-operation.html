@@ -8,7 +8,7 @@
     <title>Principles of operation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Principles of operation ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -97,11 +97,11 @@
 <p>After you configure data source and data selection items, the adapter establishes a connection to each event hub within the event hub namespace for all event hubs specified in data selection items. Once a connection is established, the adapter begins consuming events from the event hubs and processes the events as soon as they are published by an event producer and become available to consumers.</p>
 <p>For more information see <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html">PI Adapter for Azure Event Hubs data selection configuration</a>.</p>
 <h3 id="data-types">Data types</h3>
-<p>The following table lists Azure Event Hubs variable types that the adapter collects data from and types of streams created.</p>
+<p>The following table lists PI Adapter for Azure Event Hubs supported data type names (case-insensitive) and types of streams created.</p>
 <table>
 <thead>
 <tr>
-<th>Event Hubs data type</th>
+<th>Event Hubs data type names</th>
 <th>Stream data type</th>
 </tr>
 </thead>
@@ -111,39 +111,43 @@
 <td>Boolean</td>
 </tr>
 <tr>
-<td>Int16</td>
-<td>Int16</td>
-</tr>
-<tr>
-<td>UInt16</td>
-<td>UInt16</td>
+<td>Int64</td>
+<td>Int64</td>
 </tr>
 <tr>
 <td>Int32</td>
 <td>Int32</td>
 </tr>
 <tr>
-<td>UInt32</td>
-<td>UInt32</td>
-</tr>
-<tr>
-<td>Int64</td>
-<td>Int64</td>
+<td>Int16</td>
+<td>Int16</td>
 </tr>
 <tr>
 <td>UInt64</td>
 <td>UInt64</td>
 </tr>
 <tr>
-<td>Float</td>
-<td>Float32</td>
+<td>UInt32</td>
+<td>UInt32</td>
 </tr>
 <tr>
-<td>Double</td>
+<td>UInt16</td>
+<td>UInt16</td>
+</tr>
+<tr>
+<td>Float64</td>
 <td>Float64</td>
 </tr>
 <tr>
-<td>DateTime</td>
+<td>Float32</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>Float16</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>Date-Time</td>
 <td>DateTime</td>
 </tr>
 <tr>
@@ -152,6 +156,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> PI Adapter for Azure Event Hubs also supports a limited number of complex data types. For more information, see <a class="xref" href="../configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html#complex-data-type-field-mapping-examples">Complex data type field mapping examples</a>.</p>
 <h2 id="stream-creation">Stream creation</h2>
 <p>The Azure Event Hubs adapter creates a stream value with two properties for each selected Azure Event Hubs item. The properties are described in the following table.</p>
 <table>

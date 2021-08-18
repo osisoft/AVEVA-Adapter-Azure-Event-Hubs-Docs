@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure Event Hubs data source discovery </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure Event Hubs data source discovery ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PIAdapterAzureEventHubsDataSourceDiscover">
+<h1 id="azure-event-hubs-data-source-discovery">Azure Event Hubs data source discovery</h1>
+
+<p>When running a discovery against an Azure Event Hub namespace defined within your <a class="xref" href="pi-adapter-for-azure-event-hubs-data-source-configuration.html">Data source configuration</a>, you can specify query parameters to narrow the scope of the discovery, targeting specific event hubs within the namespace. When the discovery completes, you can add the discovered items to your data selection configuration.</p>
+<h2 id="azure-event-hubs-query-string">Azure Event Hubs query string</h2>
+<p>Azure Event Hubs <code>query</code> strings must include one or more <code>EventHubName</code>, along with a <code>WaitTime</code> that specifies how long the discovery runs.</p>
+<pre><code class="lang-text">EventHubNames=&lt;EVENT_HUB_1&gt;,&lt;EVENT_HUB_2&gt;;WaitTime=&lt;DAYS&gt;.&lt;HOURS&gt;:&lt;MINUTES&gt;:&lt;SECONDS&gt;
+</code></pre><p>Within the discovery request JSON payload, enter the Azure Event Hubs query using the <code>query</code> parameter, as shown in the <a href="#query-examples">query examples</a> below. For more information on using the query parameter during API requests to the <code>api/v1/configuration/&lt;componentId&gt;/discoveries</code> endpoint, see <a class="xref" href="../main/shared-content/configuration/discovery.html">Discovery</a>.</p>
+<h2 id="query-parameters">Query parameters</h2>
+<p>When including a <code>query</code> within your discovery, you can add parameters from the table that follows. Separate the <code>EventHubNames</code> and <code>WaitTime</code> parameters with a semicolon (<code>;</code>).</p>
+<table>
+<thead>
+<tr>
+<th>String item</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EventHubNames</code></td>
+<td>Required</td>
+<td>Specifies one or more event hub as query targets during discovery. Discovery looks for the specified event hubs within the namespace set in the <a class="xref" href="pi-adapter-for-azure-event-hubs-data-source-configuration.html">Data source configuration</a> using the <code>EventHubNamespaceConnectionString</code> parameter.<br><br>&bull; When querying for more than one event hub, seperate each event hub with a comma (<code>,</code>).<br>&bull; The maximum number of event hubs that you can query is <strong>ten</strong>, as Microsoft Azure limits each namespace to ten event hubs.</td>
+</tr>
+<tr>
+<td><code>WaitTime</code></td>
+<td>Optional</td>
+<td>Specifies the duration of the discovery. If you omit the <code>WaitTime</code> parameter, discovery defaults to one minute: <code>0.00:01:00</code>.<br><br>&bull; <strong>Minimum value:</strong> 30 seconds (<code>0.00:00:30</code>)<br>&bull; <strong>Maximum value:</strong> 7 days (<code>7.00:00:00</code>). This maximum is limited by Azure Event Hubs, as it retains messages for seven days.<br><br><strong>Note:</strong> Discoveries with <code>WaitTimes</code> outside of the minimum and maximum values are considered invalid and fail with the following message:<br><br><code>Discovery operation failed: Exception type: ArgumentException. Message: Wait Time must be between 30 seconds and 7 days</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-examples">Query examples</h2>
+<p>The following section contains several examples of Azure Event Hub queries. When creating a discovery request, include the Azure Event Hub query within the request payload as shown in <a class="xref" href="../main/shared-content/configuration/discovery.html#configure-discovery">Configure discovery</a>.</p>
+<div class="tabGroup" id="tabgroup_77OIrB5a+s">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_77OIrB5a+s_example-1" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-1" data-tab="example-1" tabindex="0" aria-selected="true">Example 1: Single event hub</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_77OIrB5a+s_example-2" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-2" data-tab="example-2" tabindex="-1">Example 2: Multiple event hubs</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_77OIrB5a+s_example-3" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-3" data-tab="example-3" tabindex="-1">Example 3: No WaitTime</a>
+</li>
+</ul>
+<section id="tabpanel_77OIrB5a+s_example-1" role="tabpanel" data-tab="example-1">
+<p>This Azure Event Hubs query example discovers a single event hub.</p>
+<pre><code class="lang-json">{
+    &quot;query&quot;: &quot;EventHubNames=event-hub-1;WaitTime=0.00:00:30&quot;
+}
+</code></pre></section>
+<section id="tabpanel_77OIrB5a+s_example-2" role="tabpanel" data-tab="example-2" aria-hidden="true" hidden="hidden">
+<p>This Azure Event Hubs query example discovers multiple event hubs.</p>
+<pre><code class="lang-json">{
+    &quot;query&quot;: &quot;EventHubNames=event-hub-1,event-hub-2;WaitTime=0.00:00:30&quot;
+}
+</code></pre></section>
+<section id="tabpanel_77OIrB5a+s_example-3" role="tabpanel" data-tab="example-3" aria-hidden="true" hidden="hidden">
+<p>This Azure Event Hubs query example discovers multiple event hubs, but omits the <code>WaitTime</code> parameter. Without a specified <code>WaitTime</code>, the discovery defaults to a <code>WaitTime</code> of one minute.</p>
+<pre><code class="lang-json">{
+    &quot;query&quot;: &quot;EventHubNames=event-hub-1,event-hub-2&quot;
+}
+</code></pre></section>
+</div>
+<h2 id="query-results">Query results</h2>
+<p>After you submit a discovery request and the discovery completes, you can view its results and use them to create a <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection configuration</a>. To view results for your discovery and query, perform a <code>GET</code> request against the <code>api/v1/configuration/componentId/discoveries/&lt;discoveryId&gt;/result</code> endpoint. For more information, see <a class="xref" href="../main/shared-content/configuration/discovery.html#rest-urls">REST URLs</a>.</p>
+<p>The discovery results includes a data selection configuration for each stream it finds for an event hub. For example, the following discovery results include a configuration for two streams found for <code>&quot;eventHubName&quot;:&quot;event-hub-1&quot;</code>: <code>&quot;streamId&quot;: &quot;event-hub-1.$.PumpTemperature&quot;</code> and <code>&quot;streamId&quot;: &quot;event-hub-1.$.TimeStamp&quot;</code>.</p>
+<pre><code class="lang-json">[
+    {​​​
+        &quot;eventHubName&quot;: &quot;event-hub-1&quot;,
+        &quot;deviceId&quot;: null,
+        &quot;valueField&quot;: &quot;$.PumpTemperature&quot;,
+        &quot;IndexField&quot;: null,
+        &quot;IndexFormat&quot;: null,
+        &quot;dataType&quot;: &quot;Single&quot;,
+        &quot;selected&quot;: false,
+        &quot;name&quot;: null,
+        &quot;streamId&quot;: &quot;event-hub-1.$.PumpTemperature&quot;,
+        &quot;dataFilterId&quot;: null
+    }​​​,
+    {​​​
+        &quot;eventHubName&quot;: &quot;event-hub-1&quot;,
+        &quot;deviceId&quot;: null,
+        &quot;valueField&quot;: &quot;$.TimeStamp&quot;,
+        &quot;IndexField&quot;: null,
+        &quot;IndexFormat&quot;: null,
+        &quot;dataType&quot;: &quot;DateTime&quot;,
+        &quot;selected&quot;: false,
+        &quot;name&quot;: null,
+        &quot;streamId&quot;: &quot;event-hub-1.$.TimeStamp&quot;,
+        &quot;dataFilterId&quot;: null
+    }​​​
+]
+</code></pre><h3 id="combining-query-results-into-a-valid-data-selection-configuration">Combining query results into a valid data selection configuration</h3>
+<p>After viewing the results of a discovery, you can manually combine them into a single valid data selection configuration. In the example below, the two data selection configurations from the example above are combined into single configuration. Notice that <code>IndexField</code> is updated to <code>$.TimeStamp</code>.</p>
+<p>After creating a valid data selection configuration, you can activate it by performing a <code>PUT</code> request against the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code> endpoint. For more information, see <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection</a>.</p>
+<pre><code class="lang-json">[
+    {
+        &quot;eventHubName&quot;: &quot;event-hub-1&quot;,
+        &quot;deviceId&quot;: null,
+        &quot;valueField&quot;: &quot;$.PumpTemperature&quot;,
+        &quot;IndexField&quot;: &quot;$.TimeStamp&quot;,
+        &quot;IndexFormat&quot;: null,
+        &quot;dataType&quot;: &quot;Single&quot;,
+        &quot;selected&quot;: true,
+        &quot;name&quot;: null,
+        &quot;streamId&quot;: &quot;event-hub-1.$.PumpTemperature&quot;,
+        &quot;dataFilterId&quot;: null
+    }
+]
+</code></pre><h3 id="additional-considerations-for-query-and-autoselect">Additional considerations for <code>query</code> and <code>autoselect</code></h3>
+<p>When you use the <code>query</code> parameter within a discovery request, OSIsoft recommends setting the <a class="xref" href="../main/shared-content/configuration/discovery.html#discovery-parameters">autoSelect</a> parameter to <code>false</code> for most use cases. OSIsoft makes this recomendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. <code>&quot;autoSelect&quot;: true</code> should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection configuration</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2020 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

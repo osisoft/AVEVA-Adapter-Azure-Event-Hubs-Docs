@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "VwftGNsF48RksqyAkgtTug=="
+          "hash": "1woAQdd4orjMRwK/X9P7Ky4gHkaWAs84nLzavJGK+G8="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "Dg195fK52jhEaqhxFvekLg=="
+          "hash": "hlWBkNS6i7xIl5t2Wx160ntw9ve6/921V5IdN3cXVV0="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html",
-          "hash": "a+LHN8nUBoycF19Wqkg5Fg=="
+          "hash": "fDFeaH/tQdDlMQipzhllXdpRNuEWYZgjTRkJ+NFKV3k="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-configuration-examples.html",
-          "hash": "599Hg7mUg9e2NzDfOqE8JA=="
+          "hash": "FluonI4iRf2lEw/L30YZgtRAWW/a6kS0M4OW+Om68CM="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "72hR+L47diHaAEKiCL0r1g=="
+          "hash": "oDVGLa1E5Jx/qrdb0dzPSVx2Pe3PwX1vTbgVEGBiLHM="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,19 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-configuration.html",
-          "hash": "kSSioHDPr2rTcPqyW3WrlA=="
+          "hash": "NRRrtHoW0pueULPRv2ocRmJmtZDhqzL0vIckN8u5quQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html",
+          "hash": "8YdvCwMTsv+jaG8nkQqxmBroPw7cyTrBKBAmkjLNRf4="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "content/health-and-diagnostics/health/adapter-health.html",
-          "hash": "L+AGPOPxVTlXg0204nzwyw=="
+          "hash": "wKLJ9G3+3dC0Ueutuoybf+EaWFTZIsXGHgPipHzo6ko="
         }
       },
       "is_incremental": false,
@@ -102,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "content/health-and-diagnostics/health/next-health-message-expected.html",
-          "hash": "C8w8uecCI8Wvlu+mszq2Rg=="
+          "hash": "HGnaNlPXyEy9wcXDEji3cBpo2xSvpW7WSWFaTmZ0O+s="
         }
       },
       "is_incremental": false,
@@ -114,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "content/health-and-diagnostics/health/pi-adapter-for-azure-event-hubs-device-status.html",
-          "hash": "Fl1OpHmza9cIbt2N9mAadA=="
+          "hash": "IywhYLS5WBxrjvbOkVycv4c9z4ntFd+w3NRaRP49eAc="
         }
       },
       "is_incremental": false,
@@ -137,7 +149,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "0L8VkPKlhJX9EELXKLGCIA=="
+          "hash": "c/CfOSQIJstXWlnVLjnE1pjzck8j4dnHydDnKv3l52I="
         }
       },
       "is_incremental": false,
@@ -149,7 +161,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/install-pi-adapter-for-azure-event-hubs-using-docker.html",
-          "hash": "2SoaqDBqe0qo6UrLSa7EEg=="
+          "hash": "KO9vEsxneOt+IQjbHEfxvayO2g1TMeCtS+eZTBN04/s="
         }
       },
       "is_incremental": false,
@@ -161,7 +173,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/system-requirements.html",
-          "hash": "/W3/Jp3dl8YmBjA4aUO0WA=="
+          "hash": "nWC8caAA0VbQx7xzPkhO4dYmt/3wls5SxUVv7Oa7Rwg="
         }
       },
       "is_incremental": false,
@@ -173,7 +185,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/README.html",
-          "hash": "iwk7e49HZBUDLcFRYnHdVg=="
+          "hash": "VOhngY/+t414u0+WzEezVNZzL08eN1BroQ9ycTmBKI4="
         }
       },
       "is_incremental": false,
@@ -185,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/Templates/Markdown Release Notes template-V1.html",
-          "hash": "TKrpMND0sgcPYjf5aAXu6g=="
+          "hash": "QY4HrtghrMbOLHCgCckU90oNAYXIg7lLqO0wMV/mf1Y="
         }
       },
       "is_incremental": false,
@@ -197,7 +209,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/administration.html",
-          "hash": "76PH8hiBZ0K/r0DqSzRcXQ=="
+          "hash": "4Xpc1sCW2pvJ9/7FCXvcNHfWXV5ExsEi+lFP2twucKY="
         }
       },
       "is_incremental": false,
@@ -209,7 +221,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/delete-an-adapter-component.html",
-          "hash": "d1JdHyK9fKREjWj3AkVF5g=="
+          "hash": "H3Q+zdNAc1yq+CKFdSa4l/OmLmk6WMeJjVhVwL1G2OY="
         }
       },
       "is_incremental": false,
@@ -221,7 +233,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/retrieve-product-version-information.html",
-          "hash": "oPJedQR3zRfiM6i8MnuEOA=="
+          "hash": "NysRTfBW346bBUvTcXZOUseJbUCpUvHslkCFxOYlua8="
         }
       },
       "is_incremental": false,
@@ -233,7 +245,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-an-adapter.html",
-          "hash": "3bcyE5qoH+VgR7KfYXO4ow=="
+          "hash": "XPZ5cUQnB0snjf0mT1ibQ6PMEPrutRQcDG715dnlv8w="
         }
       },
       "is_incremental": false,
@@ -245,7 +257,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-ingress-component.html",
-          "hash": "LKP1djtQo3TEBcOlNCQsuA=="
+          "hash": "bSPdnB6+XwEWxqgVGBgvDV+9cQyY4JnM2vphnedMPPU="
         }
       },
       "is_incremental": false,
@@ -257,7 +269,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/buffering.html",
-          "hash": "bqlWUGfA+lUeRlDEzj6/1g=="
+          "hash": "n/Pi+ri+RfzI2b08gItahVZ65aiq5/WzqhFx63K0wZc="
         }
       },
       "is_incremental": false,
@@ -269,7 +281,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/configuration-tools.html",
-          "hash": "+tz4ZHm4leLI2cEQamkotA=="
+          "hash": "3xDQ6E0RsN7rAl3GZBkfOiBtdKmkw6SZVusrDvswL9I="
         }
       },
       "is_incremental": false,
@@ -281,7 +293,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/data-filters.html",
-          "hash": "lbq+lJP1eZxIFwBylrLgcg=="
+          "hash": "lUgweShhoJQaaXG9ygddW1j0yAfE9EsidCpPL9ZgoEs="
         }
       },
       "is_incremental": false,
@@ -293,7 +305,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
-          "hash": "xR8IBwNg7aPaUo8w/rdgaA=="
+          "hash": "1NCwX3Kj+K9bm8EFGitH0rMyScpz8eEu7Ml9F8DQvv8="
         }
       },
       "is_incremental": false,
@@ -305,7 +317,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/discovery.html",
-          "hash": "VPCmveOVwhZskCXLpmGtqA=="
+          "hash": "ykgXy5Eg0hyz8DtPieHzs6fEEvl/YlpSPeLXIzBEfNA="
         }
       },
       "is_incremental": false,
@@ -317,7 +329,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
-          "hash": "ScptKP/lr4YPHpTgKMEPkw=="
+          "hash": "SzKQrivV4ucQeDPegxAouzM34nZQbHVA69OJplX3W+k="
         }
       },
       "is_incremental": false,
@@ -329,7 +341,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html",
-          "hash": "6EhTZRgmJSI6HGnJcLJFzA=="
+          "hash": "Fl5iMznlcCHkE4D314VEkYQybhSYmqxs5vs1uL7CSxI="
         }
       },
       "is_incremental": false,
@@ -341,7 +353,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
-          "hash": "ETDPSjR03v29uQYKztW6sA=="
+          "hash": "w+CbUe6XS+xRxJltYA5CyX99WJqO2/FGAOqqfTu38Zo="
         }
       },
       "is_incremental": false,
@@ -353,7 +365,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
-          "hash": "V+E85IAHaldIXvEcvYc6uQ=="
+          "hash": "P29asRX7XnI5eeZLw4gHvrKYepc2XagFF2NhlmdM0pg="
         }
       },
       "is_incremental": false,
@@ -365,7 +377,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/logging.html",
-          "hash": "CyfaJgzQlOfX9knv7YvFqg=="
+          "hash": "Yi3vQZvrXcxoT753WLwaa6SZuTz+1ZH8vNe9uUHLfeM="
         }
       },
       "is_incremental": false,
@@ -377,7 +389,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/schedules.html",
-          "hash": "af63Jkr0VzxWpXlakqjwog=="
+          "hash": "lXKjqZE/koM6n6fcfHO2lCNlW6SS98Mv9dC37WQR1Ys="
         }
       },
       "is_incremental": false,
@@ -389,7 +401,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
-          "hash": "3bJxvy1PqE3vTgCp9zNnaQ=="
+          "hash": "zTPffwa1ghjUyjaWVGYw9ZeAYR3g1rAfbaMfHPvBp/c="
         }
       },
       "is_incremental": false,
@@ -401,7 +413,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-components.html",
-          "hash": "a357G1c7XNDHI9y/5DUmow=="
+          "hash": "2g/N1hKDXwA1dFDTBlAzI/K3l+I71UHa6hRw1UcM5/s="
         }
       },
       "is_incremental": false,
@@ -413,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html",
-          "hash": "BubfsSqpqlFmT+DpQ1Hu6A=="
+          "hash": "lwbKEOWGgNiTvAVsT2ul4eC+o6c0NnVSquqDwNwSjW8="
         }
       },
       "is_incremental": false,
@@ -425,7 +437,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
-          "hash": "CN//fCX+FMpCt0YnBWFm2g=="
+          "hash": "sao1D3WHtnso6ezIUdrYsmgZyOUspwKa5haQTp0orkM="
         }
       },
       "is_incremental": false,
@@ -437,7 +449,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
-          "hash": "0A4ueIin00K5rhCuxBoODg=="
+          "hash": "u1HodN5S146Jcx2xuArIYd9MqZbyKbcXsbOhFGID+aE="
         }
       },
       "is_incremental": false,
@@ -449,7 +461,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
-          "hash": "/8ElPrEdo6gqKpwwuwMzCg=="
+          "hash": "cDIoQnq5ZeG7gdoh4bHdneC4aV+CrHs5SkMjPO6m9lw="
         }
       },
       "is_incremental": false,
@@ -461,7 +473,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/egress.html",
-          "hash": "wwBO+by/RTdskpH+TNNw6w=="
+          "hash": "h5hELmi6M/l5QP5SxdE7Ev7hUSYByj4+VwVRJulmyp8="
         }
       },
       "is_incremental": false,
@@ -473,7 +485,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/error-rate.html",
-          "hash": "5c95XiaN5jQJSx4H2Gmmuw=="
+          "hash": "jys2Zpb9B7dAw50//d6nrjkz76nb3CH0WPqGV9YTbx4="
         }
       },
       "is_incremental": false,
@@ -485,7 +497,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/io-rate.html",
-          "hash": "CIiWGTlm5SHXVJJ5ES8ECA=="
+          "hash": "aJlkhHc2LGbncsicgv7lr4sU/Ci7S4tC7KBeGjNK2uI="
         }
       },
       "is_incremental": false,
@@ -497,7 +509,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/stream-count.html",
-          "hash": "PrPR7wv8Q8DtMWNJWW2DPQ=="
+          "hash": "+NBfN81IbXYmQvq/bQWjJjRRIH4ohf3Ur+bFUbU58dU="
         }
       },
       "is_incremental": false,
@@ -509,7 +521,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/system.html",
-          "hash": "Yi8CjUJMOnKhhf8cXxAugg=="
+          "hash": "WcJ/U4hnDkbDBnluPnFi/gEkXDyhNcCHoRTZnf6V/Ck="
         }
       },
       "is_incremental": false,
@@ -521,7 +533,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/device-status.html",
-          "hash": "LONyBs7yRvWj+F0gV3MnAQ=="
+          "hash": "/1w0E9LdFaRF1KvXERk7Xg7oiECjiFbe58lTppr3zcg="
         }
       },
       "is_incremental": false,
@@ -533,7 +545,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "5mJdZpAU3gWYEep28+zENg=="
+          "hash": "UWfBiB3G2uULiyRtdpdgpjIMzCnbxdIklSG4ZXEzZX0="
         }
       },
       "is_incremental": false,
@@ -545,7 +557,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health.html",
-          "hash": "5ULlLljvIt+BVj6oPaqg0w=="
+          "hash": "flspIfMZmt+7RJRWymhm4XYEIoqjFZEBuOhGj44k89s="
         }
       },
       "is_incremental": false,
@@ -557,7 +569,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/next-health-message-expected.html",
-          "hash": "f5+N8i4oTdPL/YUEV5MOLw=="
+          "hash": "n2juGnvS7wYKL274CZ4b6PoYrJ0fxZZZ6FvKClpAZ50="
         }
       },
       "is_incremental": false,
@@ -701,7 +713,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/install-the-adapter.html",
-          "hash": "PPj7Uhi8CxYZ7SIFff9ROg=="
+          "hash": "WJjIb5EXK53m66bKAghFuIhJKZdlRYnF05cFo7JyvOA="
         }
       },
       "is_incremental": false,
@@ -713,7 +725,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/installation.html",
-          "hash": "Sz6zuSJIrexX2YM9mrP57Q=="
+          "hash": "vZqs75xBDZ2PRY+YtMB6Rvh1xxHqsR9QzAFnNiGtirc="
         }
       },
       "is_incremental": false,
@@ -725,7 +737,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/uninstall-the-adapter.html",
-          "hash": "URCnGOZTYhrmECikA7h/Hg=="
+          "hash": "Qfq+jocGR9NgOwE4d0VTDqMw0k89Pp5avX0Yq69HOrk="
         }
       },
       "is_incremental": false,
@@ -737,7 +749,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/metadata/metadata.html",
-          "hash": "JOgnWwRHdGtrNZFzWRZXrw=="
+          "hash": "mkAHfJ/zZs2m98dN0kEBWLHz13/mA/++E+UQAxhaVoA="
         }
       },
       "is_incremental": false,
@@ -749,7 +761,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/technical-support-and-feedback.html",
-          "hash": "4OHgMGl+2wm5ZgLglm4vlQ=="
+          "hash": "Kg239tEvAb3FB7VUgoT4GmpX2bp8dR64cHYD64J3vP0="
         }
       },
       "is_incremental": false,
@@ -761,7 +773,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
-          "hash": "gDuOJL5LhzWbWgEZ2gv3tg=="
+          "hash": "jxFWAHjas074+S9J4MiHmJ/Iqo9HdCuBS8R9EYdoyPA="
         }
       },
       "is_incremental": false,
@@ -773,7 +785,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/test.html",
-          "hash": "tYWH/hSy8XkjBW7BWFCWOQ=="
+          "hash": "Vw0bfoeZrsNGqOT+ePW/PAuEpcBvjtZvBUrlc8XaVRw="
         }
       },
       "is_incremental": false,
@@ -785,7 +797,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-performance-best-practices.html",
-          "hash": "ZUuQuxB1pCn211xR1qaMsQ=="
+          "hash": "Z474qsOGMr7GhJZ96BVZ9jWA7Q7voTxZ8olZ7TKqYx4="
         }
       },
       "is_incremental": false,
@@ -797,7 +809,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html",
-          "hash": "rRTZZf9NEk9A7FdEEpVgpg=="
+          "hash": "vwVwHDmKhUl62zLh1CznjOl3O7qLuLgubmWvdt+NEw8="
         }
       },
       "is_incremental": false,
@@ -809,7 +821,7 @@
       "output": {
         ".html": {
           "relative_path": "content/release-notes/release-notes.html",
-          "hash": "NiWCXrR/AT1x5H3gh25DlQ=="
+          "hash": "zGsx/P5b+9xqJMKu8gNCeRbVg06t9T/yRGe8ql45xco="
         }
       },
       "is_incremental": false,
@@ -821,7 +833,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "MHxPRM4IXW3gGOmR/tMHlw=="
+          "hash": "YTQuVTc3rEI6WYWjFYEXUGxLKouWORRJbSjzUazvujo="
         }
       },
       "is_incremental": false,
@@ -833,7 +845,7 @@
       "output": {
         ".html": {
           "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-azure-event-hubs.html",
-          "hash": "ykAjkTXq2lAAgxreIDTK3A=="
+          "hash": "BZjFmT1v3VNUTKpShmGimVRq2sjBypr8g22wgyHJOqw="
         }
       },
       "is_incremental": false,
@@ -845,7 +857,7 @@
       "output": {
         ".html": {
           "relative_path": "pi-adapter-for-azure-event-hubs-overview.html",
-          "hash": "6Z75MvZgA4Ln5S/1c/+/CA=="
+          "hash": "HR8oP5/P9A9cHLpfGzndSwxecavS5ZBEPZRh0HlcmNw="
         }
       },
       "is_incremental": false,
@@ -857,7 +869,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "IyjBHkud2MLBfNxAzUK/7A=="
+          "hash": "MD3JgLQVLvQ42lnWidFld3n/HqCNGz/DeWqDxTOxIOE="
         }
       },
       "is_incremental": false,
@@ -878,7 +890,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 58,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

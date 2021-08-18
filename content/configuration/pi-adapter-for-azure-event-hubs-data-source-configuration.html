@@ -8,7 +8,7 @@
     <title>Data source </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data source ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -130,7 +130,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>Azure Event Hubs1.{Topic}.{ValueField}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
+<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>AzureEventHubs1.{Topic}.{ValueField}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. <br><br>Allowed value: any string <br> Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
@@ -174,19 +174,19 @@
 <p>The following are examples of valid Azure Event Hubs data source configurations:</p>
 <h3 id="minimal-data-source-configuration">Minimal data source configuration</h3>
 <pre><code class="lang-json">{
-  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;Azure Event Hub Namespace connection string&gt;&quot;,
-  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;,
+  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;AzureEventHubNamespaceConnectionString&gt;&quot;,
+  &quot;BlobStorageConnectionString&quot;: &quot;&lt;AzureStorageAccountConnectionString&gt;&quot;,
   &quot;ConsumerGroupName&quot;: &quot;$Default&quot;,
-  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;checkpoint container&gt;&quot;
+  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;CheckpointContainer&gt;&quot;
 }
 </code></pre><h3 id="complete-data-source-configuration">Complete data source configuration</h3>
 <pre><code class="lang-json">{
   &quot;StreamIdPrefix&quot;: &quot;EventHubs1.&quot;,
   &quot;DefaultStreamIdPattern&quot;: &quot;{EventHubName}.{ValueField}&quot;,
-  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;Azure Event Hub Namespace connection string&gt;&quot;,
-  &quot;BlobStorageConnectionString&quot;: &quot;&lt;Azure Storage Account connection string&gt;&quot;,
+  &quot;EventHubNamespaceConnectionString&quot;: &quot;&lt;AzureEventHubNamespaceConnectionString&gt;&quot;,
+  &quot;BlobStorageConnectionString&quot;: &quot;&lt;AzureStorageAccountConnectionString&gt;&quot;,
   &quot;ConsumerGroupName&quot;: &quot;$Default&quot;,
-  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;checkpoint container&gt;&quot;,
+  &quot;CheckpointBlobContainerName&quot;: &quot;&lt;CheckpointContainer&gt;&quot;,
   &quot;TimeZone&quot;: &quot;America/Los_Angeles&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>

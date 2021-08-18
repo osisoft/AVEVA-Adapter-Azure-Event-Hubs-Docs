@@ -8,7 +8,7 @@
     <title>Data selection </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data selection ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -117,7 +117,7 @@
 <thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th style="text-align:center">Required</th>
 <th>Type</th>
 <th>Description</th>
 </tr>
@@ -125,69 +125,76 @@
 <tbody>
 <tr>
 <td><strong>Selected</strong></td>
-<td>Optional</td>
+<td style="text-align:center">Optional</td>
 <td><code>boolean</code></td>
 <td>Selects or clears a measurement. To select an item, set to <code>true</code>. To remove an item, leave the field empty or set to <code>false</code>.  <br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>false</code></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>Optional</td>
+<td style="text-align:center">Optional</td>
 <td><code>string</code></td>
 <td>The optional friendly name of the data item collected from the data source <br><br>Allowed value: any string<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>StreamId</strong></td>
-<td>Optional</td>
+<td style="text-align:center">Optional</td>
 <td><code>string</code></td>
 <td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom identifier follows the <strong>stream ID rules</strong>:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores (&quot;__&quot;)<br>Can contain a maximum of 100 characters<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;Id&gt;.&lt;ValueField&gt;</code> .</td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
-<td>Optional</td>
+<td style="text-align:center">Optional</td>
 <td><code>string</code></td>
 <td>The ID of the data filter <br><br>Allowed value: any string <br>Default value: <code>null</code><br><strong>Note:</strong> If the specified <strong>DataFilterId</strong> does not exist, unfiltered data is sent until that <strong>DataFilterId</strong> is created.</td>
 </tr>
 <tr>
 <td><strong>EventHubName</strong></td>
-<td>Required</td>
+<td style="text-align:center">Required</td>
 <td><code>string</code></td>
 <td>The name of the event hub to collect data from <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: <code>{EventHubName}</code></td>
 </tr>
 <tr>
 <td><strong>ValueField</strong></td>
-<td>Required</td>
+<td style="text-align:center"><sup>1</sup></td>
 <td><code>string</code></td>
-<td>The JsonPath expression<sup>1</sup>  to take value from a property<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace</td>
+<td>The JSONPath expression<sup>2</sup> to take value from a property</td>
 </tr>
 <tr>
-<td><strong>TimeField</strong></td>
-<td>Optional</td>
+<td><strong>DataFields</strong></td>
+<td style="text-align:center"><sup>1</sup></td>
 <td><code>string</code></td>
-<td>The JsonPath expression<sup>1</sup> to take value to use as a timestamp from a property<br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.<br><br>Allowed value: cannot be <code>null</code>, empty, or whitespace</td>
+<td>A <code>ComplexTypeMapping</code> that maps JSONPath expressions of fields to property names. Supported complex data types are <code>Coordinates</code> and <code>Geolocation</code>.<br><br><a href="#complex-data-type-field-mapping-examples">Complex data type field mapping examples</a></td>
+</tr>
+<tr>
+<td><strong>IndexField</strong></td>
+<td style="text-align:center">Optional</td>
+<td><code>string</code></td>
+<td>The JSONPath expression<sup>2</sup> to take value to use as a timestamp from a property<br><strong>Note:</strong> The adapter generates a timestamp when <code>null</code> is specified.</td>
 </tr>
 <tr>
 <td><strong>DeviceId</strong></td>
-<td>Optional</td>
+<td style="text-align:center">Optional</td>
 <td><code>string</code></td>
 <td>The device Id associated with the IoT Hub.</td>
 </tr>
 <tr>
 <td><strong>DataType</strong></td>
-<td>Required</td>
+<td style="text-align:center">Required</td>
 <td><code>string</code></td>
-<td>The expected data type of the values for the specified field <br><br>Allowed value: OMF supported data types</td>
+<td>The expected data type of the values for the specified field. Supported complex data types include <code>Coordinates</code> and <code>Geolocation</code>.<br><br><a href="#complex-data-type-field-mapping-examples">Complex data type field mapping examples</a><br><br>Allowed value: OMF supported data types, <code>Coordinates</code>, or <code>Geolocation</code></td>
 </tr>
 <tr>
-<td><strong>TimeFormat</strong></td>
-<td>Optional</td>
+<td><strong>IndexFormat</strong></td>
+<td style="text-align:center">Optional</td>
 <td><code>string</code></td>
-<td>The time format of the timestamp value specified in the TimeField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>1</sup><br><br><strong>Note:</strong> Specify <code>Adapter</code> to have the adapter supply the timestamp and ignore the TimeField. If you specify <code>null</code>, the adapter parses the timestamp identified in TimeField as a DateTime supporting ISO 8601 formats.</td>
+<td>The time format of the timestamp value specified in the IndexField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>2</sup><br><br><strong>Note:</strong> Specify <code>Adapter</code> to have the adapter supply the timestamp and ignore the IndexField. If you specify <code>null</code>, the adapter parses the timestamp identified in IndexField as a DateTime supporting ISO 8601 formats.</td>
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> <strong>Note:</strong> JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.</p>
+<p><sup>1</sup>: <code>DataFields</code> and <code>ValueField</code> are mutually exclusive. You must define one or the other, but not both.<br>
+<sup>2</sup>: JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.</p>
 <h2 id="data-selection-examples">Data selection examples</h2>
-<p>The following are examples of valid Azure Event Hubs data selection configurations<sup>1</sup>:</p>
+<p>The following are examples of valid Azure Event Hubs data selection configurations:</p>
 <h3 id="minimal-data-selection-configuration">Minimal data selection configuration</h3>
 <pre><code class="lang-json">[
   {
@@ -205,13 +212,13 @@
     &quot;DataFilterId&quot; : null,
     &quot;EventHubName&quot; : &quot;SampleEventHubName&quot;,
     &quot;ValueField&quot;: &quot;$.Events[0].Value&quot;,
-    &quot;TimeField&quot;: &quot;$.TimeStamp&quot;,
+    &quot;IndexField&quot;: &quot;$.TimeStamp&quot;,
     &quot;DeviceId&quot; : &quot;EventHub7&quot;,
     &quot;DataType&quot; : &quot;uint64&quot;,
-    &quot;TimeFormat&quot; : null    
+    &quot;IndexFormat&quot; : null    
   }
 ]
-</code></pre><p><sup>1</sup> <strong>Note:</strong> Both <strong>ValueField</strong> and <strong>TimeField</strong> require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:</p>
+</code></pre><p><strong>Note:</strong> Both <strong>ValueField</strong> and <strong>IndexField</strong> require the correct structure of the JSON payload to be specified. The previous examples use the following JSON payload structure:</p>
 <pre><code class="lang-json">{
   &quot;TimeStamp&quot;: &quot;02/17/2021 12:01:36 AM PST&quot;,
   &quot;Events&quot;: [
@@ -221,6 +228,12 @@
     }
   ]
 }
+</code></pre><h2 id="complex-data-type-field-mapping-examples">Complex data type field mapping examples</h2>
+<p>When working with the <code>DataFields</code> or <code>DataType</code> <a href="#data-selection-parameters">data selection parameters</a>, you can provide complex data types field mappings as JSONPath expressions. PI Adapter for Azure Event Hubs supports the following complex data types: <code>Coordinates</code> and <code>Geolocation</code>.</p>
+<h3 id="coordinates-example"><code>Coordinates</code> example</h3>
+<pre><code class="lang-json">{&quot;X&quot;: &quot;$[&#39;xValue&#39;]&quot;, &quot;Y&quot;: &quot;$[&#39;yValue&#39;]&quot;, &quot;Z&quot;: &quot;$[&#39;zValue&#39;]&quot;}
+</code></pre><h3 id="geolocation-example"><code>Geolocation</code> example</h3>
+<pre><code class="lang-json">{&quot;Latitude&quot;: &quot;$[&#39;latitudeValue&#39;]&quot;, &quot;Longitude&quot;: &quot;$[&#39;longitudeValue&#39;]&quot;}
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>

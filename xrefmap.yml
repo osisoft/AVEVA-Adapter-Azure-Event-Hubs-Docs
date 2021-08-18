@@ -79,6 +79,9 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
+- uid: PIAdapterAzureEventHubsDataSourceDiscover
+  name: Azure Event Hubs data source discovery
+  href: content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html
 - uid: PIAdapterForAzureEventHubsClientSettingsConfiguration
   name: Client settings
   href: content/configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html

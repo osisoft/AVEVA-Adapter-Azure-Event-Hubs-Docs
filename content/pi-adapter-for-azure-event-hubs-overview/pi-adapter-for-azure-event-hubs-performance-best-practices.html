@@ -8,7 +8,7 @@
     <title>Performance best practices </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Performance best practices ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,10 +80,10 @@
 
 <p>The performance of an adapter, PI Adapter for Azure Event Hubs, specifically, depends upon a number of factors, like egress limits, data shape, and data selections. Use the following performance guidelines and best practices when you set up an adapter.</p>
 <h2 id="egress-limits">Egress limits</h2>
-<p>On a virtual machine with 4 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hubs is capable of sending up to 20,000 events per second to an OCS namespace or PI Web API OMF endpoint.</p>
+<p>On a virtual machine with 8 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hubs is capable of sending up to 20,000 events per second to an OCS namespace or PI Web API OMF endpoint.</p>
 <p><strong>Note:</strong> A many-to-one relationship exists between JSON messages sent to Event Hub and time indexed events sent to the data endpoints. For more information, see <a href="#throughput-units">Throughput units</a>.</p>
 <h2 id="data-shape">Data shape</h2>
-<p>PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the <code>TimeField</code> and <code>ValueField</code>.</p>
+<p>PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the <code>IndexField</code> and <code>ValueField</code>.</p>
 <p>OSIsoft recommends using larger messages rather than smaller messages for the same amount of data to achieve optimal performance.</p>
 <p><strong>Example:</strong> 5000 stream values per message at a 250 ms update rate perform better than 100 streams per message at a 5 ms update rate.</p>
 <p>OSIsoft also recommends that you use flat data rather than deeply nested data as they are not as expensive to parse. More complex messages may also require more expensive JSONPath expressions to identify values and timestamps, which results in lower performance.</p>
@@ -122,7 +122,7 @@
     }
 }
 </code></pre><h2 id="data-selections">Data selections</h2>
-<p>Data selection related to the Event Hubs and the configuration of the <code>ValueField</code> and <code>TimeField</code> parameters highly affect performance of the adapter.</p>
+<p>Data selection related to the Event Hubs and the configuration of the <code>ValueField</code> and <code>IndexField</code> parameters highly affect performance of the adapter.</p>
 <h3 id="event-hub">Event Hub</h3>
 <h4 id="region">Region</h4>
 <p>An Event Hub namespace in the same geographic region as the adapter ensures minimal latency due to network communications.</p>
@@ -133,7 +133,7 @@
 <p>A single throughput unit for Azure Event Hubs allows for ingress of up to 1MB per second or 1000 events (JSON messages). Each message contains as many individual data endpoint events as are configured in the data selections for that Event Hub.</p>
 <p><strong>Example:</strong> 100 data selections that use Event Hub A and 10 events that are sent to the Event Hub every second results in 1000 events per second sent to the data endpoint.</p>
 <p>Consider this many-to-one relationship between the events sent to Event Hub and events sent to the data endpoint when you select the appropriate throughput units for your Event Hub.</p>
-<h3 id="valuefield-and-timefield-jsonpath">ValueField and TimeField JSONPath</h3>
+<h3 id="valuefield-and-indexfield-jsonpath">ValueField and IndexField JSONPath</h3>
 <p>OSIsoft recommends that you use the most direct reference possible to refer to a data item when you configure data selections. Evaluating JSONPath expressions can be expensive.</p>
 <h4 id="sample-data">Sample data</h4>
 <pre><code class="lang-json">{
@@ -160,8 +160,8 @@
     &quot;EventHubName&quot;: &quot;hub&quot;,
     &quot;DeviceId&quot;: null,
     &quot;ValueField&quot;: &quot;$.Events[?(@.Id == \u00271\u0027)].Value&quot;,
-    &quot;TimeField&quot;: &quot;$.TimeStamp&quot;,
-    &quot;TimeFormat&quot;: null,
+    &quot;IndexField&quot;: &quot;$.TimeStamp&quot;,
+    &quot;IndexFormat&quot;: null,
     &quot;DataType&quot;: &quot;string&quot;
 }
 </code></pre><h4 id="high-performance">High performance</h4>
@@ -174,13 +174,11 @@
     &quot;EventHubName&quot;: &quot;hub&quot;,
     &quot;DeviceId&quot;: null,
     &quot;ValueField&quot;: &quot;$.Events[1].Value&quot;,
-    &quot;TimeField&quot;: &quot;$.TimeStamp&quot;,
-    &quot;TimeFormat&quot;: null,
+    &quot;IndexField&quot;: &quot;$.TimeStamp&quot;,
+    &quot;IndexFormat&quot;: null,
     &quot;DataType&quot;: &quot;string&quot;
 }
-</code></pre><h3 id="limitations">Limitations</h3>
-<p>As documented in the Known Issues section of the <a class="xref" href="../release-notes/release-notes.html">Release Notes</a>, attempting to configure 10,000 or more streams can result in a timeout.</p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -8,7 +8,7 @@
     <title>Troubleshoot PI Adapter for Azure Event Hubs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Troubleshoot PI Adapter for Azure Event Hubs ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -136,7 +136,7 @@
 <td>The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload.</td>
 </tr>
 <tr>
-<td><strong>TimeField</strong></td>
+<td><strong>IndexField</strong></td>
 <td>The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload.</td>
 </tr>
 <tr>
@@ -144,8 +144,8 @@
 <td>The correct data type is referenced. An incorrect data type causes data conversion to fail.</td>
 </tr>
 <tr>
-<td><strong>TimeFormat</strong></td>
-<td>The correct time format is referenced. A time format that does not match the value from <strong>TimeField</strong> means that the adapter cannot convert timestamp from the AEH payload.</td>
+<td><strong>IndexFormat</strong></td>
+<td>The correct time format is referenced. A time format that does not match the value from <strong>IndexField</strong> means that the adapter cannot convert timestamp from the AEH payload.</td>
 </tr>
 </tbody>
 </table>
@@ -181,8 +181,8 @@
 <ol>
 <li><p>Navigate to the logs directory:</p>
 <ul>
-<li>Windows: <code>%ProgramData%\OSIsoft\Adapters\BACnet\Logs</code></li>
-<li>Linux: <code>/usr/share/OSIsoft/Adapters/BACnet/Logs</code></li>
+<li>Windows: <code>%ProgramData%\OSIsoft\Adapters\EventHubs\Logs</code></li>
+<li>Linux: <code>/usr/share/OSIsoft/Adapters/EventHubs/Logs</code></li>
 </ul>
 </li>
 <li><p>Optional: Change the log level of the adapter to receive more information and context.</p>
