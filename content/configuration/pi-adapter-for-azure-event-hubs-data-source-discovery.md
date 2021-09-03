@@ -97,6 +97,10 @@ The discovery results includes a data selection configuration for each stream it
 ]
 ```
 
+**Note:** If discovery generates a `streamId` that includes special characters, the adapter will replace them with encoded characters. For more information, see [Special characters encoding](#special-characters-encoding).  
+
+[!include[Special character encoding](../_includes/special-character-encoding.md)]
+
 ### Combining query results into a valid data selection configuration 
 
 After viewing the results of a discovery, you can manually combine them into a single valid data selection configuration. In the example below, the two data selection configurations from the example above are combined into single configuration. Notice that `IndexField` is updated to `$.TimeStamp`.

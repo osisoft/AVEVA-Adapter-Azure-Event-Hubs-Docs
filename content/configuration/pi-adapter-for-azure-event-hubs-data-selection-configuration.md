@@ -64,24 +64,7 @@ The full schema definition for the Azure Event Hubs data selection configuration
 <sup>1</sup>: `DataFields` and `ValueField` are mutually exclusive. You must define one or the other, but not both.<br>
 <sup>2</sup>: JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.
 
-### Special characters encoding
-
-The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The adapter substitutes the following encoded characters for special characters:
-
-| Special character | Encoded character |
-|-------------------|-----------------------|
-| `*`               | empty space                |
-| `'`              |  empty space                |
-| <code>`</code>           | empty space                 |
-| `"`               | empty space                 |
-| `?`               | empty space                 |
-| `;`               | `-`                 |
-| `\|`               | `-`                 |
-| `\`              | empty space                 |
-| `{`               | `(`                 |
-| `}`               | `)`                 |
-| `[`               | `(`                 |
-| `]`               | `)`                 |
+[!include[Special character encoding](../_includes/special-character-encoding.md)]
 
 ## Data selection examples
 
