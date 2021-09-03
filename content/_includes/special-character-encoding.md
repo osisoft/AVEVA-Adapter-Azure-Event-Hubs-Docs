@@ -4,14 +4,14 @@ The adapter encodes special characters used in the **StreamId** parameter string
 
 | Special character | Encoded character |
 |--|--|
-| `*` | empty space |
-| `'` | empty space |
-| <code>`</code> | empty space |
-| `"` | empty space |
-| `?` | empty space |
+| `*` | character omitted |
+| `'` | character omitted |
+| <code>`</code> | character omitted |
+| `"` | character omitted |
+| `?` | character omitted |
 | `;` | `-` |
 | `\| ` | `-` |
-| `\` | empty space |
+| `\` | character omitted |
 | `{` | `(` |
 | `}` | `)` |
 | `[` | `(` |
