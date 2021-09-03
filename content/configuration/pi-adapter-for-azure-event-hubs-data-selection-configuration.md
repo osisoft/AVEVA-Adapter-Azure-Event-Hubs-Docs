@@ -58,7 +58,7 @@ The full schema definition for the Azure Event Hubs data selection configuration
 | **DataFields** | <sup>1</sup> | `string` | A `ComplexTypeMapping` that maps JSONPath expressions of fields to property names. Supported complex data types are `Coordinates` and `Geolocation`.<br><br>[Complex data type field mapping examples](#complex-data-type-field-mapping-examples)
 | **IndexField** | Optional | `string` | The JSONPath expression<sup>2</sup> to take value to use as a timestamp from a property<br>**Note:** The adapter generates a timestamp when `null` is specified. |
 | **DeviceId** | Optional | `string` | The device Id associated with the IoT Hub. | <br>If specified, the event is sent only if it originated from the specified device. If omitted, the event is sent to all streams  that match the selection. |
-| **DataType** | Required | `string` | The expected data type of the values for the specified field. Supported complex data types include `Coordinates` and `Geolocation`.<br><br>[Complex data type field mapping examples](#complex-data-type-field-mapping-examples)<br><br>Allowed value: OMF supported data types, `Coordinates`, or `Geolocation` |
+| **DataType** | Required | `string` | The expected data type of the values for the specified field.<br><br>Supported Azure Event Hub data types include: `Boolean`, `Int64`, `Int32`, `Int16`, `UInt64`, `UInt32`, `UInt16`, `Float64`, `Float32`, `Float16`, `Date-Time`, `String`. For more information, see <xref:PIAdapterForAzureEventHubsPrinciplesOfOperation>.<br><br>Supported complex data types include: `Coordinates` and `Geolocation`.<br><br>[Complex data type field mapping examples](#complex-data-type-field-mapping-examples)<br><br>Allowed value: OMF supported data types, `Coordinates`, or `Geolocation` |
 | **IndexFormat** | Optional | `string` | The time format of the timestamp value specified in the IndexField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>2</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the IndexField. If you specify `null`, the adapter parses the timestamp identified in IndexField as a DateTime supporting ISO 8601 formats. |
 
 <sup>1</sup>: `DataFields` and `ValueField` are mutually exclusive. You must define one or the other, but not both.<br>
@@ -70,14 +70,14 @@ The adapter encodes special characters used in the **StreamId** parameter string
 
 | Special character | Encoded character |
 |-------------------|-----------------------|
-| `*`               | ``                 |
-| `'`              |  ``                 |
-| `` ` ``           | ``                 |
-| `"`               | ``                 |
-| `?`               | ``                 |
+| `*`               | empty space                |
+| `'`              |  empty space                |
+| <code>`</code>           | empty space                 |
+| `"`               | empty space                 |
+| `?`               | empty space                 |
 | `;`               | `-`                 |
-| `|`               | `-`                 |
-| `\`              | ``                 |
+| `\|`               | `-`                 |
+| `\`              | empty space                 |
 | `{`               | `(`                 |
 | `}`               | `)`                 |
 | `[`               | `(`                 |
