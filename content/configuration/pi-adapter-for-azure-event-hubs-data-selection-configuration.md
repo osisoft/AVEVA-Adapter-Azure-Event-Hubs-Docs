@@ -51,7 +51,7 @@ The full schema definition for the Azure Event Hubs data selection configuration
 |--|:--:|--|--|
 | **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `false` |
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source <br><br>Allowed value: any string<br>Default value: `null` |
-| **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom identifier follows the **stream ID rules**:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores ("__")<br>Can contain a maximum of 100 characters<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Id>.<ValueField>` . |
+| **StreamId** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom identifier follows the **stream ID rules**:<br><br>Is not case-sensitive<br>Can contain spaces<br>Cannot start with two underscores ("__")<br>Can contain a maximum of 100 characters<br>Cannot start or end with a period<br>Cannot contain consecutive periods<br>Cannot consist of only periods<br>**Note:** Special characters used in the **StreamId** parameter string are encoded before sending it to configured endpoints. For more information, see [Special characters encoding](#special-characters-encoding). <br><br>The default ID automatically updates when there are changes to the measurement and follows the format of `<Id>.<ValueField>` . |
 | **DataFilterId** | Optional | `string` | The ID of the data filter <br><br>Allowed value: any string <br>Default value: `null`<br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. | **DataFilterCache** | Optional | `` | The cache to support data filtering. The cache stores previous and last value. |  |
 | **EventHubName** | Required | `string` | The name of the event hub to collect data from <br><br>Allowed value: Maximum of 256 characters per Azure limits<br>Default value: `{EventHubName}` |
 | **ValueField** | <sup>1</sup> | `string` | The JSONPath expression<sup>2</sup> to take value from a property |
@@ -61,9 +61,27 @@ The full schema definition for the Azure Event Hubs data selection configuration
 | **DataType** | Required | `string` | The expected data type of the values for the specified field. Supported complex data types include `Coordinates` and `Geolocation`.<br><br>[Complex data type field mapping examples](#complex-data-type-field-mapping-examples)<br><br>Allowed value: OMF supported data types, `Coordinates`, or `Geolocation` |
 | **IndexFormat** | Optional | `string` | The time format of the timestamp value specified in the IndexField property<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET `DateTime.TryParseExact()`method, for example `01/30/2021`.<br> For more information, see [DateTime.TryParseExact Method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0)<sup>2</sup><br><br>**Note:** Specify `Adapter` to have the adapter supply the timestamp and ignore the IndexField. If you specify `null`, the adapter parses the timestamp identified in IndexField as a DateTime supporting ISO 8601 formats. |
 
-
 <sup>1</sup>: `DataFields` and `ValueField` are mutually exclusive. You must define one or the other, but not both.<br>
 <sup>2</sup>: JSONPath expressions can be expensive to evaluate. For the best performance, avoid complicated expressions in favor of direct references to data.
+
+### Special characters encoding
+
+The adapter encodes special characters used in the **StreamId** parameter string before sending it to configured endpoints. The adapter substitutes the following encoded characters for special characters:
+
+| Special character | Encoded character |
+|-------------------|-----------------------|
+| `*`               | `%2a`                 |
+| `'`              | `%27`                 |
+| `` ` ``           | `%60`                 |
+| `"`               | `%22`                 |
+| `?`               | `%3f`                 |
+| `;`               | `%3b`                 |
+| `\|`               | `%7c`                 |
+| `\`              | `%5c`                 |
+| `{`               | `%7b`                 |
+| `}`               | `%7d`                 |
+| `[`               | `%5b`                 |
+| `]`               | `%5d`                 |
 
 ## Data selection examples
 
