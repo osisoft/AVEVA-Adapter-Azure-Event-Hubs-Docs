@@ -16,7 +16,6 @@ EventHubNames=<EVENT_HUB_1>,<EVENT_HUB_2>;WaitTime=<DAYS>.<HOURS>:<MINUTES>:<SEC
 
 Within the discovery request JSON payload, enter the Azure Event Hubs query using the `query` parameter, as shown in the [query examples](#query-examples) below. For more information on using the query parameter during API requests to the `api/v1/configuration/<componentId>/discoveries` endpoint, see <xref:DiscoveryConfiguration>.
 
-
 ## Query parameters
 
 When including a `query` within your discovery, you can add parameters from the table that follows. Separate the `EventHubNames` and `WaitTime` parameters with a semicolon (`;`).
@@ -97,16 +96,13 @@ The discovery results includes a data selection configuration for each stream it
 ]
 ```
 
-**Note:** If discovery generates a `streamId` that includes special characters, the adapter will replace them with encoded characters. For more information, see [Special characters encoding](#special-characters-encoding).  
-
-[!include[Special character encoding](../_includes/special-character-encoding.md)]
+**Note:** For `streamId` results, the text parser replaces special characters with a different character. For more information, see [Text parser](xref:TextParser#special-characters-support).
 
 ### Combining query results into a valid data selection configuration 
 
 After viewing the results of a discovery, you can manually combine them into a single valid data selection configuration. In the example below, the two data selection configurations from the example above are combined into single configuration. Notice that `IndexField` is updated to `$.TimeStamp`.
 
 After creating a valid data selection configuration, you can activate it by performing a `PUT` request against the `api/v1/configuration/<ComponentId>/DataSelection` endpoint. For more information, see <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration>.
-
 
 ```json
 [
@@ -127,4 +123,5 @@ After creating a valid data selection configuration, you can activate it by perf
 
 ### Additional considerations for `query` and `autoselect`
 
-When you use the `query` parameter within a discovery request, OSIsoft recommends setting the [autoSelect](xref:DiscoveryConfiguration#discovery-parameters) parameter to `false` for most use cases. OSIsoft makes this recomendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. `"autoSelect": true` should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active [Data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
+When you use the `query` parameter within a discovery request, OSIsoft recommends setting the [autoSelect](xref:DiscoveryConfiguration#discovery-parameters) parameter to `false` for most use cases. OSIsoft makes this recommendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. `"autoSelect": true` should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active [Data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
+ 
