@@ -96,7 +96,10 @@ The discovery results includes a data selection configuration for each stream it
 ]
 ```
 
-**Note:** For `streamId` results, the text parser replaces special characters with a different character. For more information, see [Text parser](xref:TextParser#special-characters-support).
+**Note:** In query results for `streamId` results, the text parser replaces any automatically generated special characters with a replacement character. You can override these replacement characters by manually editing the data selection configuration. 
+
+* For more information on character replacement, see [Special character support](xref:TextParser#special-character-support). 
+* For more information on overriding replacement characters within a `streamId`, see <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration>.
 
 ### Combining query results into a valid data selection configuration 
 
