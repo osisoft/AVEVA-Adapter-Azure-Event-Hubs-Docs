@@ -144,6 +144,7 @@
 </table>
 <p><sup>1</sup> <strong>Buffering to disk</strong> - disk is only used if required; <br></p>
 <ul>
+<li>Data is only written to the disk buffer if queued in the memory buffer for more than 5 seconds.</li>
 <li>The <strong>MaxBufferSizeMB</strong> is applied per configured endpoint except the health endpoint.<br></li>
 <li>An adapter creates 20 MB buffer files that are stored in <strong>BufferLocation</strong>.<br></li>
 <li>When <strong>MaxBufferSizeMB</strong> is reached, the oldest buffer file is deleted and a new buffer file is created.<br></li>

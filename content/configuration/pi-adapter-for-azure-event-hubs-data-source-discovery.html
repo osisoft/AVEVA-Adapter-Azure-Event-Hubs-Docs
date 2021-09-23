@@ -168,7 +168,13 @@
         &quot;dataFilterId&quot;: null
     }​​​
 ]
-</code></pre><h3 id="combining-query-results-into-a-valid-data-selection-configuration">Combining query results into a valid data selection configuration</h3>
+</code></pre><h3 id="streamid-special-character-replacement"><code>StreamId</code> special character replacement</h3>
+<p>In query results for <code>streamId</code>, the text parser replaces any automatically generated special characters with a replacement character to make identifiers more meaningful. You can manually override these replacement characters by manually editing the data selection configuration. </p>
+<ul>
+<li>For more information on character replacement, see <a class="xref" href="../main/shared-content/configuration/text-parser/text-parser.html#special-character-support">Special character support</a>. </li>
+<li>For more information on overriding replacement characters within a <code>streamId</code>, see <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection</a>.</li>
+</ul>
+<h3 id="combining-query-results-into-a-valid-data-selection-configuration">Combining query results into a valid data selection configuration</h3>
 <p>After viewing the results of a discovery, you can manually combine them into a single valid data selection configuration. In the example below, the two data selection configurations from the example above are combined into single configuration. Notice that <code>IndexField</code> is updated to <code>$.TimeStamp</code>.</p>
 <p>After creating a valid data selection configuration, you can activate it by performing a <code>PUT</code> request against the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code> endpoint. For more information, see <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection</a>.</p>
 <pre><code class="lang-json">[
@@ -186,7 +192,7 @@
     }
 ]
 </code></pre><h3 id="additional-considerations-for-query-and-autoselect">Additional considerations for <code>query</code> and <code>autoselect</code></h3>
-<p>When you use the <code>query</code> parameter within a discovery request, OSIsoft recommends setting the <a class="xref" href="../main/shared-content/configuration/discovery.html#discovery-parameters">autoSelect</a> parameter to <code>false</code> for most use cases. OSIsoft makes this recomendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. <code>&quot;autoSelect&quot;: true</code> should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection configuration</a>.</p>
+<p>When you use the <code>query</code> parameter within a discovery request, OSIsoft recommends setting the <a class="xref" href="../main/shared-content/configuration/discovery.html#discovery-parameters">autoSelect</a> parameter to <code>false</code> for most use cases. OSIsoft makes this recommendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. <code>&quot;autoSelect&quot;: true</code> should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection configuration</a>.</p>
 </article>
           </div>
           
