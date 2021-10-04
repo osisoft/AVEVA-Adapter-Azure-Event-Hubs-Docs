@@ -5,21 +5,12 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs {VERSION_PLACEHOLDER}
-Adapter framework {VERSION_PLACEHOLDER} 
+PI Adapter for Azure Event Hubs 1.0
+Adapter framework 1.4
 
 ## Overview
 
-We are pleased to announce the release of PI Adapter for Azure Event Hubs {VERSION_PLACEHOLDER}. This is the first general availability release for the adapter. 
-
-## New features
-
-The following new features have been added since the lighthouse release of PI Adapter for Azure Event Hubs. 
-
-Feature | Description
---------|------------
-Data Discovery | PI Adapter for Azure Event Hubs now allows you to perform a discovery query against a configured data source to automatically generate a data selection configuration rather than creating one manually. For more information, see <xref:DiscoveryConfiguration>.
-Complex Data Types | PI Adapter for Azure Event Hubs now offers limited support for mapping complex data types. For more information, see [Complex data type field mapping examples](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#complex-data-type-field-mapping-examples). 
+We are pleased to announce the release of PI Adapter for Azure Event Hubs 1.02. This is the first general availability release for the adapter. 
 
 ## Resolved issues
 
@@ -33,25 +24,17 @@ Item | Description
 
 ### System requirements
 
-<!--*Provide a cross-reference to the system requirements section. For example,*-->
-
 Refer to [System requirements](xref:SystemRequirements).
 
-### Installation and upgrade
-
-<!--*Provide a cross-reference to the installation procedure. For example,*-->
+### Installation
 
 Refer to [Install the adapter](xref:InstallTheAdapter).
 
 ### Uninstallation
 
-<!--*Provide a cross-reference to the uninstallation procedure. For example,*-->
-
 Refer to [Uninstall the adapter](xref:UninstallTheAdapter).
 
 ## Security information and guidance
-
-<!-- For information on how to complete this section, please refer to the [Security Wiki](https://dev.azure.com/osieng/engineering/_wiki/wikis/Architecture.wiki/15575/SDL-practice-described-in-release-notes)-->
 
 ### OSIsoft's commitment
 
@@ -81,12 +64,6 @@ The following table lists the known vulnerabilities and their mitigation in this
  --------- | ------- | -----------------| ------ | ----------
  json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.7 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability.
 
-## Documentation overview
-
-**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments
-
 ## Technical support and resources
-
-<!--*Provide a cross-reference to the Technical Support and feedback section. For example,*-->
 
 Refer to [Technical support and feedback](xref:TechnicalSupportAndFeedback).
