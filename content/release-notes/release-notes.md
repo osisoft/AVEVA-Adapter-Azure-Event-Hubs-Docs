@@ -25,7 +25,6 @@ Complex Data Types | PI Adapter for Azure Event Hubs now offers limited support 
 
 The following issues have been resolved since the lighthouse release:
 
-<!--*Use bullets and tables as necessary (table format below).* -->
 Item | Description
 ---- | -----------
 197937 | When submitting a POST for data selection configurations to the adapter that contains more than 10,000 streams, a timeout no longer occurs.

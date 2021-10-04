@@ -27,9 +27,9 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
     | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
     | **EventHubName**    | The event hub name is valid. If the name is invalid, the adapter cannot collect data. |
     | **ValueField**      | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload. |
-    | **TimeField**       | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload. |
+    | **IndexField**       | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload. |
     | **DataType**        | The correct data type is referenced. An incorrect data type causes data conversion to fail. |
-    | **TimeFormat**      | The correct time format is referenced. A time format that does not match the value from **TimeField** means that the adapter cannot convert timestamp from the AEH payload. |
+    | **IndexFormat**      | The correct time format is referenced. A time format that does not match the value from **IndexField** means that the adapter cannot convert timestamp from the AEH payload. |
 
 3. If the adapter is performing suboptimal, navigate to <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration> and review the configuration for any custom values that override default settings. Default client settings fit most use cases, so customized settings are more likely to cause issues.
 
@@ -62,8 +62,8 @@ Perform the following steps to view the adapter and endpoint logs to isolate iss
 
 1. Navigate to the logs directory:
 
-   * Windows: `%ProgramData%\OSIsoft\Adapters\BACnet\Logs`
-   * Linux: `/usr/share/OSIsoft/Adapters/BACnet/Logs`
+   * Windows: `%ProgramData%\OSIsoft\Adapters\EventHubs\Logs`
+   * Linux: `/usr/share/OSIsoft/Adapters/EventHubs/Logs`
 
 2. Optional: Change the log level of the adapter to receive more information and context.
 

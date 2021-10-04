@@ -56,10 +56,10 @@ The following JSON is an example of a system components configuration. It contai
                 "DataFilterId" : null,
                 "EventHubName" : "SampleEventHubName",
                 "ValueField": "$.Events[0].Value",
-                "TimeField": "$.TimeStamp",
+                "IndexField": "$.TimeStamp",
                 "DeviceId" : "EventHub7",
                 "DataType" : "uint64",
-                "TimeFormat" : null 
+                "IndexFormat" : null 
             }
         ]
     },
@@ -195,10 +195,10 @@ The following are representations of minimal and complete data selection configu
     "DataFilterId" : null,
     "EventHubName" : "SampleEventHubName",
     "ValueField": "$.Events[0].Value",
-    "TimeField": "$.TimeStamp",
+    "IndexField": "$.TimeStamp",
     "DeviceId" : "EventHub7",
     "DataType" : "uint64",
-    "TimeFormat" : null      
+    "IndexFormat" : null      
   }
 ]
 ```
