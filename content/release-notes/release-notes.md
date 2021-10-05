@@ -5,7 +5,7 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0<br>
+PI Adapter for Azure Event Hubs 1.0.1.23<br>
 Adapter framework 1.4
 
 ## Overview
