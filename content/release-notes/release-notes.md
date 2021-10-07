@@ -5,45 +5,36 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0.0.10<br>
-Adapter framework 1.3.1.1 
+PI Adapter for Azure Event Hubs 1.0.1.231<br>
+Adapter Framework 1.4.0.134
 
 ## Overview
 
-PI Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from Event Hubs to OMF endpoints in OSIsoft Cloud Services or PI Servers.  For more information, refer to [PI Adapter for Azure Event Hubs overview](xref:index). 
+We are pleased to announce the release of PI Adapter for Azure Event Hubs 1.0. This is the first general availability release for the adapter. 
 
+## Resolved issues
 
-## Known issues
-
-The following problems and enhancements have been deferred until a future release.
+The following issues have been resolved since the lighthouse release:
 
 Item | Description
 ---- | -----------
-197937 | Timeout may occur when submitting a POST for data selection configurations to the adapter that contain more than 10,000 streams.
+197937 | When submitting a POST for data selection configurations to the adapter that contains more than 10,000 streams, a timeout no longer occurs.
 
 ## Setup
 
 ### System requirements
 
-<!--*Provide a cross-reference to the system requirements section. For example,*-->
-
 Refer to [System requirements](xref:SystemRequirements).
 
-### Installation and upgrade
-
-<!--*Provide a cross-reference to the installation procedure. For example,*-->
+### Installation
 
 Refer to [Install the adapter](xref:InstallTheAdapter).
 
 ### Uninstallation
 
-<!--*Provide a cross-reference to the uninstallation procedure. For example,*-->
-
 Refer to [Uninstall the adapter](xref:UninstallTheAdapter).
 
 ## Security information and guidance
-
-<!-- For information on how to complete this section, please refer to the [Security Wiki](https://dev.azure.com/osieng/engineering/_wiki/wikis/Architecture.wiki/15575/SDL-practice-described-in-release-notes)-->
 
 ### OSIsoft's commitment
 
@@ -65,20 +56,14 @@ OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://ww
 
 This section is intended to provide relevant security-related information to guide your installation or upgrade decision. OSIsoft is proactively disclosing aggregate information about the number and severity of PI Adapter for Azure Event Hubs security vulnerabilities that are fixed in this release.
 
-No additional security vulnerabilities are applicable to this release. Sub-components of this release contain known vulnerabilities which are not exploitable in PI Adapter for Azure Event Hubs. 
+No known security vulnerabilities are applicable to this release.
 
-The following table lists the known vulnerabilities and their mitigation in this product.
+The following table lists the known vulnerabilities **fixed** by this release.
 
- Component | Version | CVE or Reference | CVSS | Mitigation
- --------- | ------- | -----------------| ------ | ----------
- json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.7 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability.
-
-## Documentation overview
-
-**EdgeCmd utility:** Provides an overview on how to configure and administer PI adapters on Linux and Windows using command line arguments
-
+Component | Version | CVE or Reference | CVSS | Mitigation
+--------- | ------- | -----------------| ------ | ----------
+json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.7 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability. This vulnerability was resolved by upgrading json.Net to version 13.0.1.
+ 
 ## Technical support and resources
-
-<!--*Provide a cross-reference to the Technical Support and feedback section. For example,*-->
 
 Refer to [Technical support and feedback](xref:TechnicalSupportAndFeedback).
