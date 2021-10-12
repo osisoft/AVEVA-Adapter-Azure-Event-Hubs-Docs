@@ -5,7 +5,7 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0.1.231<br>
+PI Adapter for Azure Event Hubs 1.0.1.234<br>
 Adapter Framework 1.4.0.134
 
 ## Overview
@@ -57,12 +57,6 @@ OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://ww
 This section is intended to provide relevant security-related information to guide your installation or upgrade decision. OSIsoft is proactively disclosing aggregate information about the number and severity of PI Adapter for Azure Event Hubs security vulnerabilities that are fixed in this release.
 
 No known security vulnerabilities are applicable to this release.
-
-The following table lists the known vulnerabilities **fixed** by this release.
-
-Component | Version | CVE or Reference | CVSS | Mitigation
---------- | ------- | -----------------| ------ | ----------
-json.Net | 12.0.3 | [Applications that use Newtonsoft.Json might be exposed to DOS vulnerability](https://alephsecurity.com/vulns/aleph-2018004) | 6.7 | No code paths result in JSON parsing and subsequent serialization resulting in DoS vulnerability. This vulnerability was resolved by upgrading json.Net to version 13.0.1.
  
 ## Technical support and resources
 
