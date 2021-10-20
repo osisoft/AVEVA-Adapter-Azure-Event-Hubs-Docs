@@ -2,12 +2,12 @@
 uid: PIAdapterforAzureEventHubsTextParser
 ---
 
+
 # Text parser
 
 The adapter you are using includes the text parser component which ensures consistent parsing of text from different files. For more information on which file types are supported for your adapter, see the topics in this chapter.
 
 Designed to be a document parser, the text parser parses a semantically complete document in its entirety.
-
 The text parser produces OMF compatible output, which in turn is compatible with the OCS backing SDS (Sequential Data Store) that stores data in streams consisting of multiple values and indexes.
 
 ## Data types supported by the text parser
@@ -53,6 +53,12 @@ Special character | Replacement character |
 `[` | `(`|
 `]` | `)` |
 
+## Culture support
+
+Some numeric values and datetimes support cultures when they are being parsed. The default culture is `en-US (US English)` (InvariantCulture). OSIsoft recommends that you leave the adapter at the default unless you expect culturally variant input.
+
+**Note:** Installed cultures vary by machine with both Linux and Windows. If the specified culture is not installed, the text parser fails to parse input that requires that culture.
+
 ## Time zone support
 
 A time zone or offset specified by a time is always used to convert to UTC time. Time zones are only used if there is no offset or time zone specifier in a text date and time string.
@@ -61,9 +67,11 @@ For time zones that support time changes between daylight and standard times, a 
 
 ## Date and time processing
 
-The text parser can use time zones and custom formats to read dates and times from ingress data.
+The text parser can use time zones, cultures, and custom formats to read dates and times from ingress data.
 
 You can specify date and time formats when you configure data selection. Set the date and time using the `IndexFormat` property. If you leave the `IndexFormat` property unset, the data selection configuration defaults to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date format.
+
+If you are using a culture other than default `en-US`, use the name of day or month specific to the culture. For example, use "Juni" instead of "June" for the `de-DE` culture.
 
 The following date and time syntaxes have been tested and are supported.
 
@@ -71,6 +79,8 @@ The following date and time syntaxes have been tested and are supported.
 "MM/dd/yyyy H:mm:ss zzz"         "06/15/2018 15:15:30 -05:00"
 "MM/dd/yyyy H:mm:ss.fff zzz"     "06/15/2018 15:15:30.123 -05:00"
 "dd/MM/yyyy H:mm:ss.fff K"       "15/06/2018 15:15:30.123 Z"
+"MMMM/dd/yyyy H:mm:ss.fff K"     "June/15/2018 15:15:30.123 Z" (InvariantCulture/English)
+"MMMM/dd/yyyy H:mm:ss.fff K"     "Juni/15/2018 15:15:30.123 Z" (German)
 "MMM/dd/yyyy H:mm:ss.fff K"      "Jun/15/2018 15:15:30.123 Z" 
 "MMM-dd-yyyy H:mm:ss.fff K"      "Jun-15-2018 15:15:30.123 Z"
 "MMM-dd-yyyy H:mm:ss.fff K"      "Jun-15-2018 15:15:30.123 Z"
