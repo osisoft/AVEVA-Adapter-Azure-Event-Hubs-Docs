@@ -61,9 +61,11 @@ For time zones that support time changes between daylight and standard times, a 
 
 ## Date and time processing
 
-The text parser can use time zones and custom formats to read dates and times from ingress data.
+The text parser can use time zones, cultures, and custom formats to read dates and times from ingress data.
 
 You can specify date and time formats when you configure data selection. Set the date and time using the `IndexFormat` property. If you leave the `IndexFormat` property unset, the data selection configuration defaults to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date format.
+
+If you are using a culture other than default `en-US`, use the name of day or month specific to the culture. For example, use "Juni" instead of "June" for the `de-DE` culture.
 
 The following date and time syntaxes have been tested and are supported.
 
@@ -71,6 +73,8 @@ The following date and time syntaxes have been tested and are supported.
 "MM/dd/yyyy H:mm:ss zzz"         "06/15/2018 15:15:30 -05:00"
 "MM/dd/yyyy H:mm:ss.fff zzz"     "06/15/2018 15:15:30.123 -05:00"
 "dd/MM/yyyy H:mm:ss.fff K"       "15/06/2018 15:15:30.123 Z"
+"MMMM/dd/yyyy H:mm:ss.fff K"     "June/15/2018 15:15:30.123 Z" (InvariantCulture/English)
+"MMMM/dd/yyyy H:mm:ss.fff K"     "Juni/15/2018 15:15:30.123 Z" (German)
 "MMM/dd/yyyy H:mm:ss.fff K"      "Jun/15/2018 15:15:30.123 Z" 
 "MMM-dd-yyyy H:mm:ss.fff K"      "Jun-15-2018 15:15:30.123 Z"
 "MMM-dd-yyyy H:mm:ss.fff K"      "Jun-15-2018 15:15:30.123 Z"
