@@ -2,7 +2,7 @@
   items:
   - topicUid: PIAdapterForAzureEventHubsPrinciplesOfOperation
   - topicUid: PIAdapterForAzureEventHubsPerformanceBestPractices
-  - topicUid: TextParser
+  - topicUid: PIAdapterforAzureEventHubsTextParser
     items:
     - topicUid: JSONPathSyntaxForValueRetrieval
 - topicUid: Installation
