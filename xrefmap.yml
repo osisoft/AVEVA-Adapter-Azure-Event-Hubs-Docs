@@ -112,6 +112,9 @@ references:
 - uid: PIAdapterForAzureEventHubsPrinciplesOfOperation
   name: Principles of operation
   href: content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html
+- uid: PIAdapterforAzureEventHubsTextParser
+  name: Text parser
+  href: content/configuration/pi-adapter-for-azure-event-hubs-text-parser.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html

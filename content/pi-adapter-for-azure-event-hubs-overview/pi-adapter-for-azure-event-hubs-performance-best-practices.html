@@ -79,8 +79,6 @@
 <h1 id="performance-best-practices">Performance best practices</h1>
 
 <p>The performance of an adapter, PI Adapter for Azure Event Hubs, specifically, depends upon a number of factors, like egress limits, data shape, and data selections. Use the following performance guidelines and best practices when you set up an adapter.</p>
-<h2 id="egress-limits">Egress limits</h2>
-<p>On a virtual machine with 8 GB RAM and 2 vCPUs, a PI Adapter for Azure Event Hubs is capable of sending up to 20,000 events per second to an OCS namespace or PI Web API OMF endpoint.</p>
 <p><strong>Note:</strong> A many-to-one relationship exists between JSON messages sent to Event Hub and time indexed events sent to the data endpoints. For more information, see <a href="#throughput-units">Throughput units</a>.</p>
 <h2 id="data-shape">Data shape</h2>
 <p>PI Adapter for Azure Event Hubs assumes a single schema per source Event Hub. When a data selection is assigned a particular Event Hub, it is assumed that all messages received from that Event Hub should be processed for the <code>IndexField</code> and <code>ValueField</code>.</p>

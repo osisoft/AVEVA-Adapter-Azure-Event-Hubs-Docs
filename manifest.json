@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "wvPe5X1mjs/IjsqNp8MzoFkZpZVUvLnUaL00szHDb20="
+          "hash": "imJurWq8bp5szMBP2c5HKihDam2b6YGy64NH1zVJA8E="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,19 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html",
-          "hash": "F5CDTIjxuzictLvttW2EIwYHZuo3so0AQPxsa1uH0Dg="
+          "hash": "hc9hb5SPBbdU6GCWnDfFBv06Hz0TTlPpWvwb/wokS7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-text-parser.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-text-parser.html",
+          "hash": "B8sBro3nyGE79nJHy2VQmZSurSxSk1xnR2kghjDbmt4="
         }
       },
       "is_incremental": false,
@@ -797,7 +809,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-performance-best-practices.html",
-          "hash": "Z474qsOGMr7GhJZ96BVZ9jWA7Q7voTxZ8olZ7TKqYx4="
+          "hash": "sYarBcAo15Nuc4aPsEc5VJAMVflnNw8An0h0U2TgC6k="
         }
       },
       "is_incremental": false,
@@ -833,7 +845,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "REAFXPVQ9wthXKuNJjd4eBOvezENHLTkjC1HiHa8GVw="
+          "hash": "/Dx8iuArP1yKJbN6TYuPLl6hJ90/aeCpxzeGWwqmZik="
         }
       },
       "is_incremental": false,
@@ -890,7 +902,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 58,
+          "total_file_count": 59,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
