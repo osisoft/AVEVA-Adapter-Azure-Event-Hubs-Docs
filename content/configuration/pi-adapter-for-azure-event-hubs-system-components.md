@@ -102,4 +102,4 @@ The default _System_Components.json_ file for the System component contains the 
 | api/v1/configuration/system/components | POST | Adds a new component to the system configuration |
 | api/v1/configuration/system/components | PUT | Updates the system components configuration |
 | api/v1/configuration/system/components/_ComponentId_ | DELETE | Deletes a specific component from the system components configuration |
-| api/v1/configuration/system/components/_ComponentId_ | PUT | Creates a new component with the specified *ComponentId* in the system configuration
+| api/v1/configuration/system/components/_ComponentId_ | PUT | Creates a new component with the specified *ComponentId* in the system configuration |
