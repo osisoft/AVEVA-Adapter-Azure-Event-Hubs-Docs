@@ -14,7 +14,7 @@
 - topicUid: AzureEventHubsConfiguration
   items:
     - topicUid: ConfigurationTools
-    - topicUid: SystemComponentsConfiguration
+    - topicUid: PIAdapterAzureEventHubsSystemComponentsConfiguration
       items:
       - topicUid: SystemAndAdapterConfiguration
     - topicUid: PIAdapterForAzureEventHubsDataSourceConfiguration
