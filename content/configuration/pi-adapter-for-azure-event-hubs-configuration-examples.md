@@ -15,11 +15,11 @@ The following JSON is an example of a system components configuration. It contai
 ```json
 [
     {
-        "ComponentId": "AzureEventHubs1",
+        "ComponentId": "EventHubs1",
         "ComponentType": "EventHubs"
     },
     {
-        "ComponentId": "AzureEventHubs2",
+        "ComponentId": "EventHubs2",
         "ComponentType": "EventHubs"
     },
     {
