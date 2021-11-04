@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-configuration-examples.html",
-          "hash": "FluonI4iRf2lEw/L30YZgtRAWW/a6kS0M4OW+Om68CM="
+          "hash": "0QxKk7z7Im0Kl+ctv8A71wVpir9xLk1PckQJWnyoTnk="
         }
       },
       "is_incremental": false,
@@ -91,6 +91,18 @@
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html",
           "hash": "hc9hb5SPBbdU6GCWnDfFBv06Hz0TTlPpWvwb/wokS7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-system-components.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-system-components.html",
+          "hash": "iCplOcvHV/STaZ8gZXY5UltylCblwxBbkz/WqZ3e13Q="
         }
       },
       "is_incremental": false,
@@ -845,7 +857,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "/Dx8iuArP1yKJbN6TYuPLl6hJ90/aeCpxzeGWwqmZik="
+          "hash": "0t9U9+X63G80HJ9Qb3slyo7k8Ie1H1caW3N1lSBTdWg="
         }
       },
       "is_incremental": false,
@@ -902,7 +914,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 59,
+          "total_file_count": 60,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

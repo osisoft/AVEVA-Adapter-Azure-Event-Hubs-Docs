@@ -82,6 +82,9 @@ references:
 - uid: PIAdapterAzureEventHubsDataSourceDiscover
   name: Azure Event Hubs data source discovery
   href: content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html
+- uid: PIAdapterAzureEventHubsSystemComponentsConfiguration
+  name: System components
+  href: content/configuration/pi-adapter-for-azure-event-hubs-system-components.html
 - uid: PIAdapterForAzureEventHubsClientSettingsConfiguration
   name: Client settings
   href: content/configuration/pi-adapter-for-azure-event-hubs-client-settings-configuration.html
