@@ -108,12 +108,6 @@ The following JSON is an example of a system components configuration. It contai
                 "endpoint": "https://OCSEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
-            },
-            {
-                "Id": "EDS",
-                "Endpoint": "http://localhost:/api/v1/tenants/default/namespaces/default/omf",
-                "UserName": "eds",
-                "Password": "eds"
             }
         ]
     }
