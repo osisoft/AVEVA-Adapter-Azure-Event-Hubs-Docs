@@ -21,8 +21,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>18030</WindowHeight>
-  <WindowWidth>32767</WindowWidth>
+  <WindowHeight>11850</WindowHeight>
+  <WindowWidth>28770</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <TabRatio>500</TabRatio>
@@ -224,12 +224,12 @@
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs_1.0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Azure-Event-Hubs_1.0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
