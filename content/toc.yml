@@ -8,7 +8,7 @@
 - topicUid: Installation
   items:
   - topicUid: SystemRequirements
-  - topicUid: InstallPIAdapterForAzureEventHubs
+  - topicUid: InstallTheAdapter
   - topicUid: InstallPIAdapterForAzureEventHubsUsingDocker
   - topicUid: UninstallTheAdapter
 - topicUid: AzureEventHubsConfiguration
