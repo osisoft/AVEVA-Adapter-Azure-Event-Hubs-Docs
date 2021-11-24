@@ -23,9 +23,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /EventHubs_linux-arm/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm/OSIsoft.Data.System.Host
     else
-        exec /EventHubs_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -34,9 +34,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /EventHubs_linux-arm64/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm64/OSIsoft.Data.System.Host
     else
-        exec /EventHubs_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -45,9 +45,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /EventHubs_linux-x64/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-x64/OSIsoft.Data.System.Host
     else
-        exec /EventHubs_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-x64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -69,7 +69,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
     COPY eventhubsdockerstart.sh /
     RUN chmod +x /eventhubsdockerstart.sh
-    ADD ./eventhubs_linux-arm.tar.gz .
+    ADD ./PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
@@ -81,7 +81,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY eventhubsdockerstart.sh /
     RUN chmod +x /eventhubsdockerstart.sh
-    ADD ./eventhubs_linux-arm64.tar.gz .
+    ADD ./PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-arm64.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
@@ -93,11 +93,11 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY eventhubsdockerstart.sh /
     RUN chmod +x /eventhubsdockerstart.sh
-    ADD ./EventHubs_linux-x64.tar.gz .
+    ADD ./PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-x64.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
-2. Copy the `EventHubs_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-<platform>.tar.gz` file to the same directory as the `Dockerfile`.
 
 3. Copy the `eventhubsdockerstart.sh` script to the same directory as the `Dockerfile`.
 
