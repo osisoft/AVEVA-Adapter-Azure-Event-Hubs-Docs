@@ -47,7 +47,7 @@ To create a startup script for the adapter, follow the instructions below.
     if [ -z $portnum ] ; then
         exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-x64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
