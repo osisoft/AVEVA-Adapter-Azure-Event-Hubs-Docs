@@ -93,7 +93,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY eventhubsdockerstart.sh /
     RUN chmod +x /eventhubsdockerstart.sh
-    ADD ./PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-x64.tar.gz .
+    ADD ./PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
