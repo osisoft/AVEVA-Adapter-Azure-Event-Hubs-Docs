@@ -97,7 +97,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
-2. Copy the `PI-Adapter-for-Azure-Event-Hubs-1.0.1.239-<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-<platform>_.tar.gz` file to the same directory as the `Dockerfile`.
 
 3. Copy the `eventhubsdockerstart.sh` script to the same directory as the `Dockerfile`.
 
