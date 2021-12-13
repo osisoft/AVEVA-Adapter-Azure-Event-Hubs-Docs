@@ -89,23 +89,23 @@
 <p> <strong>ARM32</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
 if [ -z $portnum ] ; then
-    exec /EventHubs_linux-arm/OSIsoft.Data.System.Host
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm_/OSIsoft.Data.System.Host
 else
-    exec /EventHubs_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm_/OSIsoft.Data.System.Host --port:$portnum
 fi
 </code></pre><p> <strong>ARM64</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
 if [ -z $portnum ] ; then
-    exec /EventHubs_linux-arm64/OSIsoft.Data.System.Host
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm64_/OSIsoft.Data.System.Host
 else
-    exec /EventHubs_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm64_/OSIsoft.Data.System.Host --port:$portnum
 fi
 </code></pre><p> <strong>AMD64</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
 if [ -z $portnum ] ; then
-    exec /EventHubs_linux-x64/OSIsoft.Data.System.Host
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_/OSIsoft.Data.System.Host
 else
-    exec /EventHubs_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+    exec /PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_/OSIsoft.Data.System.Host --port:$portnum
 fi
 </code></pre></li>
 <li><p>Name the script <code>eventhubsdockerstart.sh</code> and save it to the directory where you plan to create the container.</p>
@@ -122,7 +122,7 @@ WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 COPY eventhubsdockerstart.sh /
 RUN chmod +x /eventhubsdockerstart.sh
-ADD ./eventhubs_linux-arm.tar.gz .
+ADD ./PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm_.tar.gz .
 ENTRYPOINT [&quot;/eventhubsdockerstart.sh&quot;]
 </code></pre><p> <strong>ARM64</strong></p>
 <pre><code class="lang-bash">FROM ubuntu
@@ -130,7 +130,7 @@ WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 COPY eventhubsdockerstart.sh /
 RUN chmod +x /eventhubsdockerstart.sh
-ADD ./eventhubs_linux-arm64.tar.gz .
+ADD ./PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm64_.tar.gz .
 ENTRYPOINT [&quot;/eventhubsdockerstart.sh&quot;]
 </code></pre><p> <strong>AMD64 (x64)</strong></p>
 <pre><code class="lang-bash">FROM ubuntu
@@ -138,10 +138,10 @@ WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 COPY eventhubsdockerstart.sh /
 RUN chmod +x /eventhubsdockerstart.sh
-ADD ./EventHubs_linux-x64.tar.gz .
+ADD ./PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-x64_.tar.gz .
 ENTRYPOINT [&quot;/eventhubsdockerstart.sh&quot;]
 </code></pre></li>
-<li><p>Copy the <code>EventHubs_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
+<li><p>Copy the <code>PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-&lt;platform&gt;_.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
 </li>
 <li><p>Copy the <code>eventhubsdockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</p>
 </li>
