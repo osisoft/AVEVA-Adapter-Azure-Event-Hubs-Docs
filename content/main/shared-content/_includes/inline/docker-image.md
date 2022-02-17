@@ -1,1 +1,1 @@
-<script_name.sh>
+eventhubsadapter
