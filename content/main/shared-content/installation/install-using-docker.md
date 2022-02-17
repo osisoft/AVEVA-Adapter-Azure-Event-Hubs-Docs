@@ -51,7 +51,6 @@ To create a startup script for the adapter, follow the instructions below.
 
 2. Name the script `eventhubsdockerstart.sh` and save it to the directory where you plan to create the container.
 
-
 ## Create a Docker container
 
 To create a Docker container that runs the adapter, follow the instructions below.
@@ -136,7 +135,7 @@ To run the adapter inside a Docker container while using the host for persistent
     docker run -d --network host -v /eventhubs:/usr/share/OSIsoft/ eventhubsadapter
     ```
 
-Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, <!-- customize -->`/Azure-Event-Hubs`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/eventhubs`. You can specify any directory.
 
 ### Change port number
 
