@@ -5,12 +5,12 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Azure Event Hubs 1.0.1.239<br>
-Adapter Framework 1.4.0.134
+[!include[product-name](../main/shared-content/_includes/inline/product-name.md)] [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
+Adapter Framework [!include[framework-version](../main/shared-content/_includes/inline/framework-version.md)]
 
 ## Overview
 
-We are pleased to announce the release of PI Adapter for Azure Event Hubs 1.0. This is the first general availability release for the adapter. 
+We are pleased to announce the release of [!include[<product-name>](../main/shared-content/_includes/inline/product-name.md)] [!include[product-version](../main/shared-content/_includes/inline/product-version.md)]  . This is the first general availability release for the adapter. 
 
 ## Resolved issues
 
