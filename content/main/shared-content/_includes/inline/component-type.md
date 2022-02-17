@@ -1,1 +1,1 @@
-<Componenent Type>
+EventHubs

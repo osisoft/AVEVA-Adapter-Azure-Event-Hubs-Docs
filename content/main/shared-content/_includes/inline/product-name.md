@@ -1,1 +1,1 @@
-<PRODUCT_NAME>
+PI Adapter for Azure Event Hubs
