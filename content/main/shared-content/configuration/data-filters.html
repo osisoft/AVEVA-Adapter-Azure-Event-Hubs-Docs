@@ -78,7 +78,8 @@
             <article class="content wrap" id="_content" data-uid="DataFiltersConfiguration">
 <h1 id="data-filters">Data filters</h1>
 
-<p>PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the ID of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
+<p>PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the Id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
+<p><strong>Note:</strong> If data filters are enabled and data quality changes, both the old and current data quality values are passed on.</p>
 <h2 id="configure-data-filters">Configure data filters</h2>
 <p>Complete the following steps to configure data filters. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code> REST endpoint to initialize the configuration.</p>
 <ol>
@@ -219,7 +220,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/data-filters.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/main/shared-content/configuration/data-filters.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

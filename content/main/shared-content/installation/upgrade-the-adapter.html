@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Health </title>
+    <title>Upgrade the adapter </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Health ">
+    <meta name="title" content="Upgrade the adapter ">
     <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,18 +75,54 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AdapterHealth">
-<h1 id="health">Health</h1>
+            <article class="content wrap" id="_content" data-uid="UpgradeTheAdapter">
+<h1 id="upgrade-the-adapter">Upgrade the adapter</h1>
 
-<p>PI Adapters produce various kinds of health data that can be egressed to different health endpoints.</p>
-<p>To egress health related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../configuration/health-endpoints.html">Health endpoint configuration</a>.</p>
-<h2 id="available-health-data">Available health data</h2>
-<p>Dynamic data is sent every minute to configured health endpoints.</p>
-<p>The following health data is available:</p>
+<p>When a new version of the adapter is released, you can upgrade to the latest version by running the new installation package.</p>
+<h2 id="windows-upgrade">Windows upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Windows computer:</p>
+<ol>
+<li><p>Download the latest Windows .msi file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Run the .msi file.</p>
+</li>
+<li><p>Complete the setup wizard.</p>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified when completing the wizard:</p>
+<pre><code class="lang-powershell">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.1.0.128&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
+<h2 id="linux-upgrade">Linux upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Linux computer:</p>
+<ol>
+<li><p>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Open a terminal session.</p>
+</li>
+<li><p>Move the Linux distribution file to the target host and run the <code>sudo apt upgrade</code> command.</p>
 <ul>
-<li><a class="xref" href="device-status.html">Device status</a></li>
-<li><a class="xref" href="next-health-message-expected.html">Next Health Message Expected</a></li>
+<li><strong>Linux ARM Debian:</strong> <code>sudo apt upgrade ./{AdapterName}_linux-arm.deb</code></li>
+<li><strong>Linux x64:</strong> <code>sudo apt upgrade ./{AdapterName}_linux-x64.deb</code></li>
 </ul>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified:</p>
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.1.0.128&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
 </article>
           </div>
           
@@ -95,7 +131,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/main/shared-content/health/health.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/main/shared-content/installation/upgrade-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

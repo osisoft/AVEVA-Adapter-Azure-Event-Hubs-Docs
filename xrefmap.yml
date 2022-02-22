@@ -13,6 +13,9 @@ references:
 - uid: Administration
   name: Administration
   href: content/main/shared-content/administration/administration.html
+- uid: AutomaticHistoryRecovery
+  name: Automatic history recovery
+  href: content/main/shared-content/configuration/history-recovery/automatic-history-recovery.html
 - uid: AzureEventHubsConfiguration
   name: Configuration
   href: content/configuration/configuration.html
@@ -55,6 +58,9 @@ references:
 - uid: HealthEndpointConfiguration
   name: Health endpoints
   href: content/main/shared-content/configuration/health-endpoints.html
+- uid: HistoryRecovery
+  name: History recovery
+  href: content/main/shared-content/configuration/history-recovery.html
 - uid: index
   name: Overview
   href: content/index.html
@@ -79,6 +85,9 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
+- uid: OnDemandHistoryRecoveryConfiguration
+  name: On-demand history recovery configuration
+  href: content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.html
 - uid: PIAdapterAzureEventHubsDataSourceDiscover
   name: Azure Event Hubs data source discovery
   href: content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html
@@ -121,9 +130,6 @@ references:
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html
-- uid: releaseNotes
-  name: Release notes
-  href: content/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
   href: content/release-notes/release-notes.html
@@ -169,6 +175,9 @@ references:
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html
+- uid: UpgradeTheAdapter
+  name: Upgrade the adapter
+  href: content/main/shared-content/installation/upgrade-the-adapter.html
 - uid: XPathAndCSVSyntaxForValueRetrieval
   name: XPath and CSV syntax for value retrieval
   href: content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html

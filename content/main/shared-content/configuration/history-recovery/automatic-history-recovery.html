@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Automatic history recovery </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Automatic history recovery ">
     <meta name="generator" content="docfx 2.58.0.0">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../content/index.html" width="46">
-                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../../../content/index.html" width="46">
+                <img id="logo" src="../../../../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,8 +75,14 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="AutomaticHistoryRecovery">
+<h1 id="automatic-history-recovery">Automatic history recovery</h1>
 
+<p>Besides on-demand history recovery, the PI adapter also supports automatic history recovery.</p>
+<p>For automatic history recovery, the adapter tracks changes to the <strong>DeviceStatus</strong> of each component. When the <strong>DeviceStatus</strong> changes to <code>DeviceInError</code> or <code>Shutdown</code>, the adapter starts a new <a href="#history-recovery-intervals">History recovery interval</a>. When the issue resolves or if the adapter is restarted and the <strong>DeviceStatus</strong> changes to <code>Good</code>, the adapter closes any current intervals for that component. The adapter tracks these intervals for each component and, when DeviceStatus has a value of <code>Good</code>, it performs history recovery for these intervals starting from oldest to newest. For more information, see also <a class="xref" href="../../health/device-status.html">Device status</a>.</p>
+<p><strong>Note:</strong> If the data collection mode is set to <code>CurrentWithBackfill</code>, the adapter clears periods not recovered for the component and stops keeping track of them. Only if the data collection mode is set to <code>HistoryOnly</code>, an automatic history recovery operation in progress will be canceled, otherwise it will be finished.</p>
+<h2 id="history-recovery-intervals">History recovery intervals</h2>
+<p>Automatic history intervals cannot be longer than four days. If an interval is longer than four days, the adapter automatically changes the start time of the interval to be no earlier than four days before the end time prior to starting a recovery. If a current outage lasts longer than four days, when the device status finally improves the adapter recovers up to four days before the current time. This avoids introducing additional data gaps.</p>
 </article>
           </div>
           
@@ -85,7 +91,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/test.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Azure-Event-Hubs-Docs/blob/main/content/main/shared-content/configuration/history-recovery/automatic-history-recovery.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -111,8 +117,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
   </body>
 </html>
