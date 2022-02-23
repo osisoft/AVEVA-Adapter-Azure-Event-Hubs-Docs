@@ -10,6 +10,7 @@
   - topicUid: SystemRequirements
   - topicUid: InstallTheAdapter
   - topicUid: InstallUsingDocker
+  - topicUid: UpgradeTheAdapter
   - topicUid: UninstallTheAdapter
 - topicUid: AzureEventHubsConfiguration
   items:
