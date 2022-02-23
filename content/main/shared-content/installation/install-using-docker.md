@@ -1,14 +1,12 @@
 ---
-uid: InstallPIAdapterForAzureEventHubsUsingDocker
+uid: InstallUsingDocker
 ---
 
 # Installation using Docker
 
-Docker is a set of tools that you can use on Linux to manage application deployments.
+Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the adapter.
 
-**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the Azure Event Hubs adapter. Docker is not required to use  the Azure Event Hubs adapter.
-
-This topic provides examples of how to create a Docker container with the Azure Event Hubs adapter.
+**Note:** Installation using Docker in only recommended for users proficient with Docker. Docker is not required to use the adapter.
 
 ## Create a startup script
 
@@ -17,7 +15,7 @@ To create a startup script for the adapter, follow the instructions below.
 1. Use a text editor to create a script similar to one of the following examples:
 
     **Note:** The script varies slightly by processor.
-
+    
     **ARM32**
 
     ```bash
@@ -62,8 +60,8 @@ To create a Docker container that runs the adapter, follow the instructions belo
     **Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
 
     **ARM32**
-
-    ```bash
+    
+    ```dockerfile
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
@@ -75,7 +73,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
 
     **ARM64**
 
-    ```bash
+    ```dockerfile
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
@@ -84,10 +82,10 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ADD ./PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-arm64_.tar.gz .
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
+    
+	**AMD64 (x64)**
 
-    **AMD64 (x64)**
-
-    ```bash
+    ```dockerfile
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
@@ -97,9 +95,9 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ENTRYPOINT ["/eventhubsdockerstart.sh"]
     ```
 
-2. Copy the `PI-Adapter-for-Azure-Event-Hubs_1.0.1.239-<platform>_.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the <code>[!include[installer](../_includes/inline/installer-name.md)]-<var>platform</var>_.tar.gz</code> file to the same directory as the `Dockerfile`.
 
-3. Copy the `eventhubsdockerstart.sh` script to the same directory as the `Dockerfile`.
+3. Copy the <code>[!include[startup-script](../_includes/inline/startup-script.md)]</code> script to the same directory as the `Dockerfile`.
 
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
@@ -115,27 +113,29 @@ The following procedures contain instructions on how to run the adapter inside a
 
 To run the adapter inside a Docker container with access to its REST API from the local host, complete the following steps:
 
-1. Use the docker container image `eventhubsadapter` created previously.
+1. Use the docker container image <code>[!include[docker-image](../_includes/inline/docker-image.md)]</code> created previously.
+
 2. Type the following in the command line (`sudo` may be necessary):
 
     ```bash
     docker run -d --network host eventhubsadapter
     ```
 
-Port `5590` is accessible from the host and you can make REST calls to Azure Event Hubs adapter from applications on the local host computer. In this example, all data stored by the Azure Event Hubs adapter is stored in the container itself. When you delete the container, the stored data is also deleted.
+Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When you delete the container, the stored data is also deleted.
 
 ### Run the Docker container with persistent storage
 
 To run the adapter inside a Docker container while using the host for persistent storage, complete the following steps. This procedure also enables access to the adapter REST API from the local host.
 
-1. Use the docker container image `eventhubsadapter` created previously.
+1. Use the docker container image <code>[!include[docker-image](../_includes/inline/docker-image.md)]</code> created previously.
+
 2. Type the following in the command line (`sudo` may be necessary):
 
     ```bash
     docker run -d --network host -v /eventhubs:/usr/share/OSIsoft/ eventhubsadapter
     ```
 
-Port `5590` is accessible from the host and you can make REST calls to Azure Event Hubs adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/eventhubs`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/eventhubs`. You can specify any directory.
 
 ### Change port number
 
@@ -153,4 +153,4 @@ curl http://localhost:6000/api/v1/configuration
 
 ### Remove REST access
 
-If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be of value where you want to host an application in the same container as Azure Event Hubs adapter but do not want to have external REST access enabled.
+If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be of value where you want to host an application in the same container as the adapter but do not want to have external REST access enabled.
