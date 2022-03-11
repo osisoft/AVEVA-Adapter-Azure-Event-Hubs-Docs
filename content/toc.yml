@@ -54,7 +54,7 @@
     - topicUid: StreamCount
     - topicUid: IORate
     - topicUid: ErrorRate
-  - topicUid: EgressDiagnostics
+    - topicUid: EgressDiagnostics
 - topicUid: TroubleshootTheAdapter
   items:
   - topicUid: TroubleshootPIAdapterForAzureEventHubs
