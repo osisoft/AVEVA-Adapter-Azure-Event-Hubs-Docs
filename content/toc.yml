@@ -14,6 +14,7 @@
   - topicUid: UninstallTheAdapter
 - topicUid: AzureEventHubsConfiguration
   items:
+    - topicUid: PIAdapterForAzureSecurity
     - topicUid: ConfigurationTools
     - topicUid: PIAdapterAzureEventHubsSystemComponentsConfiguration
       items:
