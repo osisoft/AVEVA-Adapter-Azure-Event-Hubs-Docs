@@ -67,12 +67,15 @@ references:
 - uid: Installation
   name: Installation
   href: content/main/shared-content/installation/installation.html
-- uid: InstallPIAdapterForAzureEventHubsUsingDocker
-  name: Installation using Docker
-  href: content/installation/install-pi-adapter-for-azure-event-hubs-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: content/main/shared-content/installation/install-the-adapter.html
+- uid: InstallUsingDocker
+  name: Installation using Docker
+  href: content/main/shared-content/installation/install-using-docker.html
+- uid: IntroToPiAdapters
+  name: PI Adapter for Azure Event Hubs 1.0.1.239
+  href: content/main/shared-content/introduction/intro-to-pi-adapters.html
 - uid: IORate
   name: IO rate
   href: content/main/shared-content/diagnostics/io-rate.html
@@ -127,6 +130,9 @@ references:
 - uid: PIAdapterforAzureEventHubsTextParser
   name: Text parser
   href: content/configuration/pi-adapter-for-azure-event-hubs-text-parser.html
+- uid: PIAdapterForAzureSecurity
+  name: Security
+  href: content/configuration/PIAdapterForAzureEventHubsSecurity.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html
@@ -159,7 +165,7 @@ references:
   href: content/main/shared-content/configuration/system-components.html
 - uid: SystemRequirements
   name: System requirements
-  href: content/installation/system-requirements.html
+  href: content/main/shared-content/installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: content/main/shared-content/technical-support-and-feedback.html
