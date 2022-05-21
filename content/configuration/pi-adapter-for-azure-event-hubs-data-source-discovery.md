@@ -29,7 +29,7 @@ String item | Required | Description
 
 The following section contains several examples of Azure Event Hub queries. When creating a discovery request, include the Azure Event Hub query within the request payload as shown in [Configure discovery](xref:DiscoveryConfiguration#configure-discovery).
 
-### [Example 1: Single event hub](#tab/example-1)
+### [Example 1—Single event hub](#tab/example1)
 
 This Azure Event Hubs query example discovers a single event hub.
 
@@ -39,7 +39,7 @@ This Azure Event Hubs query example discovers a single event hub.
 }
 ```
 
-### [Example 2: Multiple event hubs](#tab/example-2)
+### [Example 2—Multiple event hubs](#tab/example2)
 
 This Azure Event Hubs query example discovers multiple event hubs.
 
@@ -49,7 +49,7 @@ This Azure Event Hubs query example discovers multiple event hubs.
 }
 ```
 
-### [Example 3: No WaitTime](#tab/example-3)
+### [Example 3—No WaitTime](#tab/example3)
 
 This Azure Event Hubs query example discovers multiple event hubs, but omits the `WaitTime` parameter. Without a specified `WaitTime`, the discovery defaults to a `WaitTime` of one minute.
 
