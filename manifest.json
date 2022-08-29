@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-selection-configuration.html",
-          "hash": "yWzTXrLhO36QFh6ozkaA2kAI+DdM0BANiBxjIQFfkD4="
+          "hash": "lfnrXTUYmmpiK08JFXRxyg4J1zfqt1maD/ra78ZKKas="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-azure-event-hubs-data-source-discovery.html",
-          "hash": "A8q9cB1/xke0+s/I4bxFQfGjiyT7p96ylT0p464wGQU="
+          "hash": "ZMfxwvYbOUTpoMwfrVZlIwRUsas5o311KxW5XaknGKA="
         }
       },
       "is_incremental": false,
@@ -233,7 +233,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/_includes/inline/framework-version.html",
-          "hash": "XXJ4oYIAtSqoc4xb6Z/rsoWFF3oC5BqDvi4mUG61Trk="
+          "hash": "mysW459Vrvm6O3hfROlFE85yyosGw/LDOLVz5ynoCnI="
         }
       },
       "is_incremental": false,
@@ -305,7 +305,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/_includes/inline/symantic-version.html",
-          "hash": "OXxFCVCzkVcvMsbRUyA6NPZsMMSo8RMJmLDh9d7vqF8="
+          "hash": "9RRogLsWPjDfwNZvJp6zMicHh/W7HUy6btLP721InXc="
         }
       },
       "is_incremental": false,
@@ -964,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/technical-support-and-feedback.html",
-          "hash": "THZt9xvuAbaWJRI/gTlWE/FnZQF5YxW1oKuJmCc71no="
+          "hash": "NcdxR7Ftl4YiGY9pyR60JXyTxLztmd0FjP7GhL0w5OA="
         }
       },
       "is_incremental": false,
@@ -1012,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "content/release-notes/release-notes.html",
-          "hash": "ZDEdTdF6BsN4vH8FD7qB3zc538a1QKoDZk+tXfed8Ts="
+          "hash": "pBvpurTxhmmiVZe9E+iGdkCCvOzRQTkUCEkUD+SQd+U="
         }
       },
       "is_incremental": false,

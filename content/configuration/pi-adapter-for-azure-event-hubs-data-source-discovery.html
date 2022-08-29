@@ -108,38 +108,22 @@
 </table>
 <h2 id="query-examples">Query examples</h2>
 <p>The following section contains several examples of Azure Event Hub queries. When creating a discovery request, include the Azure Event Hub query within the request payload as shown in <a class="xref" href="../main/shared-content/configuration/discovery.html#configure-discovery">Configure discovery</a>.</p>
-<div class="tabGroup" id="tabgroup_77OIrB5a+s">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_77OIrB5a+s_example-1" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-1" data-tab="example-1" tabindex="0" aria-selected="true">Example 1: Single event hub</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_77OIrB5a+s_example-2" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-2" data-tab="example-2" tabindex="-1">Example 2: Multiple event hubs</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_77OIrB5a+s_example-3" role="tab" aria-controls="tabpanel_77OIrB5a+s_example-3" data-tab="example-3" tabindex="-1">Example 3: No WaitTime</a>
-</li>
-</ul>
-<section id="tabpanel_77OIrB5a+s_example-1" role="tabpanel" data-tab="example-1">
+<h3 id="example-1-single-event-hub">Example 1: Single event hub</h3>
 <p>This Azure Event Hubs query example discovers a single event hub.</p>
 <pre><code class="lang-json">{
     &quot;query&quot;: &quot;EventHubNames=event-hub-1;WaitTime=0.00:00:30&quot;
 }
-</code></pre></section>
-<section id="tabpanel_77OIrB5a+s_example-2" role="tabpanel" data-tab="example-2" aria-hidden="true" hidden="hidden">
+</code></pre><h3 id="example-2-multiple-event-hubs">Example 2: Multiple event hubs</h3>
 <p>This Azure Event Hubs query example discovers multiple event hubs.</p>
 <pre><code class="lang-json">{
     &quot;query&quot;: &quot;EventHubNames=event-hub-1,event-hub-2;WaitTime=0.00:00:30&quot;
 }
-</code></pre></section>
-<section id="tabpanel_77OIrB5a+s_example-3" role="tabpanel" data-tab="example-3" aria-hidden="true" hidden="hidden">
+</code></pre><h3 id="example-3-no-waittime">Example 3: No WaitTime</h3>
 <p>This Azure Event Hubs query example discovers multiple event hubs, but omits the <code>WaitTime</code> parameter. Without a specified <code>WaitTime</code>, the discovery defaults to a <code>WaitTime</code> of one minute.</p>
 <pre><code class="lang-json">{
     &quot;query&quot;: &quot;EventHubNames=event-hub-1,event-hub-2&quot;
 }
-</code></pre></section>
-</div>
-<h2 id="query-results">Query results</h2>
+</code></pre><h2 id="query-results">Query results</h2>
 <p>After you submit a discovery request and the discovery completes, you can view its results and use them to create a <a class="xref" href="pi-adapter-for-azure-event-hubs-data-selection-configuration.html">Data selection configuration</a>. To view results for your discovery and query, perform a <code>GET</code> request against the <code>api/v1/configuration/componentId/discoveries/&lt;discoveryId&gt;/result</code> endpoint. For more information, see <a class="xref" href="../main/shared-content/configuration/discovery.html#rest-urls">REST URLs</a>.</p>
 <p>The discovery results includes a data selection configuration for each stream it finds for an event hub. For example, the following discovery results include a configuration for two streams found for <code>&quot;eventHubName&quot;:&quot;event-hub-1&quot;</code>: <code>&quot;streamId&quot;: &quot;event-hub-1.$.PumpTemperature&quot;</code> and <code>&quot;streamId&quot;: &quot;event-hub-1.$.TimeStamp&quot;</code>.</p>
 <pre><code class="lang-json">[

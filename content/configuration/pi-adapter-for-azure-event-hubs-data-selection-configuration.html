@@ -181,13 +181,13 @@
 <td><strong>DataType</strong></td>
 <td style="text-align:center">Required</td>
 <td><code>string</code></td>
-<td>The expected data type of the values for the specified field.<br><br>Supported Azure Event Hub data types include: <code>Boolean</code>, <code>Int64</code>, <code>Int32</code>, <code>Int16</code>, <code>UInt64</code>, <code>UInt32</code>, <code>UInt16</code>, <code>Float64</code>, <code>Float32</code>, <code>Float16</code>, <code>Date-Time</code>, <code>String</code>. For more information, see <a class="xref" href="../pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html">Principles of operation</a>.</td>
+<td>The expected data type of the values for the specified field.<br><br>Supported Azure Event Hub data types include: <code>Boolean</code>, <code>Int64</code>, <code>Int32</code>, <code>Int16</code>, <code>UInt64</code>, <code>UInt32</code>, <code>UInt16</code>, <code>Float64</code>, <code>Float32</code>, <code>Float16</code>, <code>Date-Time</code>, <code>String</code>.<br><br>For more information, see <a class="xref" href="../pi-adapter-for-azure-event-hubs-overview/pi-adapter-for-azure-event-hubs-principles-of-operation.html">Principles of operation</a>.</td>
 </tr>
 <tr>
 <td><strong>IndexFormat</strong></td>
 <td style="text-align:center">Optional</td>
 <td><code>string</code></td>
-<td>The time format of the timestamp value specified in the IndexField property.<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code>method, for example <code>01/30/2021</code>.<br> For more information, see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparseexact?view=net-5.0">DateTime.TryParseExact Method</a><sup>2</sup><br><br><strong>Note:</strong> If you specify <code>null</code>, the adapter parses the timestamp identified in IndexField as a DateTime supporting ISO 8601 formats.</td>
+<td>The time format of the timestamp value specified in the IndexField property.<br><br>Allowed value: Any string that can be used as a DateTime format in the .NET <code>DateTime.TryParseExact()</code> method, for example <code>01/30/2021</code>.<br> For more information, see <a class="xref" href="pi-adapter-for-azure-event-hubs-text-parser.html#date-and-time-processing">Date and time processing</a>.<sup>2</sup><br><br><strong>Note:</strong> If you specify <code>null</code>, the adapter parses the timestamp identified in IndexField as a DateTime supporting ISO 8601 formats.</td>
 </tr>
 </tbody>
 </table>
