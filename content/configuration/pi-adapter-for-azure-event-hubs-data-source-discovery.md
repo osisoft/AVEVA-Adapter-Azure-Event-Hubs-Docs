@@ -126,5 +126,8 @@ After creating a valid data selection configuration, you can activate it by perf
 
 ### Additional considerations for `query` and `autoselect`
 
-When you use the `query` parameter within a discovery request, OSIsoft recommends setting the [autoSelect](xref:DiscoveryConfiguration#discovery-parameters) parameter to `false` for most use cases. OSIsoft makes this recommendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, the configuration is not suitable for a production environment without manually editing its settings<!--, most notably the `IndexField` setting-->. `"autoSelect": true` should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active [Data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
- 
+When you use the `query` parameter within a discovery request, OSIsoft recommends setting the [autoSelect](xref:DiscoveryConfiguration#discovery-parameters) parameter to `false` for most use cases. 
+
+OSIsoft makes this recommendation because the configuration is not suitable for a production environment without manually editing its settings <!--, most notably the `IndexField` setting-->, when the configuration is generated automatically, the index field will not be configured in the active [Data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration) and the adapter will default to recording the time that the adapter received the message as opposed to when the data was collected. 
+
+OSIsoft makes this recommendation because the data selection configuration that discovery returns includes only values and not indexes. Therefore, `"autoSelect": true` should only be used for data sources with simple data structures, as it automatically applies the discovery results as the active [Data selection configuration](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration).
