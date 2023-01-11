@@ -851,9 +851,9 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s90"><Data ss:Type="String">Developer</Data></Cell>
     <Cell ss:StyleID="s89"><Data ss:Type="String">developer</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
-    <Cell ss:StyleID="s89"><Data ss:Type="String">OSIsoft-Message-Format-(OMF)</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
+    <Cell ss:StyleID="s89"><Data ss:Type="String">Open-Message-Format-(OMF)</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s91"><Data ss:Type="String">Yes</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
