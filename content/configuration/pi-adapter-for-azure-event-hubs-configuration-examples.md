@@ -104,8 +104,8 @@ The following JSON is an example of a system components configuration. It contai
                 "password": "PASSWORD"
             },
             {
-                "id": "OCS Endpoint",
-                "endpoint": "https://OCSEndpoint/omf",
+                "id": "ADH Endpoint",
+                "endpoint": "https://ADHEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
             }
