@@ -4,7 +4,7 @@ uid: TroubleshootPIAdapterForAzureEventHubs
 
 # Troubleshoot PI Adapter for Azure Event Hubs
 
-PI Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+PI Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
@@ -36,7 +36,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 4. Navigate to <xref:EgressEndpointsConfiguration>. For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
     * For a PI server endpoint, verify **UserName** and **Password**.
-    * For an OCS endpoint, verify **ClientId** and **ClientSecret**.
+    * For an ADH endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
@@ -48,7 +48,7 @@ Perform the following steps to verify active connections to the data source and 
 
         Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
 
-    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
+    * For ADH, view the ADH portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
 
         Alternatively, you can use Postman to send an API request to verify data streams. For more information, see [API calls for reading data](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html).
 
