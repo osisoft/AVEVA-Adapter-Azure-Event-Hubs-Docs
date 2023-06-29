@@ -2,7 +2,7 @@
 
 AVEVA Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from source devices to OMF (Open Message Format) endpoints in AVEVA Data Hub or AVEVA PI Servers.
 
-This repository contains the documentation for PI Adapter for Azure Event Hubs. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-azure-event-hubs/)
+This repository contains the documentation for AVEVA Adapter for Azure Event Hubs. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-azure-event-hubs/)
 
 ## Subtree
 
