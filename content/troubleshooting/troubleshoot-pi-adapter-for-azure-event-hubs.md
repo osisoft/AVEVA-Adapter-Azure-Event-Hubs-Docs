@@ -1,4 +1,4 @@
----
+A---
 uid: TroubleshootPIAdapterForAzureEventHubs
 ---
 
@@ -20,7 +20,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
     | **BlobStorageConnectionString**       | Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
     | **CheckpointBlobContainerName**       | Verify that the container name is entered correctly. If the name is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
 
-2. If specific data streams or sub-streams are not updating, navigate to <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration> and verify that the following data selection items are correct:
+2. If specific data streams or sub-streams are not updating, navigate to [Data Selection Configuration](xref:AVEVAAdapterForAzureEventHubsDataSelectionConfiguration) and verify that the following data selection items are correct:
 
     | Parameter           | Description |
     |---------------------|-------------|
@@ -33,7 +33,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 3. If the adapter is performing suboptimal, navigate to <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration> and review the configuration for any custom values that override default settings. Default client settings fit most use cases, so customized settings are more likely to cause issues.
 
-4. Navigate to <xref:EgressEndpointsConfiguration>. For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
+4. Navigate to [Egress Endpoints Configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
     * For a PI server endpoint, verify **UserName** and **Password**.
     * For an ADH endpoint, verify **ClientId** and **ClientSecret**.
