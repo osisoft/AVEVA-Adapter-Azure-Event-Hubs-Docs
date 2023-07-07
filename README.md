@@ -2,19 +2,19 @@
 
 AVEVA Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from source devices to Open Message Format (OMF) endpoints in AVEVA Data Hub (ADH) or AVEVA PI Servers.
 
-This repository contains the documentation for AVEVA Adapter for Azure Event Hubs. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/aveva-adapter-azure-event-hubs/)
+This repository contains the documentation for AVEVA Adapter for Azure Event Hubs. You can access a readable version of this documentation [here.](https://docs.aveva.com/bundle/aveva-adapter-azure-event-hubs/)
 
 ## Subtree
 
-This documentation repository consumes the [AVEVA-Adapter](https://github.com/osisoft/AVEVA-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
+This documentation repository consumes the [AVEVA-Adapter](https://github.com/osisoft/aveva-adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
 
 ```bash
-git subtree pull --prefix content/main https://github.com/osisoft/AVEVA-Adapter main --squash
+git subtree pull --prefix content/main https://github.com/osisoft/aveva-adapter main --squash
 ```
 
 ## License
 
-<a href="https://www.osisoft.com/copyright/">&copy; 2020 - 2023 OSIsoft, LLC. All rights reserved.</a>
+<a href="https://www.osisoft.com/copyright/">&copy; 2015 - 2023 AVEVA Group Limited. All rights reserved.</a>
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at 
 
