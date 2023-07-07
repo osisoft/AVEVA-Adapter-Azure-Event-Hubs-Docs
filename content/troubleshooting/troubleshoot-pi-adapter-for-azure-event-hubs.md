@@ -24,7 +24,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
     | Parameter           | Description |
     |---------------------|-------------|
-    | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
+    | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:AVEVAAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
     | **EventHubName**    | The event hub name is valid. If the name is invalid, the adapter cannot collect data. |
     | **ValueField**      | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload. |
     | **IndexField**       | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload. |
