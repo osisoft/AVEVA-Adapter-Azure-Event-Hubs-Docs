@@ -4,7 +4,7 @@ uid: TroubleshootPIAdapterForAzureEventHubs
 
 # Troubleshoot PI Adapter for Azure Event Hubs
 
-PI Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
+AVEVA Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
