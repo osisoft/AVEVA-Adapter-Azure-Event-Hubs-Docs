@@ -10,7 +10,7 @@ AVEVA Adapter for Azure Event Hubs provides troubleshooting features that enable
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. If the adapter is failing to collect any data, navigate to <xref:PIAdapterForAzureEventHubsDataSourceConfiguration> and verify that the following parameter values are correct.
+1. If the adapter is failing to collect any data, navigate to [Data Source Confiruration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration) and verify that the following parameter values are correct.
 
     | Parameter                             | Description |
     |---------------------------------------|-------------|
