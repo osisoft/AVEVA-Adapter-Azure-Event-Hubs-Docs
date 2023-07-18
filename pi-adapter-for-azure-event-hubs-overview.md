@@ -2,15 +2,15 @@
 uid: PIAdapterForAzureEventHubsOverview
 ---
 
-# PI Adapter for Azure Event Hubs overview
+# Overview
 
-PI Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from Event Hubs to OMF endpoints in OSIsoft Cloud Services or PI Servers. Event Hubs is a data streaming platform and event ingestion service provided by Microsoft as part of the Azure Cloud platform. The adapter can connect to any Event Hub hosted in Azure that uses the Advanced Message Queueing Protocol (AMQP).
+AVEVA Adapter for Azure Event Hubs is a data-collection component that transfers time-series data from Event Hubs to OMF endpoints in AVEVA Data Hub or AVEVA PI Servers. Event Hubs is a data streaming platform and event ingestion service provided by Microsoft as part of the Azure Cloud platform. The adapter can connect to any Event Hub hosted in Azure that uses the Advanced Message Queueing Protocol (AMQP).
 
 ![PI Adapter for Azure Event Hubs architecture](/images/pi-adapter-for-azure-event-hubs-architecture-diagram.png)
 
 ## Adapter installation
 
-You can install the adapter with a download kit that you can obtain from the OSIsoft Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
+You can install the adapter with a download kit that you can obtain from the AVEVA Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
 
 ## Adapter configuration
 

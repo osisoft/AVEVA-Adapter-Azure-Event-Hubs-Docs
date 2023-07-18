@@ -72,7 +72,7 @@ An Event Hub namespace in the same geographic region as the adapter ensures mini
 
 #### Partitions
 
-The OCS SDS service and PI Data Archive can both store sequential data. Out of order data is accepted; however, OSIsoft recommends to order your data for optimal performance.
+The ADH SDS service and PI Data Archive can both store sequential data. Out of order data is accepted; however, OSIsoft recommends to order your data for optimal performance.
 
 OSIsoft further recommends that you use a single partition to preserve message order even though Azure Event Hubs support multiple partitions for a single Event Hub for parallelism downstream.
 

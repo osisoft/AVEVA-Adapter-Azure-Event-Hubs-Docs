@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsDeviceStatus
 
 # Device status
 
-The PI Adapter for Azure Event Hubs device status indicates the health of the Azure Event Hubs component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream depending on the endpoint type. During healthy steady-state operation, a value of `Good` is expected.
+The PI Adapter for Azure Event Hubs device status indicates the health of the Azure Event Hubs component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or ADH stream depending on the endpoint type. During healthy steady-state operation, a value of `Good` is expected.
 
 | Property                          | Type                                 | Description                    |
 |-----------------------------------|--------------------------------------|--------------------------------|

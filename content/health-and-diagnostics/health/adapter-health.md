@@ -4,7 +4,7 @@ uid: PIAdapterForAzureEventHubsHealth
 
 # Health
 
-PI Adapters produce different kinds of health data that can be egressed to different health endpoints.
+AVEVA Adapters produce different kinds of health data that can be egressed to different health endpoints.
 
 ## Available health data
 

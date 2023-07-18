@@ -1,16 +1,16 @@
 ---
-uid: TroubleshootPIAdapterForAzureEventHubs
+uid: TroubleshootAVEVAAdapterForAzureEventHubs
 ---
 
-# Troubleshoot PI Adapter for Azure Event Hubs
+# Troubleshoot AVEVA Adapter for Azure Event Hubs
 
-PI Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+AVEVA Adapter for Azure Event Hubs provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm correct configuration for your adapter.
 
-1. If the adapter is failing to collect any data, navigate to <xref:PIAdapterForAzureEventHubsDataSourceConfiguration> and verify that the following parameter values are correct.
+1. If the adapter is failing to collect any data, navigate to [Data Source Configuration](xref:PIAdapterForAzureEventHubsDataSourceConfiguration) and verify that the following parameter values are correct.
 
     | Parameter                             | Description |
     |---------------------------------------|-------------|
@@ -20,11 +20,11 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
     | **BlobStorageConnectionString**       | Verify that the string is entered correctly. If the string is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
     | **CheckpointBlobContainerName**       | Verify that the container name is entered correctly. If the name is entered incorrectly, the adapter cannot perform checkpointing, which disrupts data collection. |
 
-2. If specific data streams or sub-streams are not updating, navigate to <xref:PIAdapterForAzureEventHubsDataSelectionConfiguration> and verify that the following data selection items are correct:
+2. If specific data streams or sub-streams are not updating, navigate to [Data Selection Configuration](xref:AVEVAAdapterForAzureEventHubsDataSelectionConfiguration) and verify that the following data selection items are correct:
 
     | Parameter           | Description |
     |---------------------|-------------|
-    | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:PIAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
+    | **StreamId**        | If you using a custom stream ID that is not being generated, verify that it follows the [stream ID rules](xref:AVEVAAdapterForAzureEventHubsDataSelectionConfiguration#data-selection-parameters). If the custom stream ID does not follow the rules, the adapter generates a default stream ID based on the measurement configuration. |
     | **EventHubName**    | The event hub name is valid. If the name is invalid, the adapter cannot collect data. |
     | **ValueField**      | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a data value from the AEH payload. |
     | **IndexField**       | The JSONPath expression is valid. With an invalid JSONPath expression, the adapter cannot extract a timestamp from the AEH payload. |
@@ -33,10 +33,10 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 3. If the adapter is performing suboptimal, navigate to <xref:PIAdapterForAzureEventHubsClientSettingsConfiguration> and review the configuration for any custom values that override default settings. Default client settings fit most use cases, so customized settings are more likely to cause issues.
 
-4. Navigate to <xref:EgressEndpointsConfiguration>. For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
+4. Navigate to [Egress Endpoints Configuration](xref:EgressEndpointsConfiguration). For each configured endpoint, verify that the **Endpoint** and authentication properties are correct.
 
     * For a PI server endpoint, verify **UserName** and **Password**.
-    * For an OCS endpoint, verify **ClientId** and **ClientSecret**.
+    * For an ADH endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
@@ -48,7 +48,7 @@ Perform the following steps to verify active connections to the data source and 
 
         Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
 
-    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
+    * For ADH, view the ADH portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
 
         Alternatively, you can use Postman to send an API request to verify data streams. For more information, see [API calls for reading data](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html).
 
